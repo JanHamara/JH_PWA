@@ -1,12 +1,12 @@
-import {Link} from 'gatsby'
-import * as React from 'react'
+import {Link} from 'gatsby';
+import * as React from 'react';
 
 interface NavigationProps {
-    items: NavigationItemProp[]
+    items: NavigationItemProp[];
 }
 interface NavigationItemProp {
-    href: string
-    label: string
+    href: string;
+    label: string;
 }
 
 const Navigation = ({items}: NavigationProps): React.ReactElement => {
@@ -20,7 +20,7 @@ const Navigation = ({items}: NavigationProps): React.ReactElement => {
                 )
             )}
         </nav>
-    )
-}
+    );
+};
 
-export default Navigation
+export default Navigation;
