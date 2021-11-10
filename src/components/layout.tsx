@@ -1,5 +1,7 @@
+import {AspectRatio, Box, Center, Img} from '@chakra-ui/react';
 import * as React from 'react';
 import Navigation from './navigation';
+import SiteHeader from './site-header';
 
 const navigationItems = [
     {
@@ -31,13 +33,17 @@ interface LayoutProps {
 
 const Layout = ({pageTitle, children}: LayoutProps) => {
     return (
-        <div>
-            <title>{pageTitle}</title>
+        <Box h="full">
+            {/* <title>{pageTitle}</title> */}
 
             <Navigation items={navigationItems}></Navigation>
 
-            <main>{children}</main>
-        </div>
+            <main>
+                <SiteHeader></SiteHeader>
+
+                <Box layerStyle="constraintMax">{children}</Box>
+            </main>
+        </Box>
     );
 };
 

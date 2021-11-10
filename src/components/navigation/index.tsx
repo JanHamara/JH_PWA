@@ -1,3 +1,4 @@
+import {StylesProvider, Button, Box, useMultiStyleConfig} from '@chakra-ui/react';
 import {Link} from 'gatsby';
 import * as React from 'react';
 
@@ -9,17 +10,29 @@ interface NavigationItemProp {
     label: string;
 }
 
-const Navigation = ({items}: NavigationProps): React.ReactElement => {
+const Navigation = ({items, ...otherProps}: NavigationProps) => {
+    const styles = useMultiStyleConfig('Navigation', {});
+
     return (
-        <nav>
-            {items.map(
-                (item, index): Object => (
-                    <Link to={item.href} key={index}>
-                        {item.label}
-                    </Link>
-                )
-            )}
-        </nav>
+        <Box as="nav" {...styles.container} {...otherProps}>
+            <StylesProvider value={styles}>
+                {/* <VStack>
+                    {items.map((item, index) => {
+                        return (
+                            <Link to={item.href} key={index}>
+                                <Text color="red">{item.label}</Text>
+                            </Link>
+                        );
+                    })}
+                </VStack> */}
+
+                {/* Left Side */}
+                <Box></Box>
+
+                {/* Right Side */}
+                <Button variant="unstyled">Hello</Button>
+            </StylesProvider>
+        </Box>
     );
 };
 
