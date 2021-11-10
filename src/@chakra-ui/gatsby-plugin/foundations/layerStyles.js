@@ -1,14 +1,18 @@
 const pageBase = {
     width: 'full',
-    maxWidth: 'container.max',
+    maxWidth: 'container.xxl',
     marginLeft: 'auto',
     marginRight: 'auto',
-    paddingLeft: {base: 4, md: 8, xl: 10, max: 4},
-    paddingRight: {base: 4, md: 8, xl: 10, max: 4}
-}
+    paddingLeft: {base: 4, xxl: 0},
+    paddingRight: {base: 4, xxl: 0},
+};
 
 export default {
     page: {
         ...pageBase,
-    }
-}
+    },
+
+    constraintMax: {
+        ...pageBase,
+    },
+};

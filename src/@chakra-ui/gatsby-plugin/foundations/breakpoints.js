@@ -1,4 +1,4 @@
-import {createBreakpoints} from '@chakra-ui/theme-tools'
+import {createBreakpoints} from '@chakra-ui/theme-tools';
 
 export default createBreakpoints({
     mini: '22.5em', // 360px
@@ -7,5 +7,6 @@ export default createBreakpoints({
     md: '48em', // 768px
     lg: '64em', // 1024px
     xl: '80em', // 1280px
-    max: '90em' // 1440px
-})
+    xxl: '90em', // 1440px
+    max: '120em', // 1920px
+});
