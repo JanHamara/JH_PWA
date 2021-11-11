@@ -1,5 +1,9 @@
 // gatsby-config.js
 
+require('dotenv').config({
+    path: `.env.${process.env.NODE_ENV}`,
+});
+
 const path = require('path');
 
 // Get paths of Gatsby's required rules, which as of writing is located at:
@@ -38,13 +42,21 @@ module.exports = {
         'gatsby-plugin-image',
         'gatsby-plugin-react-helmet',
         {
+            resolve: 'gatsby-plugin-web-font-loader',
+            options: {
+                typekit: {
+                    id: process.env.TYPEKIT_ID,
+                },
+            },
+        },
+        {
             resolve: `gatsby-plugin-manifest`,
             options: {
-                name: `JH_PWA`,
-                short_name: `JH_PWA`,
+                name: `Jan Hamara | Personal Portfolio`,
+                short_name: `Jan Hamara`,
                 start_url: `/`,
-                background_color: `#f7f0eb`,
-                theme_color: `#a2466c`,
+                background_color: `#10100F`,
+                theme_color: `#10100F`,
                 display: `standalone`,
                 icon: 'src/images/icon.png',
                 icons: [

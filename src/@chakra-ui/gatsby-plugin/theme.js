@@ -12,7 +12,10 @@ import fontSizes from './foundations/fontSizes';
 import layerStyles from './foundations/layerStyles';
 import textStyles from './foundations/textStyles';
 
-// Components
+// Base Components
+import Button from './components/base/button';
+
+// Project Components
 import Navigation from './components/project/navigation';
 
 const overrides = {
@@ -29,12 +32,15 @@ const overrides = {
         tight: '0em',
         normal: '0.025',
         wide: '0.05em',
-        wider: '0.1em',
-        widest: '0.2em',
+        wider: '0.18em',
+        widest: '0.33em',
     },
     layerStyles,
     textStyles,
     components: {
+        // ChakraUI Base Comps
+        Button,
+        // Project Comps
         Navigation,
     },
 };
