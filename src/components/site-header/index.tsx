@@ -5,8 +5,12 @@ import logo from '../../images/logo_500px.png';
 
 const SiteHeader = () => {
     return (
-        <Center layerStyle="constraintMax" minH="320px">
-            <AspectRatio boxSize={{base: 20, md: 28}} ratio={1 / 1}>
+        <Center
+            layerStyle="constraintMax"
+            minH={{base: '35vh', mini: '30vh'}}
+            h={{base: '35vh', mini: '30vh'}}
+        >
+            <AspectRatio boxSize={{base: 16, mini: 20, md: 28}} ratio={1 / 1}>
                 <Img src={logo} aria-label="site-logo" alt="site-logo"></Img>
             </AspectRatio>
         </Center>
