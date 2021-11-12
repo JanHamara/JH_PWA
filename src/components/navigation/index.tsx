@@ -32,28 +32,19 @@ const Navigation = ({items, ...otherProps}: NavigationProps) => {
                         </Link>
                     );
                 })}
-            </VStack> */}
+                </VStack> */}
 
                 {/* Left Side */}
                 <Box></Box>
 
                 {/* Right Side */}
                 <Button role="group" variant="unstyled">
-                    <VStack h="55px">
-                        <AspectRatio
-                            w={{base: '32px', mini: '40px'}}
-                            h={{base: '24px', mini: '30px'}}
-                            ratio={4 / 3}
-                        >
+                    <VStack {...styles.menuWrapper}>
+                        <AspectRatio ratio={4 / 3} {...styles.menuIcon}>
                             <Img src={menuIcon} aria-label="burger-menu-icon" alt="menu-icon"></Img>
                         </AspectRatio>
 
-                        <Text
-                            opacity={0}
-                            _groupHover={{opacity: 0.8}}
-                            textStyle="base"
-                            fontSize="2xs"
-                        >
+                        <Text _groupHover={{opacity: 0.8}} {...styles.menuLabel}>
                             Menu
                         </Text>
                     </VStack>

@@ -11,8 +11,8 @@ const LandingScreen = ({subtitle, ...otherProps}: LandingScreenProps) => {
         <Center w="full" h="70vh" alignItems="flex-start" {...otherProps}>
             <VStack spacing={{base: 2, md: 4}}>
                 <AspectRatio
-                    w={{base: '240px', mini: '270px', sm: '350px', md: '550px'}}
-                    h={{base: '24px', mini: '27px', sm: '35px', md: '55px'}}
+                    w={{base: '240px', mini: '275px', sm: '350px', md: '550px'}}
+                    h={{base: '25px', mini: '28px', sm: '35px', md: '55px'}}
                     ratio={10 / 1}
                 >
                     <Img

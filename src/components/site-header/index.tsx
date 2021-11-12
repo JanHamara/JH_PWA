@@ -7,8 +7,8 @@ const SiteHeader = () => {
     return (
         <Center
             layerStyle="constraintMax"
-            minH={{base: '35vh', mini: '30vh'}}
-            h={{base: '35vh', mini: '30vh'}}
+            minH={{base: '200px', mini: '220px', xs: '260px', md: '30vh'}}
+            h={{base: '200px', mini: '220px', xs: '260px', md: '30vh'}}
         >
             <AspectRatio boxSize={{base: 16, mini: 20, md: 28}} ratio={1 / 1}>
                 <Img src={logo} aria-label="site-logo" alt="site-logo"></Img>
