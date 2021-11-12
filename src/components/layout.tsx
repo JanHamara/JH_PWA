@@ -29,20 +29,24 @@ const navigationItems = [
 interface LayoutProps {
     pageTitle: string;
     children: any;
+    absolute: any;
+    canonicalUrl: string;
 }
 
-const Layout = ({pageTitle, children}: LayoutProps) => {
+const Layout = ({pageTitle, children, absolute, canonicalUrl}: LayoutProps) => {
     return (
         <Box h="full">
-            {/* <title>{pageTitle}</title> */}
+            <title>{pageTitle}</title>
 
-            <Navigation items={navigationItems}></Navigation>
+            <Navigation location={canonicalUrl} items={navigationItems}></Navigation>
 
             <main>
                 <SiteHeader></SiteHeader>
 
                 <Box layerStyle="constraintMax">{children}</Box>
             </main>
+
+            {absolute}
         </Box>
     );
 };

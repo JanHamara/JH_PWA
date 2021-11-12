@@ -13,10 +13,13 @@ import layerStyles from './foundations/layerStyles';
 import textStyles from './foundations/textStyles';
 
 // Base Components
+import Link from './components/base/link';
 import Button from './components/base/button';
+import Modal from './components/base/modal';
 
 // Project Components
 import Navigation from './components/project/navigation';
+import Clients from './components/project/clients';
 
 const overrides = {
     initialColorMode: 'light',
@@ -39,9 +42,12 @@ const overrides = {
     textStyles,
     components: {
         // ChakraUI Base Comps
+        Link,
         Button,
+        Modal,
         // Project Comps
         Navigation,
+        Clients,
     },
 };
 

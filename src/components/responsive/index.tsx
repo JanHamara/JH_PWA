@@ -8,28 +8,40 @@ import {Box} from '@chakra-ui/react';
 interface ResponsiveProps {
     children: any;
 }
-export const HideOnDesktop = ({children}: ResponsiveProps) => (
-    <Box display={{base: 'block', md: 'none'}}>{children}</Box>
+export const HideOnDesktop = ({children, ...otherProps}: ResponsiveProps) => (
+    <Box display={{base: 'block', md: 'none'}} {...otherProps}>
+        {children}
+    </Box>
 );
 
-export const HideOnMobile = ({children}: ResponsiveProps) => (
-    <Box display={{base: 'none', md: 'block'}}>{children}</Box>
+export const HideOnMobile = ({children, ...otherProps}: ResponsiveProps) => (
+    <Box display={{base: 'none', md: 'block'}} {...otherProps}>
+        {children}
+    </Box>
 );
 
-export const BelowXL = ({children}: ResponsiveProps) => (
-    <Box display={{base: 'block', xl: 'none'}}>{children}</Box>
+export const BelowXL = ({children, ...otherProps}: ResponsiveProps) => (
+    <Box display={{base: 'block', xl: 'none'}} {...otherProps}>
+        {children}
+    </Box>
 );
 
-export const AboveXL = ({children}: ResponsiveProps) => (
-    <Box display={{base: 'none', xl: 'block'}}>{children}</Box>
+export const AboveXL = ({children, ...otherProps}: ResponsiveProps) => (
+    <Box display={{base: 'none', xl: 'block'}} {...otherProps}>
+        {children}
+    </Box>
 );
 
-export const BelowLG = ({children}: ResponsiveProps) => (
-    <Box display={{base: 'block', lg: 'none'}}>{children}</Box>
+export const BelowLG = ({children, ...otherProps}: ResponsiveProps) => (
+    <Box display={{base: 'block', lg: 'none'}} {...otherProps}>
+        {children}
+    </Box>
 );
 
-export const AboveLG = ({children}: ResponsiveProps) => (
-    <Box display={{base: 'none', lg: 'block'}}>{children}</Box>
+export const AboveLG = ({children, ...otherProps}: ResponsiveProps) => (
+    <Box display={{base: 'none', lg: 'block'}} {...otherProps}>
+        {children}
+    </Box>
 );
 
 export default {HideOnMobile, HideOnDesktop, BelowXL, AboveXL, BelowLG, AboveLG};

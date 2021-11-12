@@ -23,6 +23,7 @@ const base = {
 
 const heroSubheading = {
     ...secondary,
+    textAlign: 'center',
     fontWeight: 'semibold',
     textTransform: 'uppercase',
     letterSpacing: {base: '0.14em', mini: 'wide', sm: 'wider', md: 'widest'},
@@ -34,7 +35,6 @@ const heroSubheading = {
         md: 'translate(8px, 0)',
         lg: 'translate(4px, 0)',
     },
-    fontSize: {base: '11px', mini: '0.875rem', sm: 'xs', md: 'md'},
     opacity: 0.7,
 };
 

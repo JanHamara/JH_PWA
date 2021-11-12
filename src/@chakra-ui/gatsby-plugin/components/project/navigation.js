@@ -18,11 +18,15 @@ export default {
             w: {base: '32px', md: '40px'},
             h: {base: '24px', md: '30px'},
         },
+        closeIcon: {
+            w: {base: '32px', md: '40px'},
+            h: {base: '32px', md: '40px'},
+        },
         menuLabel: {
             opacity: 0,
             textStyle: 'base',
             fontSize: {base: '10px', md: '2xs'},
         },
     },
-    parts: ['container', 'menuWrapper', 'menuIcon', 'menuLabel'],
+    parts: ['container', 'menuWrapper', 'menuIcon', 'closeIcon', 'menuLabel'],
 };
