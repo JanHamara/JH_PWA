@@ -18,13 +18,15 @@ import {
     ModalBody,
     ModalFooter,
 } from '@chakra-ui/react';
-import {HideOnMobile} from '../responsive';
+
+import SiteHeader from '../site-header';
 import Menu from './menu/index';
 
 // Static Assets
 import menuIcon from '../../images/menu.png';
 import closeIcon from '../../images/close.png';
 import navigationImage from '../../images/illustrations/about.jpg';
+import siteLogoGhost from '../../images/logo_ghost_200px.png';
 
 interface NavigationProps {
     items: NavigationItemProp[];
@@ -93,25 +95,37 @@ const Navigation = ({items, location, ...otherProps}: NavigationProps) => {
                             </Box>
                             <ModalBody>
                                 <Center w="full" h="100vh">
+                                    <SiteHeader variant="menu"></SiteHeader>
+
                                     <Menu location={location} dir="column"></Menu>
+
+                                    <Box
+                                        position="absolute"
+                                        left="50%"
+                                        bottom="calc(15vh - 56px)"
+                                        transform="translate(-50%, -50%)"
+                                    >
+                                        [SocialMedia]
+                                    </Box>
                                 </Center>
 
-                                <HideOnMobile>
-                                    <AspectRatio
-                                        h="100vh"
-                                        w="350px"
-                                        position="absolute"
-                                        ratio={3 / 8}
-                                        top={0}
-                                        left={0}
-                                    >
-                                        <Img
-                                            src={navigationImage}
-                                            aria-label="profile-photo"
-                                            alt="my-profile-photo"
-                                        ></Img>
-                                    </AspectRatio>
-                                </HideOnMobile>
+                                <AspectRatio
+                                    h="100vh"
+                                    w={{base: '180px', md: '350px'}}
+                                    position="absolute"
+                                    ratio={3 / 8}
+                                    top={0}
+                                    left={0}
+                                    filter="contrast(1.05)"
+                                    opacity={{base: 0.2, md: 1}}
+                                    zIndex={-2}
+                                >
+                                    <Img
+                                        src={navigationImage}
+                                        aria-label="profile-photo"
+                                        alt="my-profile-photo"
+                                    ></Img>
+                                </AspectRatio>
                             </ModalBody>
                         </ModalContent>
                     </Fade>

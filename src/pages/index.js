@@ -35,6 +35,7 @@ const IndexPage = ({location}) => {
             >
                 <Img
                     src={landingImage}
+                    filter="contrast(1.05)"
                     aria-label="woman-holding-her-head"
                     alt="landing-hero-image"
                 ></Img>

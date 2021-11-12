@@ -2,11 +2,10 @@ export default {
     baseStyle: {
         overlay: {},
         dialogContainer: {
-            backgroundColor: 'bg',
             color: 'white',
         },
         dialog: {
-            backgroundColor: 'bg',
+            backgroundColor: 'rgb(10, 10, 10)',
             padding: 0,
         },
         body: {

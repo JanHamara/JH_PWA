@@ -19,11 +19,16 @@ interface MenuProps {
 const Menu = (props: MenuProps) => {
     const {dir, location} = props;
     return (
-        <Stack direction={dir} justifyContent="center" alignItems="center" spacing={8}>
+        <Stack
+            direction={dir}
+            justifyContent="center"
+            alignItems="center"
+            spacing={{base: 6, mini: 8, md: 8}}
+        >
             {items.map((item, idx) => (
                 <Link href={location + links[idx]} key={idx} variant="ghost">
                     <Img
-                        h={5}
+                        h={{base: 3, md: 5}}
                         src={item}
                         alt="menu-link"
                         opacity={0.7}
