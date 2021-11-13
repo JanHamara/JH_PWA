@@ -7,6 +7,7 @@ import {
     AspectRatio,
     Img,
 } from '@chakra-ui/react';
+
 import BAT_SVG from '../../images/svg/british-american-tobacco.svg';
 import EASYGYM_SVG from '../../images/svg/easygym.svg';
 import FIRMENICH_SVG from '../../images/svg/firmenich.svg';

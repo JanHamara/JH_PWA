@@ -3,7 +3,7 @@ import Layout from '../components/layout';
 
 const TechStackPage = ({location}) => {
     return (
-        <Layout pageTitle="Tech Stack" canonicalUrl={location.href.replace(location.pathname, '')}>
+        <Layout pageTitle="Tech Stack" location={location}>
             <h1>TechStack</h1>
             <p>[TechStackPage Page Content]</p>
         </Layout>

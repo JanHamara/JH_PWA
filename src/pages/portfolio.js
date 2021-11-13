@@ -3,7 +3,7 @@ import Layout from '../components/layout';
 
 const PortfolioPage = ({location}) => {
     return (
-        <Layout pageTitle="Portfolio" canonicalUrl={location.href.replace(location.pathname, '')}>
+        <Layout pageTitle="Portfolio" location={location}>
             <h1>Portfolio</h1>
             <p>[Portfolio Page Content]</p>
         </Layout>

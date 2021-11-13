@@ -3,7 +3,7 @@ import Layout from '../components/layout';
 
 const ContactPage = ({location}) => {
     return (
-        <Layout pageTitle="Contact" canonicalUrl={location.href.replace(location.pathname, '')}>
+        <Layout pageTitle="Contact" location={location}>
             <h1>Contact</h1>
             <p>[Contact Page Content]</p>
         </Layout>

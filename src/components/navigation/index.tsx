@@ -13,24 +13,23 @@ import {
     Modal,
     Center,
     ModalContent,
-    ModalHeader,
-    ModalCloseButton,
     ModalBody,
-    ModalFooter,
 } from '@chakra-ui/react';
-
-import SiteHeader from '../site-header';
-import Menu from './menu/index';
+import {StaticImage} from 'gatsby-plugin-image';
 
 // Static Assets
-import menuIcon from '../../images/menu.png';
-import closeIcon from '../../images/close.png';
-import navigationImage from '../../images/illustrations/about.jpg';
-import siteLogoGhost from '../../images/logo_ghost_200px.png';
+import profilePhoto from '../../images/illustrations/about.jpg';
+
+import SiteHeader from '../site-header';
+import Menu from './menu';
+import SocialMedia from '../social-media';
 
 interface NavigationProps {
     items: NavigationItemProp[];
-    location: string;
+    location: {
+        href: string;
+        pathname: string;
+    };
 }
 interface NavigationItemProp {
     href: string;
@@ -44,16 +43,6 @@ const Navigation = ({items, location, ...otherProps}: NavigationProps) => {
         <>
             <StylesProvider value={styles}>
                 <Box as="nav" {...styles.container} {...otherProps}>
-                    {/* <VStack>
-                {items.map((item, index) => {
-                    return (
-                        <Link to={item.href} key={index}>
-                            <Text color="red">{item.label}</Text>
-                        </Link>
-                    );
-                })}
-                </VStack> */}
-
                     {/* Left Side */}
                     <Box></Box>
 
@@ -61,11 +50,12 @@ const Navigation = ({items, location, ...otherProps}: NavigationProps) => {
                     <Button onClick={onOpen} role="group" variant="unstyled">
                         <VStack {...styles.menuWrapper}>
                             <AspectRatio ratio={4 / 3} {...styles.menuIcon}>
-                                <Img
-                                    src={menuIcon}
+                                <StaticImage
+                                    src="../../images/menu.png"
                                     aria-label="burger-menu-icon"
                                     alt="menu-icon"
-                                ></Img>
+                                    placeholder="none"
+                                ></StaticImage>
                             </AspectRatio>
 
                             <Text _groupHover={{opacity: 0.8}} {...styles.menuLabel}>
@@ -84,11 +74,12 @@ const Navigation = ({items, location, ...otherProps}: NavigationProps) => {
                                 <Button onClick={onClose} variant="unstyled">
                                     <VStack {...styles.menuWrapper}>
                                         <AspectRatio ratio={1 / 1} {...styles.closeIcon}>
-                                            <Img
-                                                src={closeIcon}
+                                            <StaticImage
+                                                src="../../images/close.png"
                                                 aria-label="close-menu-icon"
                                                 alt="close-icon"
-                                            ></Img>
+                                                placeholder="none"
+                                            ></StaticImage>
                                         </AspectRatio>
                                     </VStack>
                                 </Button>
@@ -97,7 +88,14 @@ const Navigation = ({items, location, ...otherProps}: NavigationProps) => {
                                 <Center w="full" h="100vh">
                                     <SiteHeader variant="menu"></SiteHeader>
 
-                                    <Menu location={location} dir="column"></Menu>
+                                    <Menu
+                                        location={
+                                            location?.pathname == '/'
+                                                ? location.href
+                                                : location?.href.replace(location?.pathname, '')
+                                        }
+                                        dir="column"
+                                    ></Menu>
 
                                     <Box
                                         position="absolute"
@@ -105,7 +103,7 @@ const Navigation = ({items, location, ...otherProps}: NavigationProps) => {
                                         bottom="calc(15vh - 56px)"
                                         transform="translate(-50%, -50%)"
                                     >
-                                        [SocialMedia]
+                                        <SocialMedia></SocialMedia>
                                     </Box>
                                 </Center>
 
@@ -121,7 +119,7 @@ const Navigation = ({items, location, ...otherProps}: NavigationProps) => {
                                     zIndex={-2}
                                 >
                                     <Img
-                                        src={navigationImage}
+                                        src={profilePhoto}
                                         aria-label="profile-photo"
                                         alt="my-profile-photo"
                                     ></Img>

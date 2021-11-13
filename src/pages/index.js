@@ -23,7 +23,7 @@ import LandingScreen from '../components/landing-screen';
 
 const IndexPage = ({location}) => {
     return (
-        <Layout pageTitle="Home Page" canonicalUrl={location.href.replace(location.pathname, '')}>
+        <Layout pageTitle="Home Page" location={location}>
             <AspectRatio
                 w={{base: '270px', mini: '360px', md: '450px'}}
                 h={{base: '240px', mini: '320px', md: '400px'}}

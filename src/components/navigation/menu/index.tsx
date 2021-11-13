@@ -9,7 +9,7 @@ import AWARDS from '../../../images/menu/awards.png';
 import CONTACT from '../../../images/menu/contact.png';
 
 const items = [ABOUT, STACK, PORTFOLIO, AWARDS, CONTACT];
-const links = ['/about', '/techstack', '/portfolio', 'awards', 'contact'];
+const links = ['/about', '/techstack', '/portfolio', '/awards', '/contact'];
 
 interface MenuProps {
     dir: StackDirection;
@@ -37,8 +37,6 @@ const Menu = (props: MenuProps) => {
                     ></Img>
                 </Link>
             ))}
-
-            {location}
         </Stack>
     );
 };
