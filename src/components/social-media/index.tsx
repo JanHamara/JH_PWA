@@ -26,6 +26,8 @@ const SocialMedia = ({dir = 'row'}: SocialMediaProps) => {
                     width={20}
                     src={'../../images/social-media/facebook.png'}
                     alt="social-media-link"
+                    placeholder="none"
+                    loading="eager"
                 ></StaticImage>
             </Link>
 
@@ -41,6 +43,8 @@ const SocialMedia = ({dir = 'row'}: SocialMediaProps) => {
                     width={20}
                     src={'../../images/social-media/instagram.png'}
                     alt="social-media-link"
+                    placeholder="none"
+                    loading="eager"
                 ></StaticImage>
             </Link>
 
@@ -56,6 +60,8 @@ const SocialMedia = ({dir = 'row'}: SocialMediaProps) => {
                     width={20}
                     src={'../../images/social-media/linkedin.png'}
                     alt="social-media-link"
+                    placeholder="none"
+                    loading="lazy"
                 ></StaticImage>
             </Link>
 
@@ -71,6 +77,8 @@ const SocialMedia = ({dir = 'row'}: SocialMediaProps) => {
                     width={20}
                     src={'../../images/social-media/github.png'}
                     alt="social-media-link"
+                    placeholder="none"
+                    loading="lazy"
                 ></StaticImage>
             </Link>
         </Stack>

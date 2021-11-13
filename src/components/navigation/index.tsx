@@ -15,6 +15,7 @@ import {
     ModalContent,
     ModalBody,
 } from '@chakra-ui/react';
+
 import {StaticImage} from 'gatsby-plugin-image';
 
 // Static Assets

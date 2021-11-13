@@ -7,6 +7,7 @@ import {Box} from '@chakra-ui/react';
  */
 interface ResponsiveProps {
     children: any;
+    position?: string;
 }
 export const HideOnDesktop = ({children, ...otherProps}: ResponsiveProps) => (
     <Box display={{base: 'block', md: 'none'}} {...otherProps}>

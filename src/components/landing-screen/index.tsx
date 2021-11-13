@@ -1,7 +1,8 @@
 import * as React from 'react';
 import {Center, Text, VStack, AspectRatio, Img, Box} from '@chakra-ui/react';
 import {AboveLG} from '../responsive';
-import landingHeading from '../../images/landing-heading.png';
+
+import {StaticImage} from 'gatsby-plugin-image';
 import Clients from '../clients';
 
 interface LandingScreenProps {
@@ -17,11 +18,13 @@ const LandingScreen = ({subtitle, ...otherProps}: LandingScreenProps) => {
                     h={{base: '25px', mini: '28px', sm: '35px', md: '55px'}}
                     ratio={10 / 1}
                 >
-                    <Img
-                        src={landingHeading}
+                    <StaticImage
+                        src="../../images/landing-heading.png"
                         aria-label="jan-hamara"
                         alt="landing-hero-heading"
-                    ></Img>
+                        placeholder="none"
+                        loading="eager"
+                    ></StaticImage>
                 </AspectRatio>
 
                 <Text
