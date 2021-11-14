@@ -1,8 +1,9 @@
 import {AspectRatio, Box, Img, HStack, Text} from '@chakra-ui/react';
 import * as React from 'react';
 import Layout from '../components/layout';
-import landingImage from '../images/landing-hero-image.png';
+// import landingImage from '../images/landing-hero-image.png';
 import LandingScreen from '../components/landing-screen';
+import {StaticImage} from 'gatsby-plugin-image';
 
 // const line = (
 //     <HStack
@@ -32,13 +33,13 @@ const IndexPage = () => {
                 top="100vh"
                 left="50%"
                 transform="translate(-50%, -100%)"
+                filter="contrast(1.05)"
             >
-                <Img
-                    src={landingImage}
-                    filter="contrast(1.05)"
+                <StaticImage
+                    src="../images/landing-hero-image.webp"
                     aria-label="woman-holding-her-head"
                     alt="landing-hero-image"
-                ></Img>
+                ></StaticImage>
             </AspectRatio>
 
             <LandingScreen subtitle="Web Developer | UI/UX Designer" />
