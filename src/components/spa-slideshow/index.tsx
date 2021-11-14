@@ -1,4 +1,4 @@
-import {Fade, VStack, HStack, Text, Link, Center, AspectRatio, Button} from '@chakra-ui/react';
+import {Fade, VStack, HStack, Text, Link, Center, AspectRatio, Button, Box} from '@chakra-ui/react';
 import * as React from 'react';
 import {StaticImage} from 'gatsby-plugin-image';
 
@@ -17,7 +17,33 @@ interface SlideshowItem {
 const SpaSlideshow = (props: SpaSlideshowProps) => {
     const {items} = props;
     const [current, setCurrent] = React.useState(0);
-    const [showSlide, setShowSlide] = React.useState(true);
+    const [visibility, setVisibility] = React.useState('visible');
+
+    React.useEffect(() => {
+        setTimeout(() => {
+            setVisibility('visible');
+        }, 1000);
+    }, []);
+
+    const goNextSection = () => {
+        setVisibility('hidden');
+        setTimeout(() => {
+            current !== items.length - 1 ? setCurrent(current + 1) : setCurrent(0);
+        }, 1000);
+        setTimeout(() => {
+            setVisibility('visibility');
+        }, 1100);
+    };
+
+    const goPrevSection = () => {
+        setVisibility('hidden');
+        setTimeout(() => {
+            current !== 0 ? setCurrent(current - 1) : setCurrent(items.length - 1);
+        }, 1000);
+        setTimeout(() => {
+            setVisibility('visibility');
+        }, 1100);
+    };
 
     return (
         <HStack w="full" h="50vh" spacing={0}>
@@ -26,9 +52,7 @@ const SpaSlideshow = (props: SpaSlideshowProps) => {
                 <Button
                     w="fit"
                     role="button"
-                    onClick={() => {
-                        current !== 0 ? setCurrent(current - 1) : setCurrent(items.length - 1);
-                    }}
+                    onClick={goPrevSection}
                     variant="unstyled"
                     aria-label="button-previous"
                 >
@@ -43,8 +67,7 @@ const SpaSlideshow = (props: SpaSlideshowProps) => {
                 </Button>
             </Center>
 
-            {/* <Fade w="full" h="50vh" in={showSlide}> */}
-            <VStack w="full" h="50vh" spacing={24}>
+            <VStack w="full" h="50vh" className={visibility} transition="opacity 1s" spacing={24}>
                 <VStack
                     mx="auto"
                     textAlign="center"
@@ -81,7 +104,12 @@ const SpaSlideshow = (props: SpaSlideshowProps) => {
                                         {role}
                                     </Text>
                                     <Text
-                                        fontSize={{base: '12px', lg: '19px', xl: '20px', xxl: 'lg'}}
+                                        fontSize={{
+                                            base: '12px',
+                                            lg: '19px',
+                                            xl: '20px',
+                                            xxl: 'lg',
+                                        }}
                                         color="red"
                                         display={
                                             idx == items[current].roles.length - 1
@@ -100,12 +128,24 @@ const SpaSlideshow = (props: SpaSlideshowProps) => {
                     {/* -- CONTENT -- */}
                     {/* ------------- */}
                     <Text
-                        maxW={{base: '70vw', md: '71vw', lg: '700px', xl: '900px', xxl: '1000px'}}
+                        maxW={{
+                            base: '70vw',
+                            md: '71vw',
+                            lg: '700px',
+                            xl: '900px',
+                            xxl: '1000px',
+                        }}
                         dangerouslySetInnerHTML={{
                             __html: items[current].content,
                         }}
                         textStyle="paragraph"
-                        fontSize={{base: '12.5px', md: '15px', lg: '17px', xl: '18px', xxl: 'md'}}
+                        fontSize={{
+                            base: '12.5px',
+                            md: '15px',
+                            lg: '17px',
+                            xl: '18px',
+                            xxl: 'md',
+                        }}
                     ></Text>
                 </VStack>
 
@@ -115,16 +155,13 @@ const SpaSlideshow = (props: SpaSlideshowProps) => {
                     </Link>
                 </Center>
             </VStack>
-            {/* </Fade> */}
 
             {/* Right Switch */}
             <Center w={4} h="50vh">
                 <Button
                     w="fit"
                     role="button"
-                    onClick={() => {
-                        current !== items.length - 1 ? setCurrent(current + 1) : setCurrent(0);
-                    }}
+                    onClick={goNextSection}
                     variant="unstyled"
                     aria-label="button-previous"
                 >

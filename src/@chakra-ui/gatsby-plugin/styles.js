@@ -15,5 +15,11 @@ export default {
             color: 'strong',
             fontWeight: 'hairline',
         },
+        '.visible': {
+            opacity: 1,
+        },
+        '.hidden': {
+            opacity: 0,
+        },
     }),
 };
