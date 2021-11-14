@@ -1,5 +1,6 @@
 import {Stack, StackDirection, Img, Link} from '@chakra-ui/react';
 import * as React from 'react';
+import {useLocation} from '@reach/router';
 
 // Static Assets
 import ABOUT from '../../../images/menu/about.png';
@@ -13,11 +14,12 @@ const links = ['/about', '/techstack', '/portfolio', '/awards', '/contact'];
 
 interface MenuProps {
     dir: StackDirection;
-    location: string;
 }
 
 const Menu = (props: MenuProps) => {
-    const {dir, location} = props;
+    const {dir} = props;
+    const loc = useLocation();
+
     return (
         <Stack
             direction={dir}
@@ -26,7 +28,11 @@ const Menu = (props: MenuProps) => {
             spacing={{base: 6, mini: 8, md: 8}}
         >
             {items.map((item, idx) => (
-                <Link href={location + links[idx]} key={idx} variant="ghost">
+                <Link
+                    href={loc.href.replace(loc.pathname, '') + links[idx]}
+                    key={idx}
+                    variant="ghost"
+                >
                     <Img
                         h={{base: 3, md: 5}}
                         src={item}

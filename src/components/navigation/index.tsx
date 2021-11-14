@@ -27,16 +27,12 @@ import SocialMedia from '../social-media';
 
 interface NavigationProps {
     items: NavigationItemProp[];
-    location: {
-        href: string;
-        pathname: string;
-    };
 }
 interface NavigationItemProp {
     href: string;
     label: string;
 }
-const Navigation = ({items, location, ...otherProps}: NavigationProps) => {
+const Navigation = ({items, ...otherProps}: NavigationProps) => {
     const styles = useMultiStyleConfig('Navigation', {});
     const {isOpen, onOpen, onClose} = useDisclosure();
 
@@ -89,14 +85,7 @@ const Navigation = ({items, location, ...otherProps}: NavigationProps) => {
                                 <Center w="full" h="100vh">
                                     <SiteHeader variant="menu"></SiteHeader>
 
-                                    <Menu
-                                        location={
-                                            location?.pathname == '/'
-                                                ? location.href
-                                                : location?.href.replace(location?.pathname, '')
-                                        }
-                                        dir="column"
-                                    ></Menu>
+                                    <Menu dir="column"></Menu>
 
                                     <Box
                                         position="absolute"

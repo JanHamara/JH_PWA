@@ -30,15 +30,14 @@ interface LayoutProps {
     pageTitle: string;
     children: any;
     absolute: any;
-    location: string;
 }
 
-const Layout = ({pageTitle, children, absolute, location}: LayoutProps) => {
+const Layout = ({pageTitle, children, absolute}: LayoutProps) => {
     return (
         <Box h="full">
             <title>{pageTitle}</title>
 
-            <Navigation location={location} items={navigationItems}></Navigation>
+            <Navigation items={navigationItems}></Navigation>
 
             <main>
                 <SiteHeader></SiteHeader>

@@ -1,9 +1,9 @@
 import * as React from 'react';
 import Layout from '../components/layout';
 
-const AboutPage = ({location}) => {
+const AboutPage = () => {
     return (
-        <Layout pageTitle="About" location={location}>
+        <Layout pageTitle="About">
             <h1>About Me</h1>
             <p>[About Page Content]</p>
         </Layout>

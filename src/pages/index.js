@@ -21,9 +21,9 @@ import LandingScreen from '../components/landing-screen';
 //     </HStack>
 // );
 
-const IndexPage = ({location}) => {
+const IndexPage = () => {
     return (
-        <Layout pageTitle="Home Page" location={location}>
+        <Layout pageTitle="Home Page">
             <AspectRatio
                 w={{base: '270px', mini: '360px', md: '450px'}}
                 h={{base: '240px', mini: '320px', md: '400px'}}

@@ -3,7 +3,7 @@ import * as React from 'react';
 import {StaticImage} from 'gatsby-plugin-image';
 
 interface SocialMediaProps {
-    dir: StackDirection;
+    dir?: StackDirection;
 }
 
 const SocialMedia = ({dir = 'row'}: SocialMediaProps) => {
