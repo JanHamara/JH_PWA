@@ -1,3 +1,4 @@
+import * as React from 'react';
 import {
     StylesProvider,
     Button,
@@ -6,10 +7,23 @@ import {
     Img,
     AspectRatio,
     Text,
+    Fade,
+    useDisclosure,
     useMultiStyleConfig,
+    Modal,
+    Center,
+    ModalContent,
+    ModalBody,
 } from '@chakra-ui/react';
-import * as React from 'react';
-import menuIcon from '../../images/menu.png';
+
+import {StaticImage} from 'gatsby-plugin-image';
+
+// Static Assets
+import profilePhoto from '../../images/illustrations/about.jpg';
+
+import SiteHeader from '../site-header';
+import Menu from './menu';
+import SocialMedia from '../social-media';
 
 interface NavigationProps {
     items: NavigationItemProp[];
@@ -20,46 +34,92 @@ interface NavigationItemProp {
 }
 const Navigation = ({items, ...otherProps}: NavigationProps) => {
     const styles = useMultiStyleConfig('Navigation', {});
+    const {isOpen, onOpen, onClose} = useDisclosure();
 
     return (
-        <Box as="nav" {...styles.container} {...otherProps}>
+        <>
             <StylesProvider value={styles}>
-                {/* <VStack>
-                {items.map((item, index) => {
-                    return (
-                        <Link to={item.href} key={index}>
-                            <Text color="red">{item.label}</Text>
-                        </Link>
-                    );
-                })}
-            </VStack> */}
+                <Box as="nav" {...styles.container} {...otherProps}>
+                    {/* Left Side */}
+                    <Box></Box>
 
-                {/* Left Side */}
-                <Box></Box>
+                    {/* Right Side */}
+                    <Button onClick={onOpen} role="group" variant="unstyled">
+                        <VStack {...styles.menuWrapper}>
+                            <AspectRatio ratio={4 / 3} {...styles.menuIcon}>
+                                <StaticImage
+                                    src="../../images/menu.png"
+                                    aria-label="burger-menu-icon"
+                                    alt="menu-icon"
+                                    placeholder="none"
+                                ></StaticImage>
+                            </AspectRatio>
 
-                {/* Right Side */}
-                <Button role="group" variant="unstyled">
-                    <VStack h="55px">
-                        <AspectRatio
-                            w={{base: '32px', mini: '40px'}}
-                            h={{base: '24px', mini: '30px'}}
-                            ratio={4 / 3}
-                        >
-                            <Img src={menuIcon} aria-label="burger-menu-icon" alt="menu-icon"></Img>
-                        </AspectRatio>
+                            <Text _groupHover={{opacity: 0.8}} {...styles.menuLabel}>
+                                Menu
+                            </Text>
+                        </VStack>
+                    </Button>
+                </Box>
 
-                        <Text
-                            opacity={0}
-                            _groupHover={{opacity: 0.8}}
-                            textStyle="base"
-                            fontSize="2xs"
-                        >
-                            Menu
-                        </Text>
-                    </VStack>
-                </Button>
+                <Modal isOpen={isOpen} onClose={onClose} motionPreset="none" isCentered>
+                    <Fade in={isOpen} animateOpacity>
+                        <ModalContent>
+                            <Box {...styles.container}>
+                                <Box></Box>
+
+                                <Button onClick={onClose} variant="unstyled">
+                                    <VStack {...styles.menuWrapper}>
+                                        <AspectRatio ratio={1 / 1} {...styles.closeIcon}>
+                                            <StaticImage
+                                                src="../../images/close.png"
+                                                aria-label="close-menu-icon"
+                                                alt="close-icon"
+                                                placeholder="none"
+                                            ></StaticImage>
+                                        </AspectRatio>
+                                    </VStack>
+                                </Button>
+                            </Box>
+                            <ModalBody>
+                                <Center w="full" h="100vh">
+                                    <SiteHeader variant="menu"></SiteHeader>
+
+                                    <Menu dir="column"></Menu>
+
+                                    <Box
+                                        position="absolute"
+                                        left="50%"
+                                        bottom="calc(15vh - 56px)"
+                                        transform="translate(-50%, -50%)"
+                                    >
+                                        <SocialMedia></SocialMedia>
+                                    </Box>
+                                </Center>
+
+                                <AspectRatio
+                                    h="100vh"
+                                    w={{base: '180px', md: '350px'}}
+                                    position="absolute"
+                                    ratio={3 / 8}
+                                    top={0}
+                                    left={0}
+                                    filter="contrast(1.05)"
+                                    opacity={{base: 0.2, md: 1}}
+                                    zIndex={-2}
+                                >
+                                    <Img
+                                        src={profilePhoto}
+                                        aria-label="profile-photo"
+                                        alt="my-profile-photo"
+                                    ></Img>
+                                </AspectRatio>
+                            </ModalBody>
+                        </ModalContent>
+                    </Fade>
+                </Modal>
             </StylesProvider>
-        </Box>
+        </>
     );
 };
 export default Navigation;

@@ -23,12 +23,18 @@ const base = {
 
 const heroSubheading = {
     ...secondary,
+    textAlign: 'center',
     fontWeight: 'semibold',
     textTransform: 'uppercase',
-    letterSpacing: {base: '0.14em', mini: 'wider', md: 'widest'},
-    maxW: {base: '250px', mini: '356px', md: '570px'},
-    transform: {base: 'translate(1px, 0)', mini: 'translate(0)', md: 'translate(4px, 0)'},
-    fontSize: {base: '11px', mini: 'xs', md: 'md'},
+    letterSpacing: {base: '0.14em', mini: 'wide', sm: 'wider', md: 'widest'},
+    width: {base: '245px', mini: '275px', sm: '356px', md: '570px'},
+    maxW: {base: '245px', mini: '275px', sm: '356px', md: '570px'},
+    transform: {
+        base: 'translate(2px, 0)',
+        mini: 'translate(0)',
+        md: 'translate(8px, 0)',
+        lg: 'translate(4px, 0)',
+    },
     opacity: 0.7,
 };
 

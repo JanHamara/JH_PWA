@@ -1,9 +1,25 @@
-import {AspectRatio, Center, Img, Text, VStack} from '@chakra-ui/react';
+import {AspectRatio, Box, Img, HStack, Text} from '@chakra-ui/react';
 import * as React from 'react';
 import Layout from '../components/layout';
 import landingImage from '../images/landing-hero-image.png';
-import landingHeading from '../images/landing-heading.png';
 import LandingScreen from '../components/landing-screen';
+
+// const line = (
+//     <HStack
+//         alignItems="center"
+//         justifyContent="center"
+//         position="absolute"
+//         left={0}
+//         bottom="170px"
+//         spacing={2}
+//         opacity={0.6}
+//     >
+//         <Box h=".5px" w="8vw" background="white"></Box>
+//         <Text textStyle="base" fontSize="2xs">
+//             PROUDLY SERVED CLIENTS
+//         </Text>
+//     </HStack>
+// );
 
 const IndexPage = () => {
     return (
@@ -19,6 +35,7 @@ const IndexPage = () => {
             >
                 <Img
                     src={landingImage}
+                    filter="contrast(1.05)"
                     aria-label="woman-holding-her-head"
                     alt="landing-hero-image"
                 ></Img>

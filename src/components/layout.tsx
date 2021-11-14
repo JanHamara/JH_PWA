@@ -29,12 +29,13 @@ const navigationItems = [
 interface LayoutProps {
     pageTitle: string;
     children: any;
+    absolute: any;
 }
 
-const Layout = ({pageTitle, children}: LayoutProps) => {
+const Layout = ({pageTitle, children, absolute}: LayoutProps) => {
     return (
         <Box h="full">
-            {/* <title>{pageTitle}</title> */}
+            <title>{pageTitle}</title>
 
             <Navigation items={navigationItems}></Navigation>
 
@@ -43,6 +44,8 @@ const Layout = ({pageTitle, children}: LayoutProps) => {
 
                 <Box layerStyle="constraintMax">{children}</Box>
             </main>
+
+            {absolute}
         </Box>
     );
 };

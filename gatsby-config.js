@@ -39,7 +39,6 @@ module.exports = {
                 isUsingColorMode: true,
             },
         },
-        'gatsby-plugin-image',
         'gatsby-plugin-react-helmet',
         {
             resolve: 'gatsby-plugin-web-font-loader',
@@ -106,6 +105,7 @@ module.exports = {
         `gatsby-plugin-offline`,
         'gatsby-plugin-sharp',
         'gatsby-transformer-sharp',
+        'gatsby-plugin-image',
         {
             resolve: 'gatsby-source-filesystem',
             options: {
