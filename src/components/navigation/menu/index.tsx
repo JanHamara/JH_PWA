@@ -29,15 +29,19 @@ const Menu = (props: MenuProps) => {
         >
             {items.map((item, idx) => (
                 <Link
-                    href={loc.href.replace(loc.pathname, '') + links[idx]}
+                    href={
+                        loc.pathname !== '/'
+                            ? loc.href.replace(loc.pathname, '') + links[idx]
+                            : links[idx]
+                    }
                     key={idx}
                     variant="ghost"
                 >
                     <Img
-                        h={{base: 3, md: 5}}
+                        h={{base: 4, md: 5}}
                         src={item}
                         alt="menu-link"
-                        opacity={0.7}
+                        opacity={{base: 1, md: 0.7}}
                         _hover={{opacity: 1, transform: 'scale(1)'}}
                         transition="1s opacity, 1s transform"
                     ></Img>

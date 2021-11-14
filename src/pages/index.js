@@ -36,9 +36,10 @@ const IndexPage = () => {
                 filter="contrast(1.05)"
             >
                 <StaticImage
-                    src="../images/landing-hero-image.webp"
+                    src="../images/illustrations/landing-hero-image.webp"
                     aria-label="woman-holding-her-head"
                     alt="landing-hero-image"
+                    placeholder="none"
                 ></StaticImage>
             </AspectRatio>
 
