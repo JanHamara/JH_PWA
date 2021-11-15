@@ -2,6 +2,7 @@ import {AspectRatio, Box, Center, Img} from '@chakra-ui/react';
 import * as React from 'react';
 import Navigation from './navigation';
 import SiteHeader from './site-header';
+import {useLocation} from '@reach/router';
 
 const navigationItems = [
     {
@@ -33,6 +34,13 @@ interface LayoutProps {
 }
 
 const Layout = ({pageTitle, children, absolute}: LayoutProps) => {
+    const location = useLocation();
+    const isLanding = location.pathname == '/';
+
+    React.useEffect(() => {
+        console.log(isLanding);
+    }, []);
+
     return (
         <Box h="full">
             <title>{pageTitle}</title>
@@ -40,12 +48,10 @@ const Layout = ({pageTitle, children, absolute}: LayoutProps) => {
             <Navigation items={navigationItems}></Navigation>
 
             <main>
-                <SiteHeader></SiteHeader>
+                <SiteHeader variant={isLanding ? 'default' : 'subpage'}></SiteHeader>
 
                 <Box layerStyle="constraintMax">{children}</Box>
             </main>
-
-            {absolute}
         </Box>
     );
 };

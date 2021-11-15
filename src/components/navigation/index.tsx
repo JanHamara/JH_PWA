@@ -48,7 +48,7 @@ const Navigation = ({items, ...otherProps}: NavigationProps) => {
                         <VStack {...styles.menuWrapper}>
                             <AspectRatio ratio={4 / 3} {...styles.menuIcon}>
                                 <StaticImage
-                                    src="../../images/menu.png"
+                                    src="../../images/icons/menu.png"
                                     aria-label="burger-menu-icon"
                                     alt="menu-icon"
                                     placeholder="none"
@@ -72,10 +72,11 @@ const Navigation = ({items, ...otherProps}: NavigationProps) => {
                                     <VStack {...styles.menuWrapper}>
                                         <AspectRatio ratio={1 / 1} {...styles.closeIcon}>
                                             <StaticImage
-                                                src="../../images/close.png"
+                                                src="../../images/icons/close.png"
                                                 aria-label="close-menu-icon"
                                                 alt="close-icon"
                                                 placeholder="none"
+                                                loading="eager"
                                             ></StaticImage>
                                         </AspectRatio>
                                     </VStack>

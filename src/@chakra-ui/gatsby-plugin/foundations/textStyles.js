@@ -21,6 +21,13 @@ const base = {
     transition: '1s opacity',
 };
 
+const paragraphBase = {
+    textTransform: 'uppercase',
+    letterSpacing: 'paragraph',
+    fontSize: 'md',
+    lineHeight: '2',
+};
+
 const heroSubheading = {
     ...secondary,
     textAlign: 'center',
@@ -38,9 +45,37 @@ const heroSubheading = {
     opacity: 0.7,
 };
 
+const heading = {
+    ...primary,
+    ...paragraphBase,
+    fontSize: {base: '17px', md: '22px', lg: '22px', xxl: '26px'},
+    fontStyle: 'normal',
+    fontWeight: 100,
+    color: 'paragraph',
+};
+
+const roles = {
+    ...primary,
+    ...paragraphBase,
+    fontStyle: 'normal',
+    fontWeight: 100,
+    color: 'paragraph',
+};
+
+const paragraph = {
+    ...primary,
+    ...paragraphBase,
+    fontStyle: 'normal',
+    fontWeight: 100,
+    color: 'paragraph',
+};
+
 export default {
     base,
     primary,
     secondary,
+    heading,
+    paragraph,
+    roles,
     heroSubheading,
 };

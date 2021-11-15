@@ -3,7 +3,7 @@ import * as React from 'react';
 import {StaticImage} from 'gatsby-plugin-image';
 
 interface SiteHeaderProps {
-    variant?: 'default' | 'menu';
+    variant?: 'default' | 'menu' | 'subpage';
 }
 
 const SiteHeader = ({variant = 'default'}: SiteHeaderProps) => {
@@ -16,8 +16,15 @@ const SiteHeader = ({variant = 'default'}: SiteHeaderProps) => {
             minH={{base: '200px', mini: '220px', xs: '260px', md: '30vh'}}
             h={{base: '200px', mini: '220px', xs: '260px', md: '30vh'}}
         >
-            <Link href="/">
-                <AspectRatio boxSize={{base: 16, mini: 20, md: 28}} ratio={1 / 1}>
+            <Link href="/" variant="ghost">
+                <AspectRatio
+                    boxSize={
+                        variant == 'default'
+                            ? {base: 16, mini: 20, md: 28}
+                            : {base: 16, mini: 20, md: 20}
+                    }
+                    ratio={1 / 1}
+                >
                     {variant == 'default' ? (
                         <StaticImage
                             src="../../images/logo_500px.png"
