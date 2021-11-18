@@ -4,6 +4,7 @@ import Navigation from './navigation';
 import SiteHeader from './site-header';
 import {useLocation} from '@reach/router';
 import FadeIn from './fade-in';
+import {Helmet} from 'react-helmet';
 
 const navigationItems = [
     {
@@ -44,7 +45,15 @@ const Layout = ({pageTitle, children, absolute}: LayoutProps) => {
 
     return (
         <Box h="full">
-            <title>{pageTitle}</title>
+            <Helmet
+                htmlAttributes={{
+                    lang: 'en',
+                }}
+            >
+                <meta charSet="utf-8" />
+                <title>Jan Hamara | Personal Portfolio</title>
+                <link rel="canonical" href="http://mysite.com/example" />
+            </Helmet>
 
             <FadeIn duration={1.5} delay={1100}>
                 <Navigation items={navigationItems}></Navigation>
