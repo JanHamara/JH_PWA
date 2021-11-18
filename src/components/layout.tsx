@@ -3,6 +3,7 @@ import * as React from 'react';
 import Navigation from './navigation';
 import SiteHeader from './site-header';
 import {useLocation} from '@reach/router';
+import FadeIn from './fade-in';
 
 const navigationItems = [
     {
@@ -45,7 +46,9 @@ const Layout = ({pageTitle, children, absolute}: LayoutProps) => {
         <Box h="full">
             <title>{pageTitle}</title>
 
-            <Navigation items={navigationItems}></Navigation>
+            <FadeIn duration={1.5} delay={1100}>
+                <Navigation items={navigationItems}></Navigation>
+            </FadeIn>
 
             <main>
                 <SiteHeader variant={isLanding ? 'default' : 'subpage'}></SiteHeader>
