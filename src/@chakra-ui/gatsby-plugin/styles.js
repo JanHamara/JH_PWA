@@ -21,5 +21,22 @@ export default {
         '.hidden': {
             opacity: 0,
         },
+        '.inlineLink': {
+            opacity: 0.8,
+            _hover: {
+                opacity: 1,
+            },
+            _before: {
+                content: '"/ "',
+                color: 'red',
+            },
+            _after: {
+                content: '" /"',
+                color: 'red',
+            },
+        },
+        '.sep': {
+            color: 'red',
+        },
     }),
 };

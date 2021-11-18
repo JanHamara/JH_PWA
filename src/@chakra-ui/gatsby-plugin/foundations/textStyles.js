@@ -70,6 +70,15 @@ const paragraph = {
     color: 'paragraph',
 };
 
+const stack = {
+    ...primary,
+    ...paragraphBase,
+    fontSize: {base: '2xs', xl: '2xs'},
+    textTransform: 'none',
+    letterSpacing: 'wider',
+    color: 'paragraph',
+};
+
 export default {
     base,
     primary,
@@ -78,4 +87,5 @@ export default {
     paragraph,
     roles,
     heroSubheading,
+    stack,
 };

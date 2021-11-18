@@ -4,7 +4,7 @@ export default {
         letterSpacing: 'paragraph',
         fontSize: 'md',
         lineHeight: '2',
-        opacity: 0.7,
+        opacity: 0.8,
         color: 'paragraph',
         transition: 'opacity 1s',
         _hover: {

@@ -3,6 +3,7 @@ import {AspectRatio, Box, Center, Img} from '@chakra-ui/react';
 import {StaticImage} from 'gatsby-plugin-image';
 import Layout from '../components/layout';
 import SpaSlideshow from '../components/spa-slideshow';
+import FadeIn from '../components/fade-in';
 
 const AwardsPage = () => {
     const mockAwardsData = [
@@ -45,39 +46,41 @@ const AwardsPage = () => {
                 </Box>
             </Layout>
 
-            <Box position="absolute" left={0} top={0}>
-                <AspectRatio
-                    w={{base: '30vw', md: '20vw', xl: '17vw'}}
-                    maxW="330px"
-                    opacity={{base: 0.3, md: 0.7}}
-                    ratio={1 / 1}
-                >
-                    <StaticImage
-                        src="../images/illustrations/awards.png"
-                        alt="rose-image"
-                        aria-label="image-of-rose"
-                        placeholder="none"
-                        loading="eager"
-                    ></StaticImage>
-                </AspectRatio>
-            </Box>
+            <FadeIn duration={3}>
+                <Box position="absolute" left={0} top={0}>
+                    <AspectRatio
+                        w={{base: '30vw', md: '20vw', xl: '17vw'}}
+                        maxW="330px"
+                        opacity={{base: 0.3, md: 0.7}}
+                        ratio={1 / 1}
+                    >
+                        <StaticImage
+                            src="../images/illustrations/awards.png"
+                            alt="rose-image"
+                            aria-label="image-of-rose"
+                            placeholder="none"
+                            loading="eager"
+                        ></StaticImage>
+                    </AspectRatio>
+                </Box>
 
-            <Box position="absolute" right={0} bottom={0}>
-                <AspectRatio
-                    w={{base: '30vw', md: '20vw', xl: '17vw'}}
-                    maxW="330px"
-                    opacity={{base: 0.3, md: 0.7}}
-                    ratio={0.9 / 1}
-                >
-                    <StaticImage
-                        src="../images/illustrations/awards_2.png"
-                        alt="rose-image"
-                        aria-label="image-of-rose"
-                        placeholder="none"
-                        loading="eager"
-                    ></StaticImage>
-                </AspectRatio>
-            </Box>
+                <Box position="absolute" right={0} bottom={0}>
+                    <AspectRatio
+                        w={{base: '30vw', md: '20vw', xl: '17vw'}}
+                        maxW="330px"
+                        opacity={{base: 0.3, md: 0.7}}
+                        ratio={0.9 / 1}
+                    >
+                        <StaticImage
+                            src="../images/illustrations/awards_2.png"
+                            alt="rose-image"
+                            aria-label="image-of-rose"
+                            placeholder="none"
+                            loading="eager"
+                        ></StaticImage>
+                    </AspectRatio>
+                </Box>
+            </FadeIn>
         </>
     );
 };

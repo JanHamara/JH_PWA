@@ -15,8 +15,6 @@ import PIGUETGALLAND_SVG from '../../images/svg/piguetgalland.svg';
 import UTMB_SVG from '../../images/svg/utmb.svg';
 import ROGERDUBUIS_SVG from '../../images/svg/rogerdubuis.svg';
 
-const leftRow = [BAT_SVG, EASYGYM_SVG, UTMB_SVG];
-
 const Clients = ({...otherProps}) => {
     const styles = useMultiStyleConfig('Clients', {});
 

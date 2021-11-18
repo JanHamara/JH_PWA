@@ -41,7 +41,7 @@ const Menu = (props: MenuProps) => {
                         h={{base: 4, md: 5}}
                         src={item}
                         alt="menu-link"
-                        opacity={{base: 1, md: 0.7}}
+                        opacity={{base: 1, md: 0.9}}
                         _hover={{opacity: 1, transform: 'scale(1)'}}
                         transition="1s opacity, 1s transform"
                     ></Img>

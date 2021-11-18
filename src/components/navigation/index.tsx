@@ -24,6 +24,7 @@ import profilePhoto from '../../images/illustrations/about.jpg';
 import SiteHeader from '../site-header';
 import Menu from './menu';
 import SocialMedia from '../social-media';
+import FadeIn from '../fade-in';
 
 interface NavigationProps {
     items: NavigationItemProp[];
@@ -64,59 +65,63 @@ const Navigation = ({items, ...otherProps}: NavigationProps) => {
 
                 <Modal isOpen={isOpen} onClose={onClose} motionPreset="none" isCentered>
                     <Fade in={isOpen} animateOpacity>
-                        <ModalContent>
-                            <Box {...styles.container}>
-                                <Box></Box>
+                        <FadeIn duration={0.5} delay={0}>
+                            <ModalContent>
+                                <Box {...styles.container}>
+                                    <Box></Box>
 
-                                <Button onClick={onClose} variant="unstyled">
-                                    <VStack {...styles.menuWrapper}>
-                                        <AspectRatio ratio={1 / 1} {...styles.closeIcon}>
-                                            <StaticImage
-                                                src="../../images/icons/close.png"
-                                                aria-label="close-menu-icon"
-                                                alt="close-icon"
-                                                placeholder="none"
-                                                loading="eager"
-                                            ></StaticImage>
+                                    <Button onClick={onClose} variant="unstyled">
+                                        <VStack {...styles.menuWrapper}>
+                                            <AspectRatio ratio={1 / 1} {...styles.closeIcon}>
+                                                <StaticImage
+                                                    src="../../images/icons/close.png"
+                                                    aria-label="close-menu-icon"
+                                                    alt="close-icon"
+                                                    placeholder="none"
+                                                    loading="eager"
+                                                ></StaticImage>
+                                            </AspectRatio>
+                                        </VStack>
+                                    </Button>
+                                </Box>
+                                <FadeIn duration={0.5} delay={500}>
+                                    <ModalBody>
+                                        <Center w="full" h="100vh">
+                                            <SiteHeader variant="menu"></SiteHeader>
+
+                                            <Menu dir="column"></Menu>
+
+                                            <Box
+                                                position="absolute"
+                                                left="50%"
+                                                bottom="calc(15vh - 56px)"
+                                                transform="translate(-50%, -50%)"
+                                            >
+                                                <SocialMedia></SocialMedia>
+                                            </Box>
+                                        </Center>
+
+                                        <AspectRatio
+                                            h="100vh"
+                                            w={{base: '180px', md: '350px'}}
+                                            position="absolute"
+                                            ratio={3 / 8}
+                                            top={0}
+                                            left={0}
+                                            filter="contrast(1.05)"
+                                            opacity={{base: 0.2, md: 1}}
+                                            zIndex={-2}
+                                        >
+                                            <Img
+                                                src={profilePhoto}
+                                                aria-label="profile-photo"
+                                                alt="my-profile-photo"
+                                            ></Img>
                                         </AspectRatio>
-                                    </VStack>
-                                </Button>
-                            </Box>
-                            <ModalBody>
-                                <Center w="full" h="100vh">
-                                    <SiteHeader variant="menu"></SiteHeader>
-
-                                    <Menu dir="column"></Menu>
-
-                                    <Box
-                                        position="absolute"
-                                        left="50%"
-                                        bottom="calc(15vh - 56px)"
-                                        transform="translate(-50%, -50%)"
-                                    >
-                                        <SocialMedia></SocialMedia>
-                                    </Box>
-                                </Center>
-
-                                <AspectRatio
-                                    h="100vh"
-                                    w={{base: '180px', md: '350px'}}
-                                    position="absolute"
-                                    ratio={3 / 8}
-                                    top={0}
-                                    left={0}
-                                    filter="contrast(1.05)"
-                                    opacity={{base: 0.2, md: 1}}
-                                    zIndex={-2}
-                                >
-                                    <Img
-                                        src={profilePhoto}
-                                        aria-label="profile-photo"
-                                        alt="my-profile-photo"
-                                    ></Img>
-                                </AspectRatio>
-                            </ModalBody>
-                        </ModalContent>
+                                    </ModalBody>
+                                </FadeIn>
+                            </ModalContent>
+                        </FadeIn>
                     </Fade>
                 </Modal>
             </StylesProvider>
