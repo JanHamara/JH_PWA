@@ -13,17 +13,23 @@ const SiteHeader = ({variant = 'default'}: SiteHeaderProps) => {
             position={variant == 'menu' ? 'absolute' : 'static'}
             top={0}
             zIndex={variant == 'menu' ? '-2' : '1'}
-            layerStyle="constraintMax"
-            minH={{base: '200px', mini: '220px', xs: '260px', md: '30vh'}}
-            h={{base: '200px', mini: '220px', xs: '260px', md: '30vh'}}
+            justifyContent={variant == 'menu' ? 'center' : {base: 'flex-start', md: 'center'}}
+            layerStyle={{base: 'constraintMaxMobile', md: 'constraintMax'}}
+            minH={{base: '100px', mini: '100px', xs: '100px', md: '30vh'}}
+            h={
+                variant == 'menu'
+                    ? {base: '180px', mini: '220px', xs: '260px', md: '30vh'}
+                    : {base: '100px', mini: '100px', xs: '100px', md: '30vh'}
+            }
+            mb={variant == 'subpage' ? 6 : 0}
         >
             <FadeIn duration={variant == 'default' ? 2 : 1} delay={variant == 'default' ? 500 : 0}>
                 <Link href="/" variant="ghost">
                     <AspectRatio
                         boxSize={
-                            variant == 'default'
-                                ? {base: 16, mini: 20, md: 28}
-                                : {base: 16, mini: 20, md: 20}
+                            variant == 'menu'
+                                ? {base: 16, mini: 16, md: 28}
+                                : {base: '45px', mini: 16, md: 20}
                         }
                         ratio={1 / 1}
                     >
