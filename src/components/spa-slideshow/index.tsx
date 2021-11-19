@@ -71,7 +71,7 @@ const SpaSlideshow = (props: SpaSlideshowProps) => {
     };
 
     return (
-        <HStack w="full" h="50vh" spacing={0}>
+        <HStack w="full" h={{base: '60vh', xs: '65vh', md: '50vh'}} spacing={0}>
             {/* Left Switch */}
             {!about && !techstack && (
                 <Center w={4} h="50vh">
@@ -96,7 +96,8 @@ const SpaSlideshow = (props: SpaSlideshowProps) => {
 
             <VStack
                 w="full"
-                h="50vh"
+                h={{base: '100%', md: '50vh'}}
+                justifyContent={{base: 'center', md: 'flex-start'}}
                 className={visibility}
                 transition="opacity 1s"
                 spacing={about ? 0 : 24}
@@ -177,7 +178,8 @@ const SpaSlideshow = (props: SpaSlideshowProps) => {
                                       xxl: '1000px',
                                   }
                                 : {
-                                      base: '75vw',
+                                      base: '80vw',
+                                      sm: '90vw',
                                       md: '71vw',
                                       lg: '700px',
                                       xl: '900px',
@@ -190,6 +192,8 @@ const SpaSlideshow = (props: SpaSlideshowProps) => {
                         textStyle="paragraph"
                         fontSize={{
                             base: '9.5px',
+                            mini: '11px',
+                            xs: '2xs',
                             md: '15px',
                             lg: '17px',
                             xl: '18px',
@@ -214,9 +218,9 @@ const SpaSlideshow = (props: SpaSlideshowProps) => {
                 {items[current].label && (
                     <Center
                         w="full"
-                        position={{base: 'static', md: 'absolute'}}
+                        position={{base: 'absolute', md: 'absolute'}}
                         pt={{base: 8, md: 0}}
-                        bottom="calc(15vh)"
+                        bottom={{base: '9vh', md: 'calc(15vh)'}}
                     >
                         {items[items.length - 1].label == items[current].label ? (
                             <Link

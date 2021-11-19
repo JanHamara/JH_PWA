@@ -60,6 +60,7 @@ const AboutPage = () => {
 
             <FadeIn>
                 <AspectRatio
+                    display={{base: 'block', md: 'block'}}
                     h="100vh"
                     w={{base: '180px', md: '350px'}}
                     position="absolute"
@@ -69,7 +70,7 @@ const AboutPage = () => {
                     filter="contrast(1.05)"
                     opacity={{base: 0.1, xl: 0.4, xxl: 1}}
                     transition="opacity 1s"
-                    zIndex={0}
+                    zIndex={-1}
                 >
                     <Img src={profilePhoto} aria-label="profile-photo" alt="my-profile-photo"></Img>
                 </AspectRatio>

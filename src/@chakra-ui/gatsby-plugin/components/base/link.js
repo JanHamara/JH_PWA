@@ -16,19 +16,19 @@ export default {
     },
     variants: {
         secondary: {
-            fontSize: {base: '2xs', md: 'xs', lg: 'sm', xxl: 'md'},
+            fontSize: {base: '10px', mini: '12px', xs: '2xs', md: 'xs', lg: 'sm', xxl: 'md'},
             _before: {
                 display: 'inline-block',
                 content: '"/"',
                 color: 'red',
-                transform: 'translate(-20px, 0)',
+                transform: {base: 'translate(-10px, 0)', md: 'translate(-20px, 0)'},
                 transition: 'transform 1s',
             },
             _after: {
                 display: 'inline-block',
                 content: '"/"',
                 color: 'red',
-                transform: 'translate(20px, 0)',
+                transform: {base: 'translate(10px, 0)', md: 'translate(20px, 0)'},
                 transition: 'transform 1s',
             },
             _hover: {
@@ -38,13 +38,13 @@ export default {
                 _before: {
                     content: '"/"',
                     color: 'red',
-                    transform: 'translate(-40px, 0)',
+                    transform: {base: 'translate(-20px, 0)', md: 'translate(-40px, 0)'},
                     opacity: 1,
                 },
                 _after: {
                     content: '"/"',
                     color: 'red',
-                    transform: 'translate(40px, 0)',
+                    transform: {base: 'translate(20px, 0)', md: 'translate(40px, 0)'},
                     opacity: 1,
                 },
             },

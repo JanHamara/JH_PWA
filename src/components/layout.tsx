@@ -55,7 +55,7 @@ const Layout = ({pageTitle, children, absolute}: LayoutProps) => {
                 <link rel="canonical" href="http://mysite.com/example" />
             </Helmet>
 
-            <FadeIn duration={1.5} delay={1100}>
+            <FadeIn duration={1.5} delay={300}>
                 <Navigation items={navigationItems}></Navigation>
             </FadeIn>
 
