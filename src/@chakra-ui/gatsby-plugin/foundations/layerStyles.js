@@ -15,4 +15,10 @@ export default {
     constraintMax: {
         ...pageBase,
     },
+
+    constraintMaxMobile: {
+        ...pageBase,
+        paddingLeft: {base: 8, xs: 10, md: 16},
+        paddingRight: {base: 8, xs: 10, md: 16},
+    },
 };

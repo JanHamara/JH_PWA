@@ -177,7 +177,7 @@ const SpaSlideshow = (props: SpaSlideshowProps) => {
                                       xxl: '1000px',
                                   }
                                 : {
-                                      base: '70vw',
+                                      base: '75vw',
                                       md: '71vw',
                                       lg: '700px',
                                       xl: '900px',
@@ -189,7 +189,7 @@ const SpaSlideshow = (props: SpaSlideshowProps) => {
                         }}
                         textStyle="paragraph"
                         fontSize={{
-                            base: '12.5px',
+                            base: '9.5px',
                             md: '15px',
                             lg: '17px',
                             xl: '18px',
@@ -212,7 +212,12 @@ const SpaSlideshow = (props: SpaSlideshowProps) => {
                 )}
 
                 {items[current].label && (
-                    <Center w="full" position="absolute" bottom="calc(15vh)">
+                    <Center
+                        w="full"
+                        position={{base: 'static', md: 'absolute'}}
+                        pt={{base: 8, md: 0}}
+                        bottom="calc(15vh)"
+                    >
                         {items[items.length - 1].label == items[current].label ? (
                             <Link
                                 href={loc.href.replace(
