@@ -38,7 +38,7 @@ const Menu = (props: MenuProps) => {
                     variant="ghost"
                 >
                     <Img
-                        h={{base: 4, md: 5}}
+                        h={{base: 3, xs: 4, md: 5}}
                         src={item}
                         alt="menu-link"
                         opacity={{base: 1, md: 0.9}}

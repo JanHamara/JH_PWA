@@ -11,6 +11,9 @@ export default {
             minH: '100vh',
             h: 'auto',
         },
+        body: {
+            zIndex: -2,
+        },
         strong: {
             color: 'strong',
             fontWeight: 'hairline',
@@ -23,6 +26,7 @@ export default {
         },
         '.inlineLink': {
             opacity: 0.8,
+            whiteSpace: 'nowrap',
             _hover: {
                 opacity: 1,
             },

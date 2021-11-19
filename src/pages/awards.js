@@ -51,7 +51,7 @@ const AwardsPage = () => {
                     <AspectRatio
                         w={{base: '30vw', md: '20vw', xl: '17vw'}}
                         maxW="330px"
-                        opacity={{base: 0.3, md: 0.7}}
+                        opacity={{base: 0.1, md: 0.7}}
                         ratio={1 / 1}
                     >
                         <StaticImage

@@ -13,13 +13,21 @@ const SiteHeader = ({variant = 'default'}: SiteHeaderProps) => {
             position={variant == 'menu' ? 'absolute' : 'static'}
             top={0}
             zIndex={variant == 'menu' ? '-2' : '1'}
-            justifyContent={variant == 'menu' ? 'center' : {base: 'flex-start', md: 'center'}}
-            layerStyle={{base: 'constraintMaxMobile', md: 'constraintMax'}}
-            minH={{base: '100px', mini: '100px', xs: '100px', md: '30vh'}}
+            justifyContent={variant == 'subpage' ? {base: 'flex-start', md: 'center'} : 'center'}
+            layerStyle={
+                variant == 'subpage'
+                    ? {base: 'constraintMaxMobile', md: 'constraintMax'}
+                    : 'constraintMax'
+            }
+            minH={
+                variant == 'subpage'
+                    ? {base: '100px', mini: '100px', xs: '100px', md: '30vh'}
+                    : {base: '180px', mini: '220px', xs: '260px', md: '30vh'}
+            }
             h={
-                variant == 'menu'
-                    ? {base: '180px', mini: '220px', xs: '260px', md: '30vh'}
-                    : {base: '100px', mini: '100px', xs: '100px', md: '30vh'}
+                variant == 'subpage'
+                    ? {base: '100px', mini: '100px', xs: '100px', md: '30vh'}
+                    : {base: '180px', mini: '220px', xs: '260px', md: '30vh'}
             }
             mb={variant == 'subpage' ? 6 : 0}
         >
@@ -27,9 +35,9 @@ const SiteHeader = ({variant = 'default'}: SiteHeaderProps) => {
                 <Link href="/" variant="ghost">
                     <AspectRatio
                         boxSize={
-                            variant == 'menu'
-                                ? {base: 16, mini: 16, md: 28}
-                                : {base: '45px', mini: 16, md: 20}
+                            variant == 'subpage'
+                                ? {base: '45px', mini: 16, md: 20}
+                                : {base: 16, mini: 16, md: 28}
                         }
                         ratio={1 / 1}
                     >
