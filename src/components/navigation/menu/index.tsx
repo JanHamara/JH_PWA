@@ -25,7 +25,7 @@ const Menu = (props: MenuProps) => {
             direction={dir}
             justifyContent="center"
             alignItems="center"
-            spacing={{base: 6, mini: 8, md: 8}}
+            spacing={{base: 6, mini: 8, md: 12, lg: 8}}
         >
             {items.map((item, idx) => (
                 <Link

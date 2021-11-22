@@ -4,9 +4,10 @@ import {StaticImage} from 'gatsby-plugin-image';
 
 interface SocialMediaProps {
     dir?: StackDirection;
+    size?: number;
 }
 
-const SocialMedia = ({dir = 'row'}: SocialMediaProps) => {
+const SocialMedia = ({dir = 'row', size = 20}: SocialMediaProps) => {
     return (
         <Stack
             direction={dir}

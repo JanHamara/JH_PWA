@@ -71,7 +71,16 @@ const SpaSlideshow = (props: SpaSlideshowProps) => {
     };
 
     return (
-        <HStack w="full" h={{base: '60vh', xs: '65vh', md: '50vh'}} spacing={0}>
+        <HStack
+            w="full"
+            h={
+                !about && !techstack
+                    ? {base: 'auto', md: '50vh'}
+                    : {base: '75vh', xs: '80vh', md: '50vh'}
+            }
+            overflow="visible"
+            spacing={0}
+        >
             {/* Left Switch */}
             {!about && !techstack && (
                 <Center w={4} h="50vh">
@@ -96,21 +105,37 @@ const SpaSlideshow = (props: SpaSlideshowProps) => {
 
             <VStack
                 w="full"
-                h={{base: '100%', md: '50vh'}}
+                h={{base: 'auto', md: '50vh'}}
                 justifyContent={{base: 'center', md: 'flex-start'}}
                 className={visibility}
                 transition="opacity 1s"
-                spacing={about ? 0 : 24}
+                spacing={
+                    // This is basically just spacing for button
+                    about
+                        ? {base: 10, mini: 12, xs: 16, md: 24}
+                        : techstack
+                        ? // If you add text section to tech stack, you need to decrease this offset
+                          {base: 12, mini: 16, md: 16}
+                        : {base: 8, mini: 10, xs: 12, sm: 16, md: 24}
+                }
             >
                 <VStack
                     w="full"
+                    h={{base: 'auto', md: 'full'}}
                     mx="auto"
                     textAlign="center"
-                    spacing={about ? 0 : {base: 12, md: 12, lg: 16}}
-                    mt={about ? 0 : {base: 6, md: 0}}
+                    // You need to align this spacing with button spacing just above
+                    spacing={
+                        about
+                            ? 0
+                            : techstack
+                            ? {base: 6, mini: 8, xs: 12, sm: 16, md: 16}
+                            : {base: 6, md: 12, lg: 16}
+                    }
+                    mt={about ? 0 : {base: 0, md: 0}}
                     zIndex={9}
                 >
-                    <VStack w="full" spacing={{base: 12, md: 8}}>
+                    <VStack w="full" spacing={{base: 6, md: 8}}>
                         {/* ------------- */}
                         {/* --- TITLE --- */}
                         {/* ------------- */}
@@ -127,13 +152,17 @@ const SpaSlideshow = (props: SpaSlideshowProps) => {
                         {/* --- ROLES --- */}
                         {/* ------------- */}
                         {items[current].roles && (
-                            <HStack spacing={{base: 3, md: 4}}>
+                            <HStack
+                                display={{base: 'none', md: 'flex'}}
+                                spacing={{base: 1, mini: 2, md: 4}}
+                            >
                                 {items[current].roles.map((role, idx) => (
                                     <>
                                         <Text
                                             textStyle="roles"
                                             fontSize={{
-                                                base: '13px',
+                                                base: '10px',
+                                                mini: '11px',
                                                 md: '16px',
                                                 lg: '17px',
                                                 xl: '18px',
@@ -144,7 +173,8 @@ const SpaSlideshow = (props: SpaSlideshowProps) => {
                                         </Text>
                                         <Text
                                             fontSize={{
-                                                base: '12px',
+                                                base: '10px',
+                                                mini: '14px',
                                                 lg: '19px',
                                                 xl: '20px',
                                                 xxl: 'lg',
@@ -208,7 +238,11 @@ const SpaSlideshow = (props: SpaSlideshowProps) => {
                 </VStack>
 
                 {items[current].href && (
-                    <Center w="full" position="absolute" bottom="calc(15vh)">
+                    <Center
+                        w="full"
+                        position={{base: 'static', md: 'absolute'}}
+                        bottom="calc(15vh)"
+                    >
                         <Link href={items[current].href} target="_blank" variant="secondary">
                             Read More
                         </Link>
@@ -218,9 +252,9 @@ const SpaSlideshow = (props: SpaSlideshowProps) => {
                 {items[current].label && (
                     <Center
                         w="full"
-                        position={{base: 'absolute', md: 'absolute'}}
-                        pt={{base: 8, md: 0}}
-                        bottom={{base: '9vh', md: 'calc(15vh)'}}
+                        position={{base: 'static', md: 'absolute'}}
+                        pt={{base: 0, md: 0}}
+                        bottom={{base: '15vh', md: 'calc(15vh)'}}
                     >
                         {items[items.length - 1].label == items[current].label ? (
                             <Link
