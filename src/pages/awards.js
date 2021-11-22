@@ -37,8 +37,9 @@ const AwardsPage = () => {
         <>
             <Layout pageTitle="Awards">
                 <Box
-                    h="70vh"
-                    maxW={{base: '88vw', lg: '880px', xl: '1120px', xxl: 'container.xl'}}
+                    h={{base: '75vh', md: '70vh'}}
+                    display={{base: 'flex', md: 'block'}}
+                    maxW={{base: '95vw', lg: '880px', xl: '1120px', xxl: 'container.xl'}}
                     mx="auto"
                     overflow="hidden"
                 >

@@ -41,7 +41,7 @@ const AboutPage = () => {
             <FadeIn>
                 <Layout pageTitle="About">
                     <Box
-                        h="70vh"
+                        h={{base: 'auto', md: '70vh'}}
                         maxW={{base: '88vw', lg: '880px', xl: '1120px', xxl: 'container.xl'}}
                         mx="auto"
                         overflow="hidden"

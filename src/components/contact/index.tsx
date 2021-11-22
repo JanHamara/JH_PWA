@@ -19,13 +19,13 @@ const Contact = (props: ContactProps) => {
 
     return (
         <Flex w="full" flexDirection="column" alignItems="center">
-            <VStack justifyContent="center" alignItems="center" spacing={{base: 8, md: 4}}>
+            <VStack justifyContent="center" alignItems="center" spacing={8}>
                 <Text
                     maxW={{base: '85vw', md: 'full'}}
                     textStyle="heading"
                     color="strong"
                     textAlign="center"
-                    fontSize={{base: 'sm', md: 'md'}}
+                    fontSize={{base: '2xs', xs: 'xs', md: 'md'}}
                 >
                     {info.heading}
                 </Text>
@@ -33,7 +33,7 @@ const Contact = (props: ContactProps) => {
                     display={{base: 'none', md: 'block'}}
                     textStyle="paragraph"
                     maxW={{base: '70vw', md: 'full'}}
-                    fontSize={{base: 'xs', md: 'sm', lg: 'md'}}
+                    fontSize={{base: '2xs', md: 'sm', lg: 'md'}}
                     textAlign="center"
                 >
                     {info.subheading}
@@ -42,9 +42,9 @@ const Contact = (props: ContactProps) => {
 
             <Stack
                 w="full"
-                maxW="container.md"
+                maxW={{md: '600px', lg: 'container.md'}}
                 flexWrap="wrap"
-                mt={{base: 16, md: 24}}
+                mt={{base: 8, xs: 14, md: 24}}
                 direction={{base: 'column', md: 'row'}}
                 spacing={{base: 8, md: 24}}
             >
@@ -58,14 +58,24 @@ const Contact = (props: ContactProps) => {
                         <Flex
                             textStyle="roles"
                             color="strong"
-                            fontSize={{base: 'xs', md: 'sm', lg: 'md'}}
+                            fontSize={{base: '12px', xs: 'xs', md: 'sm', lg: 'md'}}
                         >
                             <Text mr={2} color="red">
                                 /
                             </Text>
                             {infoItem.label}
                         </Flex>
-                        <Text mt={4} textStyle="paragraph" fontSize={{base: 'sm', lg: 'md'}}>
+                        <Text
+                            mt={{base: 2, md: 4}}
+                            textStyle="paragraph"
+                            fontSize={{
+                                base: '11px',
+                                mini: '12px',
+                                xs: '15px',
+                                md: 'base',
+                                lg: 'md',
+                            }}
+                        >
                             {infoItem.value}
                         </Text>
                     </Flex>
@@ -73,7 +83,7 @@ const Contact = (props: ContactProps) => {
             </Stack>
 
             {social && (
-                <Box mt={32} display={{base: 'block', md: 'block'}}>
+                <Box mt={{base: 16, xs: 20, md: 32}} display={{base: 'block', md: 'block'}}>
                     <SocialMedia></SocialMedia>
                 </Box>
             )}

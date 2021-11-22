@@ -16,7 +16,7 @@ export default {
     },
     variants: {
         secondary: {
-            fontSize: {base: '10px', mini: '12px', xs: '2xs', md: 'xs', lg: 'sm', xxl: 'md'},
+            fontSize: {base: '10px', mini: '12px', xs: '14px', md: 'xs', lg: 'sm', xxl: 'md'},
             _before: {
                 display: 'inline-block',
                 content: '"/"',

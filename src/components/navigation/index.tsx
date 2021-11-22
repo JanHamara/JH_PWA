@@ -110,7 +110,7 @@ const Navigation = ({items, ...otherProps}: NavigationProps) => {
                                             left={0}
                                             filter="contrast(1.05)"
                                             opacity={{base: 0.2, md: 1}}
-                                            zIndex={-2}
+                                            zIndex={-3}
                                         >
                                             <Img
                                                 src={profilePhoto}

@@ -119,7 +119,7 @@ const TechStack = ({stack = 'frontend', ...otherProps}: TechStackProps) => {
                             justifyContent="center"
                             alignItems="center"
                             key={idx}
-                            mb={{base: 12, md: 5, xl: 0}}
+                            mb={{base: 8, md: 5, xl: 0}}
                             opacity={0.8}
                             role="group"
                             transition="transform 1s"
@@ -129,7 +129,7 @@ const TechStack = ({stack = 'frontend', ...otherProps}: TechStackProps) => {
                                 transform: 'scale(1.1)',
                             }}
                         >
-                            <Box boxSize={9} mb={4}>
+                            <Box boxSize={{base: 6, mini: 8, sm: 9}} mb={4}>
                                 <AspectRatio ratio={1 / 1}>
                                     <Img
                                         src={item.src}
@@ -140,7 +140,11 @@ const TechStack = ({stack = 'frontend', ...otherProps}: TechStackProps) => {
                                 </AspectRatio>
                             </Box>
 
-                            <Text textStyle="stack" fontSize="10px" _groupHover={{color: 'strong'}}>
+                            <Text
+                                textStyle="stack"
+                                fontSize={{base: '8px', mini: '9px', xs: '11px', sm: '10px'}}
+                                _groupHover={{color: 'strong'}}
+                            >
                                 {item.label}
                             </Text>
                         </Flex>

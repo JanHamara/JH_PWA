@@ -29,7 +29,7 @@ const SiteHeader = ({variant = 'default'}: SiteHeaderProps) => {
                     ? {base: '100px', mini: '100px', xs: '100px', md: '30vh'}
                     : {base: '180px', mini: '220px', xs: '260px', md: '30vh'}
             }
-            mb={variant == 'subpage' ? 6 : 0}
+            mb={variant == 'subpage' ? 0 : 0}
         >
             <FadeIn duration={variant == 'default' ? 2 : 1} delay={variant == 'default' ? 500 : 0}>
                 <Link href="/" variant="ghost">

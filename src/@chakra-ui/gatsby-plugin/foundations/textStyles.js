@@ -48,7 +48,16 @@ const heroSubheading = {
 const heading = {
     ...primary,
     ...paragraphBase,
-    fontSize: {base: '17px', md: '22px', lg: '22px', xxl: '26px'},
+    fontSize: {
+        base: '14px',
+        mini: '17px',
+        xs: '20px',
+        sm: '18px',
+        md: '22px',
+        lg: '22px',
+        xxl: '26px',
+    },
+    maxW: {base: '85vw', lg: 'unset'},
     fontStyle: 'normal',
     fontWeight: 100,
     color: 'paragraph',
