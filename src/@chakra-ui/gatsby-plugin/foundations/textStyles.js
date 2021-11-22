@@ -88,6 +88,32 @@ const stack = {
     color: 'paragraph',
 };
 
+const projectHeading = {
+    ...secondary,
+    ...base,
+    opacity: 1,
+    color: 'white',
+    fontFamily: 'heading',
+    letterSpacing: 'widest',
+    fontWeight: 'medium',
+};
+
+const projectHeaderLabel = {
+    ...projectHeading,
+    letterSpacing: 'widest',
+    _before: {
+        content: '"/"',
+        color: 'white',
+        fontFamily: 'heading',
+        mr: 2,
+    },
+};
+
+const projectParagraph = {
+    ...paragraph,
+    letterSpacing: 'wider',
+};
+
 export default {
     base,
     primary,
@@ -97,4 +123,7 @@ export default {
     roles,
     heroSubheading,
     stack,
+    projectHeading,
+    projectHeaderLabel,
+    projectParagraph,
 };

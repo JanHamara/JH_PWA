@@ -20,6 +20,8 @@ import Modal from './components/base/modal';
 // Project Components
 import Navigation from './components/project/navigation';
 import Clients from './components/project/clients';
+import ProjectHeader from './components/project/project-header';
+import Project from './components/project/project';
 
 const overrides = {
     initialColorMode: 'light',
@@ -49,6 +51,8 @@ const overrides = {
         // Project Comps
         Navigation,
         Clients,
+        ProjectHeader,
+        Project,
     },
 };
 

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {Text, Box, Flex, AspectRatio, Img, SimpleGrid} from '@chakra-ui/react';
+import {Text, Box, Flex, AspectRatio, Img, SimpleGrid, HStack} from '@chakra-ui/react';
 
 // Front End
 import HTML from '../../images/techstack/html.png';
@@ -32,44 +32,45 @@ import ZEPLIN from '../../images/techstack/zeplin.png';
 import INVISION from '../../images/techstack/invision.png';
 
 const technologies = [
-    {src: HTML, label: 'HTML 5', category: 'frontend'},
-    {src: CSS, label: 'CSS 3', category: 'frontend'},
-    {src: JAVASCRIPT, label: 'JAVASCRIPT', category: 'frontend'},
-    {src: TYPESCRIPT, label: 'TYPESCRIPT', category: 'frontend'},
-    {src: REACT, label: 'REACT', category: 'frontend'},
-    {src: VUEJS, label: 'VUE.JS', category: 'frontend'},
-    {src: WEBPACK, label: 'WEBPACK', category: 'frontend'},
-    {src: PWA, label: 'PWAs', category: 'frontend'},
+    {src: HTML, label: 'HTML 5', category: 'frontend', key: 'html'},
+    {src: CSS, label: 'CSS 3', category: 'frontend', key: 'css'},
+    {src: JAVASCRIPT, label: 'JAVASCRIPT', category: 'frontend', key: 'javascript'},
+    {src: TYPESCRIPT, label: 'TYPESCRIPT', category: 'frontend', key: 'typescript'},
+    {src: REACT, label: 'REACT', category: 'frontend', key: 'react'},
+    {src: VUEJS, label: 'VUE.JS', category: 'frontend', key: 'vue'},
+    {src: WEBPACK, label: 'WEBPACK', category: 'frontend', key: 'webpack'},
+    {src: PWA, label: 'PWAs', category: 'frontend', key: 'pwa'},
 
     // Server-side
-    {src: NODEJS, label: 'NODE.JS', category: 'serverside'},
-    {src: NEXTJS, label: 'NEXT.JS', category: 'serverside'},
-    {src: GATSBY, label: 'GATSBY', category: 'serverside'},
-    {src: STRAPI, label: 'STRAPI', category: 'serverside'},
-    {src: JAMSTACK, label: 'JAMSTACK', category: 'serverside'},
-    {src: SF, label: 'SALESFORCE', category: 'serverside'},
-    {src: WORDPRESS, label: 'WORDPRESS', category: 'serverside'},
-    {src: GRAPHQL, label: 'GRAPHQL', category: 'serverside'},
+    {src: NODEJS, label: 'NODE.JS', category: 'serverside', key: 'nodejs'},
+    {src: NEXTJS, label: 'NEXT.JS', category: 'serverside', key: 'nextjs'},
+    {src: GATSBY, label: 'GATSBY', category: 'serverside', key: 'gatsby'},
+    {src: STRAPI, label: 'STRAPI', category: 'serverside', key: 'strapi'},
+    {src: JAMSTACK, label: 'JAMSTACK', category: 'serverside', key: 'jamstack'},
+    {src: SF, label: 'SALESFORCE', category: 'serverside', key: 'salesforce'},
+    {src: WORDPRESS, label: 'WORDPRESS', category: 'serverside', key: 'wordpress'},
+    {src: GRAPHQL, label: 'GRAPHQL', category: 'serverside', key: 'graphql'},
 
     // Design
-    {src: FIGMA, label: 'FIGMA', category: 'design'},
-    {src: ZEPLIN, label: 'ZEPLIN', category: 'design'},
-    {src: INVISION, label: 'INVISION', category: 'design'},
-    {src: XD, label: 'ADOBE XD', category: 'design'},
-    {src: AE, label: 'ADOBE AE', category: 'design'},
-    {src: AI, label: 'ILLUSTRATOR', category: 'design'},
-    {src: LR, label: 'LIGHTROOM', category: 'design'},
-    {src: PR, label: 'PREMIERE', category: 'design'},
+    {src: FIGMA, label: 'FIGMA', category: 'design', key: 'figma'},
+    {src: ZEPLIN, label: 'ZEPLIN', category: 'design', key: 'zeplin'},
+    {src: INVISION, label: 'INVISION', category: 'design', key: 'invision'},
+    {src: XD, label: 'ADOBE XD', category: 'design', key: 'XD'},
+    {src: AE, label: 'ADOBE AE', category: 'design', key: 'AE'},
+    {src: AI, label: 'ILLUSTRATOR', category: 'design', key: 'AI'},
+    {src: LR, label: 'LIGHTROOM', category: 'design', key: 'LR'},
+    {src: PR, label: 'PREMIERE', category: 'design', key: 'PR'},
 ];
 
 interface TechStackProps {
-    stack: string;
+    stack?: string;
+    pf?: string[];
 }
 
-const TechStack = ({stack = 'frontend', ...otherProps}: TechStackProps) => {
+const TechStack = ({stack = 'frontend', pf = undefined, ...otherProps}: TechStackProps) => {
     let selectedStack = technologies.filter((technology) => technology.category == stack);
 
-    return (
+    return !pf ? (
         <>
             <Flex
                 w="full"
@@ -152,6 +153,58 @@ const TechStack = ({stack = 'frontend', ...otherProps}: TechStackProps) => {
                 </SimpleGrid>
             </Box>
         </>
+    ) : (
+        <HStack mt={14} spacing={10}>
+            {pf.map((item) => (
+                <Box>
+                    {technologies.map(
+                        (tech, idx) =>
+                            item == tech.key && (
+                                <Flex
+                                    flexDirection="column"
+                                    justifyContent="center"
+                                    alignItems="center"
+                                    key={idx}
+                                    mb={{base: 8, md: 5, xl: 0}}
+                                    opacity={0.8}
+                                    role="group"
+                                    transition="transform 1s"
+                                    _hover={{
+                                        opacity: 0.9,
+                                        cursor: 'pointer',
+                                        transform: 'scale(1.1)',
+                                    }}
+                                >
+                                    <Box boxSize={{base: 6, mini: 8, sm: 9}} mb={4}>
+                                        <AspectRatio ratio={1 / 1}>
+                                            <Img
+                                                src={tech.src}
+                                                alt="technology-logo"
+                                                placeholder="none"
+                                                loading="eager"
+                                            ></Img>
+                                        </AspectRatio>
+                                    </Box>
+
+                                    <Text
+                                        textStyle="stack"
+                                        fontWeight="semibold"
+                                        fontSize={{
+                                            base: '8px',
+                                            mini: '9px',
+                                            xs: '11px',
+                                            sm: '10px',
+                                        }}
+                                        _groupHover={{color: 'strong'}}
+                                    >
+                                        {tech.label}
+                                    </Text>
+                                </Flex>
+                            )
+                    )}
+                </Box>
+            ))}
+        </HStack>
     );
 };
 export default TechStack;
