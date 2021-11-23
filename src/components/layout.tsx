@@ -32,10 +32,10 @@ const navigationItems = [
 interface LayoutProps {
     pageTitle: string;
     children: any;
-    absolute: any;
+    portfolio?: boolean;
 }
 
-const Layout = ({pageTitle, children, absolute}: LayoutProps) => {
+const Layout = ({portfolio = false, pageTitle = 'Personal Portfolio', children}: LayoutProps) => {
     const location = useLocation();
     const isLanding = location.pathname == '/';
 
@@ -51,8 +51,9 @@ const Layout = ({pageTitle, children, absolute}: LayoutProps) => {
                 }}
             >
                 <meta charSet="utf-8" />
-                <title>Jan Hamara | Personal Portfolio</title>
-                <link rel="canonical" href="http://mysite.com/example" />
+                <meta name="robots" content="all" />
+                <title>Jan Hamara | {pageTitle}</title>
+                {/* <link rel="canonical" href="http://mysite.com/example" /> */}
             </Helmet>
 
             <FadeIn duration={1.5} delay={300}>
@@ -62,7 +63,9 @@ const Layout = ({pageTitle, children, absolute}: LayoutProps) => {
             <main>
                 <SiteHeader variant={isLanding ? 'default' : 'subpage'}></SiteHeader>
 
-                <Box layerStyle="constraintMax">{children}</Box>
+                <Box layerStyle={portfolio ? 'constraintProjectMax' : 'constraintMax'}>
+                    {children}
+                </Box>
             </main>
         </Box>
     );
