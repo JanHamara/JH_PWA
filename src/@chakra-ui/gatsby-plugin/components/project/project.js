@@ -12,14 +12,14 @@ export default {
             },
         },
         pThumbnail: {
-            mt: {base: 10, md: 16},
+            mt: {base: 10, md: 20},
             w: 'full',
             ratio: 11 / 7,
         },
         pContent: {
-            mt: {base: 10, md: 24},
+            color: 'content',
+            mt: {base: 10, md: 20},
             textStyle: 'projectParagraph',
-            letterSpacing: '0.18em',
             fontSize: {
                 base: '9.5px',
                 mini: '11px',
@@ -28,16 +28,19 @@ export default {
             },
         },
         phContent: {
-            mt: {base: 6, md: 24},
+            color: 'content',
+            mt: {base: 6, md: 8},
             textStyle: 'projectParagraph',
-            letterSpacing: '0.18em',
             fontSize: {
-                base: '9.5px',
+                base: '10px',
                 mini: '11px',
                 xs: '2xs',
                 md: '17px',
             },
         },
+        pButton: {
+            mt: {base: 10, md: 20},
+        },
     },
-    parts: ['pHeading', 'pContent', 'phContent', 'pThumbnail'],
+    parts: ['pHeading', 'pContent', 'phContent', 'pThumbnail', 'pButton'],
 };

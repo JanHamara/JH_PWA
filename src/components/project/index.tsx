@@ -1,9 +1,18 @@
-import {Text, AspectRatio, Flex, StylesProvider, useMultiStyleConfig} from '@chakra-ui/react';
+import {
+    Text,
+    AspectRatio,
+    Flex,
+    Link,
+    Center,
+    StylesProvider,
+    useMultiStyleConfig,
+} from '@chakra-ui/react';
 import * as React from 'react';
 import ProjectHeader from '../../components/project-header';
 import {StaticImage} from 'gatsby-plugin-image';
 import FadeIn from '../../components/fade-in';
 import TechStack from '../tech-stack';
+import {useLocation} from '@reach/router';
 
 interface ProjectProps {
     data: {
@@ -24,6 +33,7 @@ interface ProjectProps {
 const Project = (props: ProjectProps) => {
     const {title, header, brief, stack, role, achievement} = props.data;
     const styles = useMultiStyleConfig('Project', {});
+    const location = useLocation();
 
     return (
         <Flex flexDirection="column" w="full" h="auto">
@@ -33,7 +43,7 @@ const Project = (props: ProjectProps) => {
 
                 {/* Project Thumbnail */}
                 <FadeIn delay={1000}>
-                    <AspectRatio {...styles.pThumbnail}>
+                    <AspectRatio {...styles.pThumbnail} mt={{base: 14, md: 16}}>
                         <StaticImage
                             src="../../images/projects/utmb/1.jpg"
                             alt="project-thumbnail-image"
@@ -92,6 +102,22 @@ const Project = (props: ProjectProps) => {
                         }}
                     ></Text>
                 )}
+
+                <Center {...styles.pButton}>
+                    <Link
+                        href={location.href.replace(location.pathname, '') + '/portfolio'}
+                        variant="secondary"
+                        fontSize={{
+                            base: '10px',
+                            mini: '12px',
+                            xs: '14px',
+                            md: 'xs',
+                            lg: '17px',
+                        }}
+                    >
+                        Back to portfolio
+                    </Link>
+                </Center>
             </StylesProvider>
         </Flex>
     );
