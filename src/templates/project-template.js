@@ -1,16 +1,15 @@
 import * as React from 'react';
-import Layout from '../../components/layout';
-import mockData from '../../mocks/pages/utmb';
-import Project from '../../components/project';
-import FadeIn from '../../components/fade-in';
+import Layout from '../components/layout';
+import Project from '../components/project';
+import FadeIn from '../components/fade-in';
 import {AspectRatio, Box} from '@chakra-ui/layout';
 import {StaticImage} from 'gatsby-plugin-image';
 
-const UtmbPage = ({location}) => {
+const ProjectPage = ({pageContext: {page}}) => {
     return (
         <>
-            <Layout pageTitle="UTMB World Series" portfolio={true}>
-                <Project data={mockData}></Project>
+            <Layout pageTitle={page.title} portfolio={true}>
+                <Project data={page}></Project>
             </Layout>
 
             <FadeIn duration={3}>
@@ -52,4 +51,4 @@ const UtmbPage = ({location}) => {
     );
 };
 
-export default UtmbPage;
+export default ProjectPage;
