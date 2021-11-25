@@ -4,7 +4,10 @@ export default {
             direction: 'column',
         },
         heading: {
-            fontSize: {base: '17px', md: '34px'},
+            mt: {base: 4, xs: 8, md: 0},
+            fontSize: {base: '17px', mini: '20px', xs: '22px', md: '34px', lg: '48px'},
+            fontFamily: 'body',
+            fontWeight: 'black',
             letterSpacing: 'wider',
             _before: {
                 content: '"/"',
@@ -19,12 +22,12 @@ export default {
             fontSize: {base: '9px', md: '14px'},
         },
         headerItemValue: {
-            mt: 1,
+            mt: 2,
             opacity: 1,
             fontFamily: 'heading',
             fontWeight: 'hairline',
             color: 'paragraph',
-            lineHeight: {base: 5, md: 10},
+            lineHeight: {base: 5, md: 7},
             letterSpacing: 'wider',
             ml: {base: 3.5, md: 4},
             fontSize: {

@@ -1,9 +1,19 @@
-import {Text, AspectRatio, Flex, StylesProvider, useMultiStyleConfig} from '@chakra-ui/react';
+import {
+    Text,
+    AspectRatio,
+    Flex,
+    Link,
+    Center,
+    Img,
+    StylesProvider,
+    useMultiStyleConfig,
+} from '@chakra-ui/react';
 import * as React from 'react';
 import ProjectHeader from '../../components/project-header';
 import {StaticImage} from 'gatsby-plugin-image';
 import FadeIn from '../../components/fade-in';
 import TechStack from '../tech-stack';
+import {useLocation} from '@reach/router';
 
 interface ProjectProps {
     data: {
@@ -18,11 +28,14 @@ interface ProjectProps {
         role: string;
         stack: string[];
         achievement: string;
+        slug: string;
+        images: string[];
+        conclusion?: string;
     };
 }
 
 const Project = (props: ProjectProps) => {
-    const {title, header, brief, stack, role, achievement} = props.data;
+    const {title, header, slug, brief, stack, role, achievement, conclusion, images} = props.data;
     const styles = useMultiStyleConfig('Project', {});
 
     return (
@@ -33,11 +46,8 @@ const Project = (props: ProjectProps) => {
 
                 {/* Project Thumbnail */}
                 <FadeIn delay={1000}>
-                    <AspectRatio {...styles.pThumbnail}>
-                        <StaticImage
-                            src="../../images/projects/utmb/1.jpg"
-                            alt="project-thumbnail-image"
-                        ></StaticImage>
+                    <AspectRatio {...styles.pThumbnail} mt={{base: 14, md: 16}}>
+                        <Img src={images[0]} alt="project-thumbnail-image"></Img>
                     </AspectRatio>
                 </FadeIn>
 
@@ -59,12 +69,11 @@ const Project = (props: ProjectProps) => {
                 {stack && <TechStack pf={stack}></TechStack>}
 
                 {/* Project Thumbnail 2 */}
-                <AspectRatio {...styles.pThumbnail}>
-                    <StaticImage
-                        src="../../images/projects/utmb/2.jpg"
-                        alt="project-thumbnail-image"
-                    ></StaticImage>
-                </AspectRatio>
+                {images[1] && (
+                    <AspectRatio {...styles.pThumbnail}>
+                        <Img src={images[1]} alt="project-thumbnail-image"></Img>
+                    </AspectRatio>
+                )}
 
                 {/* Project Role */}
                 {role && (
@@ -77,12 +86,11 @@ const Project = (props: ProjectProps) => {
                 )}
 
                 {/* Project Thumbnail 3 */}
-                <AspectRatio {...styles.pThumbnail}>
-                    <StaticImage
-                        src="../../images/projects/utmb/3.jpg"
-                        alt="project-thumbnail-image"
-                    ></StaticImage>
-                </AspectRatio>
+                {images[2] && (
+                    <AspectRatio {...styles.pThumbnail}>
+                        <Img src={images[2]} alt="project-thumbnail-image"></Img>
+                    </AspectRatio>
+                )}
 
                 {achievement && (
                     <Text
@@ -92,6 +100,39 @@ const Project = (props: ProjectProps) => {
                         }}
                     ></Text>
                 )}
+
+                {/* Project Thumbnail 3 */}
+                {images[3] && (
+                    <AspectRatio {...styles.pThumbnail}>
+                        <Img src={images[3]} alt="project-thumbnail-image"></Img>
+                    </AspectRatio>
+                )}
+
+                {/* Project Role */}
+                {conclusion && (
+                    <Text
+                        {...styles.pContent}
+                        dangerouslySetInnerHTML={{
+                            __html: conclusion,
+                        }}
+                    ></Text>
+                )}
+
+                <Center {...styles.pButton}>
+                    <Link
+                        href="/"
+                        variant="secondary"
+                        fontSize={{
+                            base: '10px',
+                            mini: '12px',
+                            xs: '14px',
+                            md: 'xs',
+                            lg: '17px',
+                        }}
+                    >
+                        Back to portfolio
+                    </Link>
+                </Center>
             </StylesProvider>
         </Flex>
     );

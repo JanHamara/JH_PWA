@@ -4,6 +4,7 @@ export default {
         letterSpacing: 'paragraph',
         fontSize: 'md',
         lineHeight: '2',
+        fontWeight: 'hairline',
         opacity: 0.8,
         color: 'paragraph',
         transition: 'opacity 1s',

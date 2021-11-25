@@ -12,7 +12,8 @@ const SiteHeader = ({variant = 'default'}: SiteHeaderProps) => {
         <Center
             position={variant == 'menu' ? 'absolute' : 'static'}
             top={0}
-            zIndex={variant == 'menu' ? '-2' : '1'}
+            // zIndex={variant == 'menu' ? '1' : '1'}
+            zIndex={1}
             justifyContent={variant == 'subpage' ? {base: 'flex-start', md: 'center'} : 'center'}
             layerStyle={
                 variant == 'subpage'

@@ -111,7 +111,8 @@ const projectHeaderLabel = {
 
 const projectParagraph = {
     ...paragraph,
-    letterSpacing: 'wider',
+    letterSpacing: '0.16em',
+    lineHeight: {base: 2, md: 1.8},
 };
 
 export default {
