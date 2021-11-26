@@ -21,9 +21,13 @@ const ProjectHeader = (props: ProjectHeaderProps) => {
             <StylesProvider value={styles}>
                 <Flex {...styles.container}>
                     <FadeIn delay={500}>
-                        <Text textStyle="projectHeading" {...styles.heading}>
-                            {title}
-                        </Text>
+                        <Text
+                            textStyle="projectHeading"
+                            {...styles.heading}
+                            dangerouslySetInnerHTML={{
+                                __html: title,
+                            }}
+                        ></Text>
                     </FadeIn>
 
                     <FadeIn delay={750}>

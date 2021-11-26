@@ -47,6 +47,27 @@ exports.createPages = ({actions}) => {
             achievement:
                 'I worked on the front-end integration of  <strong>reusable UI components</strong> using an internal web component Javascript library called <strong>Modulus</strong>, also assisting back-end devs during development of API with <strong>Sylius</strong>, a powerful headless eCommerce platform, recognized by developers as the best <strong>Symfony-based</strong> framework built with <strong>API Platform</strong>, ready to interface with <strong>PWA</strong>, <strong>SPA</strong>, or <strong>Native Mobile Apps</strong>. <br/><br/> In order to create a <strong>robust</strong> and <strong>well organized design system</strong> powered by our UI components, as well as to achieve <strong>the highest level of abstraction and modularity</strong> within our component library, we have been following <strong>the atomic design methodology</strong>',
         },
+        {
+            slug: 'bat',
+            title: 'British American Tobacco',
+            header: {
+                techstack:
+                    'SF Lightning Web Components, Salesforce B2B Commerce Cloud, Adobe Illustrator, After Effects',
+                client: 'British American Tobacco',
+                role: 'Front-end Development, UI/UX Design',
+                agency: 'WIDE Switzerland',
+            },
+            images: [
+                'https://res.cloudinary.com/jhamara/image/upload/v1637922275/projects/1_pbli52.jpg',
+                'https://res.cloudinary.com/jhamara/image/upload/v1637922488/projects/BAT_-_2_sqrubq.jpg',
+                'https://res.cloudinary.com/jhamara/image/upload/v1637927285/projects/3_ydjtos.jpg',
+            ],
+            brief: '<strong>British American Tobacco</strong> has tasked our agency with a creation of <strong>BLAST®</strong> platform, a brand new <strong>B2B e-commerce product</strong> for their retailers, offering not only a new image for their <strong>product catalogue</strong> along with an <strong>improved shopping experience</strong>, but also with additional features, such as <strong>retailer training platform</strong>, <strong>loyalty points scheme</strong> with discounts on purchases, as well as <strong>daily lottery</strong> for official platform members.',
+            // stack: ['react', 'nextjs', 'nodejs', 'typescript', 'strapi'],
+            role: "We have built the platform on top of <strong>Salesforce B2B Commerce Cloud</strong>, also making use of Salesforce's <strong>Lightning Web Components (LWCs)</strong> for the development of UI. Lightning Web Components are extremely lightweight, they use <strong>core Web Components standards</strong>, follow latest accessibility requirements and deliver exceptional performance in browsers that support Salesforce. <br/><br/> Most importantly, however, these components are optimized for use within <strong>Salesforce's Experience Cloud</strong> Visual Editor, allowing non-technical users to use these components easily in a drag-and-drop editor, <strong>creating full page layouts</strong> and <strong>managing data flows into components</strong> from within a simple visual editor.",
+            achievement:
+                'My responsibility was mostly the front-end integration, <strong>development of UI components</strong> with Lightning Web Components technology, integration with <strong>Commerce Cloud</strong> data, as well as setting up <strong>page templates</strong> and <strong>data flows</strong> through component data attributes set up in <strong>Experience Cloud.</strong>. <br/><br/> As the project progressed, I have taken on more responsibilities for some <strong>creative tasks</strong>, for example, designing a <strong>collection of animated illustrations</strong> requested by client, with which they wanted to give the platform a little bit of <strong>personal "fun" touch</strong>.',
+        },
     ];
 
     pages.forEach((page) => {

@@ -2,9 +2,11 @@ import {
     Text,
     AspectRatio,
     Flex,
+    HStack,
     Link,
     Center,
     Img,
+    Box,
     StylesProvider,
     useMultiStyleConfig,
 } from '@chakra-ui/react';
@@ -13,7 +15,11 @@ import ProjectHeader from '../../components/project-header';
 import {StaticImage} from 'gatsby-plugin-image';
 import FadeIn from '../../components/fade-in';
 import TechStack from '../tech-stack';
-import {useLocation} from '@reach/router';
+
+// Static Assets Imports
+import loaderGif from '../../images/projects/bat/loader.gif';
+import cartGif from '../../images/projects/bat/cart-animation.gif';
+import cartEmptyGif from '../../images/projects/bat/cart.gif';
 
 interface ProjectProps {
     data: {
@@ -116,6 +122,46 @@ const Project = (props: ProjectProps) => {
                             __html: conclusion,
                         }}
                     ></Text>
+                )}
+
+                {slug == 'bat' && (
+                    <Box position="relative">
+                        <AspectRatio {...styles.pThumbnail}>
+                            <Img
+                                src="https://res.cloudinary.com/jhamara/image/upload/v1637930728/projects/BAT_-_4_nkcudo.jpg"
+                                alt="project-thumbnail-image"
+                            ></Img>
+                        </AspectRatio>
+
+                        <HStack
+                            w="90%"
+                            h={{base: 'auto', md: '400px'}}
+                            position="absolute"
+                            top={{base: '70%', xs: '65%', lg: '60%'}}
+                            left="50%"
+                            transform="translate(-50%, -50%)"
+                            spacing={28}
+                            justifyContent="center"
+                        >
+                            {/* <Img
+                                src={loaderGif}
+                                maxW={{base: '150px', md: '200px'}}
+                                alt="cart-animation"
+                            ></Img> */}
+
+                            <Img
+                                src={cartGif}
+                                maxW={{base: '50px', xs: '70px', md: '140px', lg: '200px'}}
+                                alt="cart-animation"
+                            ></Img>
+                            {/* 
+                            <Img
+                                src={cartEmptyGif}
+                                maxW={{base: '150px', md: '200px'}}
+                                alt="cart-empty-animation"
+                            ></Img> */}
+                        </HStack>
+                    </Box>
                 )}
 
                 <Center {...styles.pButton}>
