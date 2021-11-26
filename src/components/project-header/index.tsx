@@ -7,7 +7,7 @@ interface ProjectHeaderProps {
     header: {
         techstack: string;
         client: string;
-        role: string;
+        role: string[];
         agency: string;
     };
 }
@@ -53,7 +53,9 @@ const ProjectHeader = (props: ProjectHeaderProps) => {
                                     Role
                                 </Text>
                                 <Text textStyle="paragraph" {...styles.headerItemValue}>
-                                    {header.role}
+                                    {header.role.map((it) => (
+                                        <Box>{it}</Box>
+                                    ))}
                                 </Text>
                             </Box>
                             <Box {...styles.headerItem} display={{base: 'none', md: 'block'}}>

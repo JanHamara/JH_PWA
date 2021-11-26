@@ -12,9 +12,11 @@ exports.createPages = ({actions}) => {
             header: {
                 techstack: 'React, Next.js, Typescript, Strapi, Docker, React Aria',
                 client: 'UTMB®',
-                role: 'Front-end Integration, UI/UX Consultation',
+                role: ['Front-end Integration', 'UI/UX Consultation'],
                 agency: 'WIDE Switzerland',
             },
+            shortDesc:
+                'Online race platform and site-factory for the <strong>biggest trail-running organization in the world</strong>...',
             images: [
                 'https://res.cloudinary.com/jhamara/image/upload/v1637860072/projects/1_u09fuy.jpg',
                 'https://res.cloudinary.com/jhamara/image/upload/v1637860072/projects/2_lrm0og.jpg',
@@ -32,9 +34,11 @@ exports.createPages = ({actions}) => {
             header: {
                 techstack: 'Modulus, Express, Sylius, Webpack, Docker, ESLint + Lint-Staged',
                 client: 'easyGym',
-                role: 'Front-end Integration, UI/UX Consultation',
+                role: ['Front-end Integration', 'UI/UX Consultation'],
                 agency: 'WIDE Switzerland',
             },
+            shortDesc:
+                'Website development for a gym franchise owned by one of the most-known consumer brands in Europe - <strong>easyJet</strong>...',
             images: [
                 'https://res.cloudinary.com/jhamara/image/upload/v1637860061/projects/1_hp45mx.jpg',
                 'https://res.cloudinary.com/jhamara/image/upload/v1637860060/projects/2_ifgruf.jpg',
@@ -49,14 +53,16 @@ exports.createPages = ({actions}) => {
         },
         {
             slug: 'bat',
-            title: 'British American Tobacco',
+            title: 'BLAST® by BAT',
             header: {
                 techstack:
                     'SF Lightning Web Components, Salesforce B2B Commerce Cloud, Adobe Illustrator, After Effects',
                 client: 'British American Tobacco',
-                role: 'Front-end Development, UI/UX Design',
+                role: ['Front-end Integration', 'UI/UX Design'],
                 agency: 'WIDE Switzerland',
             },
+            shortDesc:
+                'B2B e-Commerce platform for retailers of <strong>British American Tobacco products</strong>...',
             images: [
                 'https://res.cloudinary.com/jhamara/image/upload/v1637922275/projects/1_pbli52.jpg',
                 'https://res.cloudinary.com/jhamara/image/upload/v1637922488/projects/BAT_-_2_sqrubq.jpg',
@@ -76,5 +82,11 @@ exports.createPages = ({actions}) => {
             component: require.resolve(`./src/templates/project-template.js`),
             context: {page},
         });
+    });
+
+    createPage({
+        path: `/portfolio`,
+        component: require.resolve(`./src/templates/portfolio-page.js`),
+        context: {pages},
     });
 };
