@@ -3,10 +3,10 @@ import {
     AspectRatio,
     Flex,
     HStack,
-    Link,
     Center,
     Img,
     Box,
+    Link as ChakraLink,
     StylesProvider,
     useMultiStyleConfig,
 } from '@chakra-ui/react';
@@ -15,6 +15,7 @@ import ProjectHeader from '../../components/project-header';
 import {StaticImage} from 'gatsby-plugin-image';
 import FadeIn from '../../components/fade-in';
 import TechStack from '../tech-stack';
+import {Link} from 'gatsby';
 
 // Static Assets Imports
 import loaderGif from '../../images/projects/bat/loader.gif';
@@ -165,18 +166,20 @@ const Project = (props: ProjectProps) => {
                 )}
 
                 <Center {...styles.pButton}>
-                    <Link
-                        href="/"
-                        variant="secondary"
-                        fontSize={{
-                            base: '10px',
-                            mini: '12px',
-                            xs: '14px',
-                            md: 'xs',
-                            lg: '17px',
-                        }}
-                    >
-                        Back to portfolio
+                    <Link to="/portfolio">
+                        <ChakraLink
+                            href="/portfolio"
+                            variant="secondary"
+                            fontSize={{
+                                base: '10px',
+                                mini: '12px',
+                                xs: '14px',
+                                md: 'xs',
+                                lg: '17px',
+                            }}
+                        >
+                            Back to portfolio
+                        </ChakraLink>
                     </Link>
                 </Center>
             </StylesProvider>

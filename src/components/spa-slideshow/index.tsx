@@ -3,7 +3,7 @@ import {
     VStack,
     HStack,
     Text,
-    Link,
+    Link as ChakraLink,
     Center,
     AspectRatio,
     Button,
@@ -13,6 +13,7 @@ import {
 import * as React from 'react';
 import {StaticImage} from 'gatsby-plugin-image';
 import {useLocation} from '@reach/router';
+import {Link} from 'gatsby';
 
 import TechStack from '../tech-stack';
 
@@ -243,9 +244,9 @@ const SpaSlideshow = (props: SpaSlideshowProps) => {
                         position={{base: 'static', md: 'absolute'}}
                         bottom="calc(15vh)"
                     >
-                        <Link href={items[current].href} target="_blank" variant="secondary">
+                        <ChakraLink href={items[current].href} target="_blank" variant="secondary">
                             Read More
-                        </Link>
+                        </ChakraLink>
                     </Center>
                 )}
 
@@ -257,17 +258,11 @@ const SpaSlideshow = (props: SpaSlideshowProps) => {
                         bottom={{base: '15vh', md: 'calc(15vh)'}}
                     >
                         {items[items.length - 1].label == items[current].label ? (
-                            <Link
-                                href={loc.href.replace(
-                                    loc.pathname,
-                                    about ? '/techstack' : techstack ? '/portfolio' : '/'
-                                )}
-                                variant="secondary"
-                            >
-                                {items[current].label}
+                            <Link to={about ? '/techstack' : techstack ? '/portfolio' : '/'}>
+                                <ChakraLink variant="secondary">{items[current].label}</ChakraLink>
                             </Link>
                         ) : (
-                            <Link
+                            <ChakraLink
                                 href="/"
                                 onClick={(e) => {
                                     e.preventDefault();
@@ -276,7 +271,7 @@ const SpaSlideshow = (props: SpaSlideshowProps) => {
                                 variant="secondary"
                             >
                                 {items[current].label}
-                            </Link>
+                            </ChakraLink>
                         )}
                     </Center>
                 )}

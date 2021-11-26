@@ -73,7 +73,7 @@ const ContactPage = () => {
                 >
                     <AspectRatio w="37px" h="288px" opacity={1} ratio={1 / 8}>
                         <StaticImage
-                            src="../images/illustrations/contact-text.png"
+                            src="../images/categories/contact.png"
                             alt="contact-page-label-image"
                             aria-label="contact-text-image"
                             placeholder="none"

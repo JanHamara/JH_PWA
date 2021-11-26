@@ -81,6 +81,24 @@ const AwardsPage = () => {
                         ></StaticImage>
                     </AspectRatio>
                 </Box>
+
+                <Box
+                    position="absolute"
+                    left={{base: 8, xs: 10, md: 16}}
+                    bottom="64px"
+                    display={{base: 'none', xl: 'block'}}
+                    zIndex={-1}
+                >
+                    <AspectRatio w="42px" h="288px" opacity={1} ratio={1 / 8}>
+                        <StaticImage
+                            src="../images/categories/awards.png"
+                            alt="contact-page-label-image"
+                            aria-label="contact-text-image"
+                            placeholder="none"
+                            loading="eager"
+                        ></StaticImage>
+                    </AspectRatio>
+                </Box>
             </FadeIn>
         </>
     );
