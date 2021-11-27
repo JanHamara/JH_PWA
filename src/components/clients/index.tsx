@@ -67,7 +67,11 @@ const Clients = ({...otherProps}) => {
                     </AspectRatio>
 
                     <AspectRatio {...styles.ratioBase} ratio={5 / 4}>
-                        <Link to="https://www.piguetgalland.ch/en/" target="_blank">
+                        <Link
+                            to="https://www.piguetgalland.ch/en/"
+                            target="_blank"
+                            style={{overflow: 'visible'}}
+                        >
                             <Img
                                 transform="scale(1.3) translateX(-6px)"
                                 src={PIGUETGALLAND_SVG}
