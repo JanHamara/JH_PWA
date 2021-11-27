@@ -40,7 +40,7 @@ export default {
         background: 'white',
         color: 'black',
         px: {base: '7px', md: '10px'},
-        py: {base: '3px', md: '8px', lg: '3px'},
+        py: {base: '3px', md: '8px'},
         textTransform: 'uppercase',
         fontFamily: 'heading',
         fontWeight: 'regular',
