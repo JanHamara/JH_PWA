@@ -25,7 +25,7 @@ const AboutPage = () => {
         {
             id: 1,
             content:
-                'I graduated from <strong>MA Digital Media & Information Studies</strong> <br/> degree at <strong>the University of Glasgow</strong>. <br/><br/>Participation at many <strong>hackathons</strong> over the world during my studies has allowed me to learn from the very best developers and companies in the tech field, and has led to some notable achievements and <a href="https://www.instagram.com/watch_us_see/" class="inlineLink" target="_blank" style="color: #d1d1d1">awards</a>',
+                'I graduated from <strong>MA Digital Media & Information Studies</strong> <br/> degree at <strong>the University of Glasgow</strong>. <br/><br/> During my studies, I have completed multiple internships, most important one at <strong>J.P.Morgan Chase & Co.</strong> at their <strong>Technology Centre of Excellence</strong> in Glasgow. <br/><br/>Participation at many <strong>hackathons</strong> over the world during my studies has allowed me to learn from the very best developers and companies in the tech field, and has led to some notable achievements and <a href="https://www.instagram.com/watch_us_see/" class="inlineLink" target="_blank" style="color: #d1d1d1;"><strong>awards</strong></a>',
             label: 'Interests',
         },
         {

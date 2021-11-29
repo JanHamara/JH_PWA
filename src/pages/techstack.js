@@ -1,9 +1,10 @@
 import * as React from 'react';
-import {Box} from '@chakra-ui/react';
+import {Box, AspectRatio} from '@chakra-ui/react';
 import Layout from '../components/layout';
 import SpaSlideshow from '../components/spa-slideshow';
 import ProgressSidebar from '../components/progress-sidebar';
 import FadeIn from '../components/fade-in';
+import {StaticImage} from 'gatsby-plugin-image';
 
 const TechStackPage = () => {
     const [current, setCurrent] = React.useState(0);

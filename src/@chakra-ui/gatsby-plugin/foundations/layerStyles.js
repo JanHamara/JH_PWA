@@ -75,7 +75,7 @@ export default {
         paddingLeft: {base: 8, xs: 10, md: 16},
         paddingRight: {base: 8, xs: 10, md: 16},
         pt: {base: 4, md: 0},
-        pb: {base: 10, xs: 16, md: 24},
+        pb: {base: 20, xs: 24, md: 24},
     },
 
     constraintMaxMobile: {

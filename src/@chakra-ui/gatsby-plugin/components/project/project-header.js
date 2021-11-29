@@ -2,6 +2,7 @@ export default {
     baseStyle: {
         container: {
             direction: 'column',
+            px: {base: 2, md: 0},
         },
         heading: {
             mt: {base: 4, xs: 8, md: 0},
