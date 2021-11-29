@@ -52,8 +52,12 @@ const Layout = ({portfolio = false, pageTitle = 'Personal Portfolio', children}:
             >
                 <meta charSet="utf-8" />
                 <meta name="robots" content="all" />
+                <meta
+                    name="description"
+                    content="Personal portfolio website of Jan Hamara, a front-end developer and UI/UX designer based in Barcelona, Spain."
+                />
                 <title>Jan Hamara | {pageTitle}</title>
-                {/* <link rel="canonical" href="http://mysite.com/example" /> */}
+                <link rel="canonical" href="https://jhpwa.gatsbyjs.io/" />
             </Helmet>
 
             <FadeIn duration={1.5} delay={300}>
