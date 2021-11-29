@@ -16,6 +16,10 @@ export default {
             w: 'full',
             ratio: 11 / 7,
         },
+        pHalfThumbnail: {
+            w: 'full',
+            ratio: 11 / 5,
+        },
         pContent: {
             color: 'content',
             mt: {base: 10, md: 20},
@@ -26,6 +30,10 @@ export default {
                 xs: '2xs',
                 md: '17px',
             },
+        },
+        pVideo: {
+            mt: {base: 10, md: 20},
+            w: 'full',
         },
         phContent: {
             color: 'content',
@@ -42,5 +50,5 @@ export default {
             mt: {base: 10, md: 20},
         },
     },
-    parts: ['pHeading', 'pContent', 'phContent', 'pThumbnail', 'pButton'],
+    parts: ['pHeading', 'pContent', 'phContent', 'pThumbnail', 'pButton', 'pVideo'],
 };

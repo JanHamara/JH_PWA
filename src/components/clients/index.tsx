@@ -1,12 +1,6 @@
 import * as React from 'react';
-import {
-    StylesProvider,
-    HStack,
-    useMultiStyleConfig,
-    Link,
-    AspectRatio,
-    Img,
-} from '@chakra-ui/react';
+import {StylesProvider, HStack, useMultiStyleConfig, AspectRatio, Img} from '@chakra-ui/react';
+import {Link} from 'gatsby';
 
 import BAT_SVG from '../../images/svg/british-american-tobacco.svg';
 import EASYGYM_SVG from '../../images/svg/easygym.svg';
@@ -31,46 +25,60 @@ const Clients = ({...otherProps}) => {
             <StylesProvider value={styles}>
                 <HStack spacing={{base: '4vw', xl: 16, xxl: 20}} justifySelf="flex-start">
                     <AspectRatio {...styles.ratioSquare} ratio={1 / 1}>
-                        {/* <Link href="https://batsupplier.com/" target="_blank" w="fit" h="fit"> */}
-                        <Img
-                            transform="scale(1.1)"
-                            src={BAT_SVG}
-                            alt="British-American-Tobacco"
-                            {...styles.client}
-                        ></Img>
-                        {/* </Link> */}
+                        <Link to="/portfolio/bat">
+                            <Img
+                                transform="scale(1.1)"
+                                src={BAT_SVG}
+                                alt="British-American-Tobacco"
+                                {...styles.client}
+                            ></Img>
+                        </Link>
                     </AspectRatio>
 
                     <AspectRatio {...styles.ratioBase} ratio={5 / 4}>
-                        <Img src={EASYGYM_SVG} alt="Easygym" {...styles.client}></Img>
+                        <Link to="/portfolio/easygym">
+                            <Img src={EASYGYM_SVG} alt="Easygym" {...styles.client}></Img>
+                        </Link>
                     </AspectRatio>
 
                     <AspectRatio {...styles.ratioBase} ratio={5 / 4}>
-                        <Img
-                            transform="scale(.8)"
-                            src={UTMB_SVG}
-                            alt="UTMB"
-                            {...styles.client}
-                        ></Img>
+                        <Link to="/portfolio/utmb">
+                            <Img
+                                transform="scale(.8)"
+                                src={UTMB_SVG}
+                                alt="UTMB"
+                                {...styles.client}
+                            ></Img>
+                        </Link>
                     </AspectRatio>
                 </HStack>
 
                 <HStack spacing={{base: '4vw', xl: 16, xxl: 20}} justifySelf="flex-end">
                     <AspectRatio {...styles.ratioBase} ratio={5 / 4}>
-                        <Img src={FIRMENICH_SVG} alt="Firmenich" {...styles.client}></Img>
+                        <Link to="https://www.firmenich.com/" target="_blank">
+                            <Img src={FIRMENICH_SVG} alt="Firmenich" {...styles.client}></Img>
+                        </Link>
                     </AspectRatio>
 
                     <AspectRatio {...styles.ratioBase} ratio={5 / 4}>
-                        <Img src={ROGERDUBUIS_SVG} alt="Roger Dubuis" {...styles.client}></Img>
+                        <Link to="https://www.rogerdubuis.com/ww-en" target="_blank">
+                            <Img src={ROGERDUBUIS_SVG} alt="Roger Dubuis" {...styles.client}></Img>
+                        </Link>
                     </AspectRatio>
 
                     <AspectRatio {...styles.ratioBase} ratio={5 / 4}>
-                        <Img
-                            transform="scale(1.3) translateX(-6px)"
-                            src={PIGUETGALLAND_SVG}
-                            alt="Piguet Galland"
-                            {...styles.client}
-                        ></Img>
+                        <Link
+                            to="https://www.piguetgalland.ch/en/"
+                            target="_blank"
+                            style={{overflow: 'visible'}}
+                        >
+                            <Img
+                                transform="scale(1.3) translateX(-6px)"
+                                src={PIGUETGALLAND_SVG}
+                                alt="Piguet Galland"
+                                {...styles.client}
+                            ></Img>
+                        </Link>
                     </AspectRatio>
                 </HStack>
             </StylesProvider>

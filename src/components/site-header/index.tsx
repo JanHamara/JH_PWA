@@ -1,7 +1,8 @@
-import {Center, AspectRatio, Img, Link} from '@chakra-ui/react';
+import {Center, AspectRatio} from '@chakra-ui/react';
 import * as React from 'react';
 import {StaticImage} from 'gatsby-plugin-image';
 import FadeIn from '../fade-in';
+import {Link} from 'gatsby';
 
 interface SiteHeaderProps {
     variant?: 'default' | 'menu' | 'subpage';
@@ -33,7 +34,7 @@ const SiteHeader = ({variant = 'default'}: SiteHeaderProps) => {
             mb={variant == 'subpage' ? 0 : 0}
         >
             <FadeIn duration={variant == 'default' ? 2 : 1} delay={variant == 'default' ? 500 : 0}>
-                <Link href="/" variant="ghost">
+                <Link to="/">
                     <AspectRatio
                         boxSize={
                             variant == 'subpage'

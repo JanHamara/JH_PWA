@@ -42,5 +42,8 @@ export default {
         '.sep': {
             color: 'red',
         },
+        '.video-vim': {
+            minHeight: {base: '250px', md: '500px'},
+        },
     }),
 };
