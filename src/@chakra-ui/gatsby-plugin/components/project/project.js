@@ -3,6 +3,7 @@ export default {
         pHeading: {
             textStyle: 'projectHeading',
             mt: {base: 14, md: 24},
+            px: {base: 2, md: 0},
             fontSize: {base: '17px', md: 'xl'},
             _before: {
                 content: '"/"',
@@ -23,6 +24,7 @@ export default {
         pContent: {
             color: 'content',
             mt: {base: 10, md: 20},
+            px: {base: 2, md: 0},
             textStyle: 'projectParagraph',
             fontSize: {
                 base: '9.5px',
@@ -38,6 +40,7 @@ export default {
         phContent: {
             color: 'content',
             mt: {base: 6, md: 8},
+            px: {base: 2, md: 0},
             textStyle: 'projectParagraph',
             fontSize: {
                 base: '10px',
@@ -47,7 +50,7 @@ export default {
             },
         },
         pButton: {
-            mt: {base: 10, md: 20},
+            mt: {base: 12, xs: 16, md: 20},
         },
     },
     parts: ['pHeading', 'pContent', 'phContent', 'pThumbnail', 'pButton', 'pVideo'],
