@@ -3,6 +3,7 @@ import {
     AspectRatio,
     Flex,
     HStack,
+    Stack,
     Center,
     Img,
     Box,
@@ -27,22 +28,39 @@ interface ProjectProps {
         title: string;
         header: {
             techstack: string;
-            client: string;
-            role: string;
-            agency: string;
+            client?: string;
+            role: string[];
+            agency?: string;
         };
         brief: string;
         role: string;
         stack: string[];
         achievement: string;
         slug: string;
-        images: string[];
+        images?: string[];
+        sideImages?: {
+            left: string;
+            right: string;
+        };
+        video?: string;
         conclusion?: string;
     };
 }
 
 const Project = (props: ProjectProps) => {
-    const {title, header, slug, brief, stack, role, achievement, conclusion, images} = props.data;
+    const {
+        title,
+        header,
+        slug,
+        brief,
+        stack,
+        role,
+        achievement,
+        conclusion,
+        images,
+        sideImages,
+        video,
+    } = props.data;
     const styles = useMultiStyleConfig('Project', {});
 
     return (
@@ -52,11 +70,13 @@ const Project = (props: ProjectProps) => {
                 <ProjectHeader title={title} header={header}></ProjectHeader>
 
                 {/* Project Thumbnail */}
-                <FadeIn delay={1000}>
-                    <AspectRatio {...styles.pThumbnail} mt={{base: 14, md: 16}}>
-                        <Img src={images[0]} alt="project-thumbnail-image"></Img>
-                    </AspectRatio>
-                </FadeIn>
+                {images && images[0] && (
+                    <FadeIn delay={1000}>
+                        <AspectRatio {...styles.pThumbnail} mt={{base: 14, md: 16}}>
+                            <Img src={images[0]} alt="project-thumbnail-image"></Img>
+                        </AspectRatio>
+                    </FadeIn>
+                )}
 
                 {/* Project Brief */}
                 {brief && (
@@ -76,10 +96,26 @@ const Project = (props: ProjectProps) => {
                 {stack && <TechStack pf={stack}></TechStack>}
 
                 {/* Project Thumbnail 2 */}
-                {images[1] && (
+                {images && images[1] && (
                     <AspectRatio {...styles.pThumbnail}>
                         <Img src={images[1]} alt="project-thumbnail-image"></Img>
                     </AspectRatio>
+                )}
+
+                {/* Side Images */}
+                {sideImages && (
+                    <Stack
+                        spacing={4}
+                        mt={{base: 10, md: 20}}
+                        direction={{base: 'column', md: 'row'}}
+                    >
+                        <AspectRatio {...styles.pHalfThumbnail}>
+                            <Img src={sideImages.left} alt="project-thumbnail-image"></Img>
+                        </AspectRatio>
+                        <AspectRatio {...styles.pHalfThumbnail}>
+                            <Img src={sideImages.right} alt="project-thumbnail-image"></Img>
+                        </AspectRatio>
+                    </Stack>
                 )}
 
                 {/* Project Role */}
@@ -93,7 +129,7 @@ const Project = (props: ProjectProps) => {
                 )}
 
                 {/* Project Thumbnail 3 */}
-                {images[2] && (
+                {images && images[2] && (
                     <AspectRatio {...styles.pThumbnail}>
                         <Img src={images[2]} alt="project-thumbnail-image"></Img>
                     </AspectRatio>
@@ -109,7 +145,7 @@ const Project = (props: ProjectProps) => {
                 )}
 
                 {/* Project Thumbnail 3 */}
-                {images[3] && (
+                {images && images[3] && (
                     <AspectRatio {...styles.pThumbnail}>
                         <Img src={images[3]} alt="project-thumbnail-image"></Img>
                     </AspectRatio>
@@ -162,6 +198,21 @@ const Project = (props: ProjectProps) => {
                                 alt="cart-empty-animation"
                             ></Img> */}
                         </HStack>
+                    </Box>
+                )}
+
+                {/* Project Demo */}
+                {video && (
+                    <Box {...styles.pVideo} maxH="500px">
+                        <iframe
+                            title="vimeo-player"
+                            src={video + '&title=0&byline=0&portrait=0'}
+                            width="100%"
+                            height="auto"
+                            frameborder="0"
+                            className="video-vim"
+                            allowfullscreen
+                        ></iframe>
                     </Box>
                 )}
 

@@ -16,8 +16,8 @@ const PortfolioPage = ({pageContext: {pages}}) => {
 
                 <FadeIn delay={600}>
                     <Text mt={8} layerStyle="paragraph">
-                        Explore a collection of latest design and development work, I did for
-                        various clients and projects.
+                        Explore a collection of latest design and development projects, I worked on
+                        for various clients and agencies...
                     </Text>
                 </FadeIn>
 
@@ -25,7 +25,7 @@ const PortfolioPage = ({pageContext: {pages}}) => {
                     <VStack
                         maxW={{base: '85vw', lg: 'container.xl'}}
                         w="full"
-                        mt={{base: 12, xs: 16, md: 24, lg: 28}}
+                        mt={{base: 12, xs: 16, md: 24}}
                         spacing={{base: 16, md: 28, lg: 32}}
                     >
                         {pages.map((page) => (
@@ -47,7 +47,7 @@ const PortfolioPage = ({pageContext: {pages}}) => {
                                         transition="opacity 1s"
                                     >
                                         <img
-                                            src={page.images[0]}
+                                            src={page.previewImage}
                                             alt="portfolio-thumbnail-image"
                                             sx={{position: 'static'}}
                                         ></img>
@@ -120,7 +120,14 @@ const PortfolioPage = ({pageContext: {pages}}) => {
                                         ></Text>
                                     )}
 
-                                    <Link to={'/portfolio/' + page.slug}>
+                                    <Link
+                                        to={
+                                            page.slug == 'rd'
+                                                ? 'https://www.rogerdubuis.com/ww-en'
+                                                : '/portfolio/' + page.slug
+                                        }
+                                        target={page.slug == 'rd' ? '_blank' : '_self'}
+                                    >
                                         <ChakraLink
                                             ml={{base: 3, md: 6}}
                                             variant="secondary"

@@ -6,9 +6,9 @@ interface ProjectHeaderProps {
     title: string;
     header: {
         techstack: string;
-        client: string;
+        client?: string;
         role: string[];
-        agency: string;
+        agency?: string;
     };
 }
 
@@ -32,40 +32,60 @@ const ProjectHeader = (props: ProjectHeaderProps) => {
 
                     <FadeIn delay={750}>
                         <SimpleGrid {...styles.header} columns={{base: 1, md: 2}}>
-                            <Box {...styles.headerItem}>
-                                <Text textStyle="projectHeaderLabel" {...styles.headerItemLabel}>
-                                    Tech Stack
-                                </Text>
-                                <Text textStyle="paragraph" {...styles.headerItemValue}>
-                                    {header.techstack}
-                                </Text>
-                            </Box>
-                            <Box {...styles.headerItem}>
-                                <Text textStyle="projectHeaderLabel" {...styles.headerItemLabel}>
-                                    Client
-                                </Text>
-                                <Text textStyle="paragraph" {...styles.headerItemValue}>
-                                    {header.client}
-                                </Text>
-                            </Box>
-                            <Box {...styles.headerItem}>
-                                <Text textStyle="projectHeaderLabel" {...styles.headerItemLabel}>
-                                    Role
-                                </Text>
-                                <Text textStyle="paragraph" {...styles.headerItemValue}>
-                                    {header.role.map((it) => (
-                                        <Box>{it}</Box>
-                                    ))}
-                                </Text>
-                            </Box>
-                            <Box {...styles.headerItem} display={{base: 'none', md: 'block'}}>
-                                <Text textStyle="projectHeaderLabel" {...styles.headerItemLabel}>
-                                    Agency
-                                </Text>
-                                <Text textStyle="paragraph" {...styles.headerItemValue}>
-                                    {header.agency}
-                                </Text>
-                            </Box>
+                            {header.techstack && (
+                                <Box {...styles.headerItem}>
+                                    <Text
+                                        textStyle="projectHeaderLabel"
+                                        {...styles.headerItemLabel}
+                                    >
+                                        Tech Stack
+                                    </Text>
+                                    <Text textStyle="paragraph" {...styles.headerItemValue}>
+                                        {header.techstack}
+                                    </Text>
+                                </Box>
+                            )}
+                            {header.client && (
+                                <Box {...styles.headerItem}>
+                                    <Text
+                                        textStyle="projectHeaderLabel"
+                                        {...styles.headerItemLabel}
+                                    >
+                                        Client
+                                    </Text>
+                                    <Text textStyle="paragraph" {...styles.headerItemValue}>
+                                        {header.client}
+                                    </Text>
+                                </Box>
+                            )}
+                            {header.role && (
+                                <Box {...styles.headerItem}>
+                                    <Text
+                                        textStyle="projectHeaderLabel"
+                                        {...styles.headerItemLabel}
+                                    >
+                                        Role
+                                    </Text>
+                                    <Text textStyle="paragraph" {...styles.headerItemValue}>
+                                        {header.role.map((it) => (
+                                            <Box>{it}</Box>
+                                        ))}
+                                    </Text>
+                                </Box>
+                            )}
+                            {header.agency && (
+                                <Box {...styles.headerItem} display={{base: 'none', md: 'block'}}>
+                                    <Text
+                                        textStyle="projectHeaderLabel"
+                                        {...styles.headerItemLabel}
+                                    >
+                                        Agency
+                                    </Text>
+                                    <Text textStyle="paragraph" {...styles.headerItemValue}>
+                                        {header.agency}
+                                    </Text>
+                                </Box>
+                            )}
                         </SimpleGrid>
                     </FadeIn>
                 </Flex>
