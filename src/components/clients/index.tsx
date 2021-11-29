@@ -55,13 +55,13 @@ const Clients = ({...otherProps}) => {
 
                 <HStack spacing={{base: '4vw', xl: 16, xxl: 20}} justifySelf="flex-end">
                     <AspectRatio {...styles.ratioBase} ratio={5 / 4}>
-                        <Link to="https://www.firmenich.com/" target="_blank">
+                        <Link to="https://www.firmenich.com/" rel="noopener" target="_blank">
                             <Img src={FIRMENICH_SVG} alt="Firmenich" {...styles.client}></Img>
                         </Link>
                     </AspectRatio>
 
                     <AspectRatio {...styles.ratioBase} ratio={5 / 4}>
-                        <Link to="https://www.rogerdubuis.com/ww-en" target="_blank">
+                        <Link to="https://www.rogerdubuis.com/ww-en" rel="noopener" target="_blank">
                             <Img src={ROGERDUBUIS_SVG} alt="Roger Dubuis" {...styles.client}></Img>
                         </Link>
                     </AspectRatio>
@@ -70,6 +70,7 @@ const Clients = ({...otherProps}) => {
                         <Link
                             to="https://www.piguetgalland.ch/en/"
                             target="_blank"
+                            rel="noopener"
                             style={{overflow: 'visible'}}
                         >
                             <Img

@@ -9,7 +9,6 @@ import STACK from '../../../images/menu/stack.png';
 import PORTFOLIO from '../../../images/menu/portfolio.png';
 import AWARDS from '../../../images/menu/awards.png';
 import CONTACT from '../../../images/menu/contact.png';
-import GatsbyLink from 'gatsby-link';
 
 const items = [ABOUT, STACK, PORTFOLIO, AWARDS, CONTACT];
 const links = ['/about', '/techstack', '/portfolio', '/awards', '/contact'];

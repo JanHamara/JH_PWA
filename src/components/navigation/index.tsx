@@ -45,7 +45,12 @@ const Navigation = ({items, ...otherProps}: NavigationProps) => {
                     <Box></Box>
 
                     {/* Right Side */}
-                    <Button onClick={onOpen} role="group" variant="unstyled">
+                    <Button
+                        onClick={onOpen}
+                        role="group"
+                        aria-label="menu-button"
+                        variant="unstyled"
+                    >
                         <VStack {...styles.menuWrapper}>
                             <AspectRatio ratio={4 / 3} {...styles.menuIcon}>
                                 <StaticImage
