@@ -3,6 +3,7 @@ import {AspectRatio, Box, Img} from '@chakra-ui/react';
 import Layout from '../components/layout';
 import SpaSlideshow from '../components/spa-slideshow';
 import ProgressSidebar from '../components/progress-sidebar';
+import ProgressCounter from '../components/progress-counter';
 import FadeIn from '../components/fade-in';
 
 // Static Assets
@@ -90,6 +91,15 @@ const AboutPage = () => {
                         current={current}
                         items={mockAboutData.length}
                     ></ProgressSidebar>
+                </Box>
+
+                <Box
+                    position="absolute"
+                    right={{base: 8, xs: 10, md: 16}}
+                    bottom={{base: '32px', xs: '40px', md: '64px'}}
+                    display={{base: 'none', lg: 'block'}}
+                >
+                    <ProgressCounter current={current} items={3}></ProgressCounter>
                 </Box>
             </FadeIn>
         </>

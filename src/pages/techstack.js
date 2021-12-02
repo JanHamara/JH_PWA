@@ -4,7 +4,7 @@ import Layout from '../components/layout';
 import SpaSlideshow from '../components/spa-slideshow';
 import ProgressSidebar from '../components/progress-sidebar';
 import FadeIn from '../components/fade-in';
-import {StaticImage} from 'gatsby-plugin-image';
+import ProgressCounter from '../components/progress-counter';
 
 const TechStackPage = () => {
     const [current, setCurrent] = React.useState(0);
@@ -73,6 +73,15 @@ const TechStackPage = () => {
                         current={current}
                         items={mockTechData.length}
                     ></ProgressSidebar>
+                </Box>
+
+                <Box
+                    position="absolute"
+                    right={{base: 8, xs: 10, md: 16}}
+                    bottom={{base: '32px', xs: '40px', md: '64px'}}
+                    display={{base: 'none', lg: 'block'}}
+                >
+                    <ProgressCounter current={current} items={3}></ProgressCounter>
                 </Box>
             </FadeIn>
         </>
