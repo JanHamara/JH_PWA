@@ -4,7 +4,7 @@ export default {
             textStyle: 'projectHeading',
             mt: {base: 14, md: 24},
             px: {base: 2, md: 0},
-            fontSize: {base: '17px', md: 'xl'},
+            fontSize: {base: '16px', md: 'lg'},
             _before: {
                 content: '"/"',
                 color: 'red',
@@ -30,7 +30,7 @@ export default {
                 base: '9.5px',
                 mini: '11px',
                 xs: '2xs',
-                md: '17px',
+                md: '14px',
             },
         },
         pVideo: {
@@ -46,7 +46,7 @@ export default {
                 base: '10px',
                 mini: '11px',
                 xs: '2xs',
-                md: '17px',
+                md: '14px',
             },
         },
         pButton: {

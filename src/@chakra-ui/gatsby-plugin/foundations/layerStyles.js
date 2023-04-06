@@ -64,7 +64,7 @@ export default {
 
     constraintProjectMax: {
         ...pageBase,
-        maxWidth: 'container.xl',
+        maxWidth: 'container.lg',
         paddingLeft: {base: 8, xs: 10, md: 16},
         paddingRight: {base: 8, xs: 10, md: 16},
         pt: {base: 4, md: 0},

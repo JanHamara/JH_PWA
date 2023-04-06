@@ -225,8 +225,7 @@ const Project = (props: ProjectProps) => {
                                 base: '10px',
                                 mini: '12px',
                                 xs: '14px',
-                                md: 'xs',
-                                lg: '17px',
+                                md: '15px',
                             }}
                         >
                             Back to portfolio
