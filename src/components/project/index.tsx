@@ -72,7 +72,7 @@ const Project = (props: ProjectProps) => {
                 {/* Project Thumbnail */}
                 {images && images[0] && (
                     <FadeIn delay={1000}>
-                        <AspectRatio {...styles.pThumbnail} mt={{base: 14, md: 16}}>
+                        <AspectRatio {...styles.pThumbnail} mt={{base: 14, md: 12}}>
                             <Img src={images[0]} alt="project-thumbnail-image"></Img>
                         </AspectRatio>
                     </FadeIn>

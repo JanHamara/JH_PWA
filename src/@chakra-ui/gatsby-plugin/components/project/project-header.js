@@ -17,8 +17,8 @@ export default {
                 mr: {base: 2, md: 4},
             },
         },
-        header: {mt: {base: 4, md: 6}},
-        headerItem: {mt: {base: 4, md: 8}, maxW: {base: '95%', md: '75%'}},
+        header: {mt: {base: 4, md: 4}},
+        headerItem: {mt: {base: 4, md: 6}, maxW: {base: '95%', md: '75%'}},
         headerItemLabel: {
             fontSize: {base: '9px', md: '13px'},
         },
