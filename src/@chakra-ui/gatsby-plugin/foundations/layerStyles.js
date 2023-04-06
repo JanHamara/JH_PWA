@@ -13,8 +13,7 @@ const paragraph = {
         sm: '90vw',
         md: '71vw',
         lg: '700px',
-        xl: '900px',
-        xxl: '990px',
+        xl: '800px',
     },
     textStyle: 'paragraph',
     textAlign: 'center',
@@ -23,9 +22,7 @@ const paragraph = {
         mini: '11px',
         xs: '2xs',
         md: '15px',
-        lg: '17px',
-        xl: '18px',
-        xxl: 'md',
+        lg: '16px',
     },
 };
 
@@ -39,8 +36,8 @@ export default {
     role: {
         background: 'white',
         color: 'black',
-        px: {base: '7px', md: '10px'},
-        py: {base: '3px', md: '8px'},
+        px: {base: '7px', md: '8px'},
+        py: {base: '3px', md: '6px'},
         textTransform: 'uppercase',
         fontFamily: 'heading',
         fontWeight: 'regular',
@@ -52,7 +49,7 @@ export default {
             md: '16px',
             lg: '17px',
             xl: '18px',
-            xxl: '14px',
+            xxl: '12px',
         },
         lineHeight: {
             base: '11px',
@@ -61,7 +58,7 @@ export default {
             md: '16px',
             lg: '17px',
             xl: '18px',
-            xxl: '14px',
+            xxl: '12px',
         },
     },
 

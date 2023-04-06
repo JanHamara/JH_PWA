@@ -23,9 +23,9 @@ const PortfolioPage = ({pageContext: {pages}}) => {
 
                 <FadeIn delay={800} duration={1.5}>
                     <VStack
-                        maxW={{base: '85vw', lg: 'container.xl'}}
+                        maxW={{base: '85vw', lg: '920px'}}
                         w="full"
-                        mt={{base: 12, xs: 16, md: 24}}
+                        mt={{base: 12, xs: 16, md: 20}}
                         spacing={{base: 16, md: 28, lg: 32}}
                     >
                         {pages.map((page) => (
@@ -39,7 +39,7 @@ const PortfolioPage = ({pageContext: {pages}}) => {
                             >
                                 <Link to={'/portfolio/' + page.slug}>
                                     <AspectRatio
-                                        minW={{base: '80vw', md: '85vw', lg: '476px'}}
+                                        minW={{base: '80vw', md: '85vw', lg: '380px'}}
                                         w="50%"
                                         ratio={11 / 7}
                                         opacity={0.95}
@@ -70,8 +70,8 @@ const PortfolioPage = ({pageContext: {pages}}) => {
                                             xs: '20px',
                                             sm: '18px',
                                             md: '30px',
-                                            lg: '22px',
-                                            xxl: '36px',
+                                            lg: '28px',
+                                            xxl: '28px',
                                         }}
                                         lineHeight={{
                                             base: '15px',
@@ -79,8 +79,8 @@ const PortfolioPage = ({pageContext: {pages}}) => {
                                             xs: '20px',
                                             sm: '18px',
                                             md: '30px',
-                                            lg: '22px',
-                                            xxl: '36px',
+                                            lg: '28px',
+                                            xxl: '28px',
                                         }}
                                         letterSpacing="wider"
                                         fontFamily="body"
@@ -110,9 +110,9 @@ const PortfolioPage = ({pageContext: {pages}}) => {
                                                 mini: '11px',
                                                 xs: '2xs',
                                                 md: '17px',
-                                                lg: '17px',
-                                                xl: '18px',
-                                                xxl: '18px',
+                                                lg: '15px',
+                                                xl: '15px',
+                                                xxl: '15px',
                                             }}
                                             dangerouslySetInnerHTML={{
                                                 __html: page.shortDesc,
@@ -137,8 +137,6 @@ const PortfolioPage = ({pageContext: {pages}}) => {
                                                 xs: '15px',
                                                 md: '17px',
                                                 lg: '17px',
-                                                xl: '18px',
-                                                xxl: 'md',
                                             }}
                                         >
                                             Explore
