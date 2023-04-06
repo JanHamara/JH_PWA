@@ -205,16 +205,16 @@ const SpaSlideshow = (props: SpaSlideshowProps) => {
                                       base: '70vw',
                                       md: '71vw',
                                       lg: '700px',
-                                      xl: '900px',
-                                      xxl: '1000px',
+                                      xl: '800px',
+                                      xxl: '800px',
                                   }
                                 : {
                                       base: '80vw',
                                       sm: '90vw',
                                       md: '71vw',
                                       lg: '700px',
-                                      xl: '900px',
-                                      xxl: '1024px',
+                                      xl: '800px',
+                                      xxl: '800px',
                                   }
                         }
                         dangerouslySetInnerHTML={{
@@ -224,11 +224,11 @@ const SpaSlideshow = (props: SpaSlideshowProps) => {
                         fontSize={{
                             base: '9.5px',
                             mini: '11px',
-                            xs: '2xs',
-                            md: '15px',
-                            lg: '17px',
-                            xl: '18px',
-                            xxl: 'md',
+                            xs: '14px',
+                            md: '14px',
+                            lg: '15px',
+                            xl: '16px',
+                            xxl: '16px',
                         }}
                     ></Text>
 
@@ -255,7 +255,7 @@ const SpaSlideshow = (props: SpaSlideshowProps) => {
                         w="full"
                         position={{base: 'static', md: 'absolute'}}
                         pt={{base: 0, md: 0}}
-                        bottom={{base: '15vh', md: 'calc(15vh)'}}
+                        bottom={{base: '15vh', md: '11vh'}}
                     >
                         {items[items.length - 1].label == items[current].label ? (
                             <Link to={about ? '/techstack' : techstack ? '/portfolio' : '/'}>

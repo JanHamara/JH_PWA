@@ -62,7 +62,7 @@ const AboutPage = () => {
                 <AspectRatio
                     display={{base: 'block', md: 'block'}}
                     h="100vh"
-                    w={{base: '180px', md: '350px'}}
+                    w={{base: '180px', md: '250px'}}
                     position="absolute"
                     ratio={3 / 8}
                     top={0}
