@@ -33,7 +33,7 @@ const LandingScreen = ({subtitle, ...otherProps}: LandingScreenProps) => {
                 <FadeIn delay={750} duration={1.5}>
                     <Text
                         textStyle="heroSubheading"
-                        fontSize={{base: '11px', mini: '0.875rem', sm: 'xs', md: '16.5px'}}
+                        fontSize={{base: '11px', mini: '0.875rem', sm: 'xs', md: '15px'}}
                     >
                         {subtitle}
                     </Text>
