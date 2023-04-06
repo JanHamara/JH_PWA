@@ -20,7 +20,7 @@ export default {
         header: {mt: {base: 4, md: 4}},
         headerItem: {mt: {base: 4, md: 6}, maxW: {base: '95%', md: '75%'}},
         headerItemLabel: {
-            fontSize: {base: '9px', md: '13px'},
+            fontSize: {base: '9px', md: '12px'},
         },
         headerItemValue: {
             mt: 2,
@@ -35,7 +35,7 @@ export default {
                 base: '10px',
                 mini: '11px',
                 xs: '2xs',
-                md: '15px',
+                md: '14px',
             },
         },
     },
