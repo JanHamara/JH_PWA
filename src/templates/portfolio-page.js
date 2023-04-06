@@ -109,10 +109,7 @@ const PortfolioPage = ({pageContext: {pages}}) => {
                                                 base: '9.5px',
                                                 mini: '11px',
                                                 xs: '2xs',
-                                                md: '17px',
-                                                lg: '15px',
-                                                xl: '15px',
-                                                xxl: '15px',
+                                                md: '14px',
                                             }}
                                             dangerouslySetInnerHTML={{
                                                 __html: page.shortDesc,
