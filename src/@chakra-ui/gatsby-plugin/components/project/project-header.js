@@ -6,7 +6,7 @@ export default {
         },
         heading: {
             mt: {base: 4, xs: 8, md: 0},
-            fontSize: {base: '17px', mini: '20px', xs: '22px', md: '34px', lg: '48px'},
+            fontSize: {base: '17px', mini: '20px', xs: '22px', md: '34px', lg: '38px'},
             fontFamily: 'body',
             fontWeight: 'black',
             letterSpacing: 'wider',
