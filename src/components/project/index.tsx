@@ -224,7 +224,7 @@ const Project = (props: ProjectProps) => {
                             fontSize={{
                                 base: '10px',
                                 mini: '12px',
-                                xs: '14px',
+                                xs: '13px',
                                 md: '15px',
                             }}
                         >

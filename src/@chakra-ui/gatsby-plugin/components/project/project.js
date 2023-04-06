@@ -4,7 +4,7 @@ export default {
             textStyle: 'projectHeading',
             mt: {base: 14, md: 24},
             px: {base: 2, md: 0},
-            fontSize: {base: '16px', md: 'lg'},
+            fontSize: {base: '14px', md: 'md'},
             _before: {
                 content: '"/"',
                 color: 'red',
