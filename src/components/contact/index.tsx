@@ -21,11 +21,11 @@ const Contact = (props: ContactProps) => {
         <Flex w="full" flexDirection="column" alignItems="center">
             <VStack justifyContent="center" alignItems="center" spacing={8}>
                 <Text
-                    maxW={{base: '85vw', md: 'full'}}
+                    maxW={{base: '85vw', md: '800px'}}
                     textStyle="heading"
                     color="strong"
                     textAlign="center"
-                    fontSize={{base: '2xs', xs: 'xs', md: 'md'}}
+                    fontSize={{base: '2xs', xs: 'xs', md: 'base'}}
                 >
                     {info.heading}
                 </Text>
@@ -33,7 +33,7 @@ const Contact = (props: ContactProps) => {
                     display={{base: 'none', md: 'block'}}
                     textStyle="paragraph"
                     maxW={{base: '70vw', md: 'full'}}
-                    fontSize={{base: '2xs', md: 'sm', lg: 'md'}}
+                    fontSize={{base: '2xs', md: 'base'}}
                     textAlign="center"
                 >
                     {info.subheading}
@@ -42,7 +42,7 @@ const Contact = (props: ContactProps) => {
 
             <Stack
                 w="full"
-                maxW={{md: '600px', lg: 'container.md'}}
+                maxW={{md: '600px', lg: 'container.column'}}
                 flexWrap="wrap"
                 mt={{base: 8, xs: 14, md: 24}}
                 direction={{base: 'column', md: 'row'}}
@@ -58,7 +58,7 @@ const Contact = (props: ContactProps) => {
                         <Flex
                             textStyle="roles"
                             color="strong"
-                            fontSize={{base: '12px', xs: 'xs', md: 'sm', lg: 'md'}}
+                            fontSize={{base: '12px', xs: 'xs', md: 'base'}}
                         >
                             <Text mr={2} color="red">
                                 /
@@ -73,7 +73,6 @@ const Contact = (props: ContactProps) => {
                                 mini: '12px',
                                 xs: '15px',
                                 md: 'base',
-                                lg: 'md',
                             }}
                         >
                             {infoItem.value}

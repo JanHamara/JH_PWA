@@ -66,12 +66,12 @@ const ContactPage = () => {
 
                 <Box
                     position="absolute"
-                    right={{base: 8, xs: 10, md: 16}}
+                    right={{base: 8, xs: 10, md: 12}}
                     bottom="64px"
                     display={{base: 'none', lg: 'block'}}
                     zIndex={-1}
                 >
-                    <AspectRatio w="37px" h="288px" opacity={1} ratio={1 / 8}>
+                    <AspectRatio w="30px" h="240px" opacity={1} ratio={1 / 8}>
                         <StaticImage
                             src="../images/categories/contact.png"
                             alt="contact-page-label-image"
