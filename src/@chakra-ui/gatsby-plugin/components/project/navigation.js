@@ -25,7 +25,7 @@ export default {
         menuLabel: {
             opacity: 0,
             textStyle: 'base',
-            fontSize: {base: '10px', md: '2xs'},
+            fontSize: {base: '10px'},
         },
     },
     parts: ['container', 'menuWrapper', 'menuIcon', 'closeIcon', 'menuLabel'],

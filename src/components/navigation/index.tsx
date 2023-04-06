@@ -72,7 +72,7 @@ const Navigation = ({items, ...otherProps}: NavigationProps) => {
                     <Fade in={isOpen} animateOpacity>
                         <FadeIn duration={0.5} delay={0}>
                             <ModalContent>
-                                <Box {...styles.container}>
+                                <Box {...styles.container} style={{ zIndex: 9999 }}>
                                     <Box></Box>
 
                                     <Button onClick={onClose} variant="unstyled">
@@ -108,7 +108,7 @@ const Navigation = ({items, ...otherProps}: NavigationProps) => {
 
                                         <AspectRatio
                                             h="100vh"
-                                            w={{base: '180px', md: '350px'}}
+                                            w={{base: '180px', md: '250px'}}
                                             position="absolute"
                                             ratio={3 / 8}
                                             top={0}

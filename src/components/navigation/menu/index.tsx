@@ -26,13 +26,13 @@ const Menu = (props: MenuProps) => {
             direction={dir}
             justifyContent="center"
             alignItems="center"
-            spacing={{base: 6, mini: 8, md: 12, lg: 8}}
+            spacing={{base: 6, mini: 8}}
         >
             {items.map((item, idx) => (
                 <Link to={links[idx]} role="group">
                     <ChakraLink variant="ghost">
                         <Img
-                            h={{base: 3, xs: 4, md: 5}}
+                            h={{base: 3, xs: 4, md: 4}}
                             src={item}
                             alt="menu-link"
                             opacity={{base: 1, md: 0.8}}

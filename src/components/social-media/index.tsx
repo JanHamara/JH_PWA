@@ -13,7 +13,7 @@ const SocialMedia = ({dir = 'row', size = 20}: SocialMediaProps) => {
             direction={dir}
             justifyContent="center"
             alignItems="center"
-            spacing={{base: 6, mini: 8, md: 8}}
+            spacing={{base: 6, mini: 8}}
         >
             <Link
                 href="https://www.facebook.com/jancihamaramain/"
@@ -24,7 +24,7 @@ const SocialMedia = ({dir = 'row', size = 20}: SocialMediaProps) => {
                 variant="ghost"
             >
                 <StaticImage
-                    width={20}
+                    width={18}
                     src={'../../images/social-media/facebook.png'}
                     alt="social-media-link"
                     placeholder="none"
@@ -41,7 +41,7 @@ const SocialMedia = ({dir = 'row', size = 20}: SocialMediaProps) => {
                 variant="ghost"
             >
                 <StaticImage
-                    width={20}
+                    width={18}
                     src={'../../images/social-media/instagram.png'}
                     alt="social-media-link"
                     placeholder="none"
@@ -58,7 +58,7 @@ const SocialMedia = ({dir = 'row', size = 20}: SocialMediaProps) => {
                 variant="ghost"
             >
                 <StaticImage
-                    width={20}
+                    width={18}
                     src={'../../images/social-media/linkedin.png'}
                     alt="social-media-link"
                     placeholder="none"
@@ -75,7 +75,7 @@ const SocialMedia = ({dir = 'row', size = 20}: SocialMediaProps) => {
                 variant="ghost"
             >
                 <StaticImage
-                    width={20}
+                    width={18}
                     src={'../../images/social-media/github.png'}
                     alt="social-media-link"
                     placeholder="none"
