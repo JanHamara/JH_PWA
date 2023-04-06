@@ -130,7 +130,7 @@ const SpaSlideshow = (props: SpaSlideshowProps) => {
                         about
                             ? 0
                             : techstack
-                            ? {base: 6, mini: 8, xs: 12, sm: 16, md: 16}
+                            ? {base: 6, mini: 8, xs: 10, sm: 10, md: 10, lg: 10, xl: 12, xxl: 12}
                             : {base: 6, md: 12, lg: 16}
                     }
                     mt={about ? 0 : {base: 0, md: 0}}
@@ -255,7 +255,7 @@ const SpaSlideshow = (props: SpaSlideshowProps) => {
                         w="full"
                         position={{base: 'static', md: 'absolute'}}
                         pt={{base: 0, md: 0}}
-                        bottom={{base: '15vh', md: '11vh'}}
+                        bottom={{base: '15vh', md: '13vh'}}
                     >
                         {items[items.length - 1].label == items[current].label ? (
                             <Link to={about ? '/techstack' : techstack ? '/portfolio' : '/'}>

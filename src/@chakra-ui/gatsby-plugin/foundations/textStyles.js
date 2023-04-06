@@ -51,11 +51,9 @@ const heading = {
     fontSize: {
         base: '14px',
         mini: '17px',
-        xs: '20px',
+        xs: '18px',
         sm: '18px',
-        md: '22px',
-        lg: '22px',
-        xxl: '26px',
+        md: '20px',
     },
     maxW: {base: '85vw', lg: 'unset'},
     fontStyle: 'normal',

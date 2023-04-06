@@ -75,7 +75,7 @@ const TechStack = ({stack = 'frontend', pf = undefined, ...otherProps}: TechStac
             <Flex
                 w="full"
                 justifyContent="center"
-                maxW="1100px"
+                maxW="1000px"
                 mt={0}
                 flexWrap={{base: 'wrap', xl: 'nowrap'}}
                 display={{base: 'none', md: 'flex'}}
@@ -94,7 +94,7 @@ const TechStack = ({stack = 'frontend', pf = undefined, ...otherProps}: TechStac
                         transition="transform 1s"
                         _hover={{opacity: 0.9, cursor: 'pointer', transform: 'scale(1.1)'}}
                     >
-                        <Box boxSize={{base: 10, lg: 12, xl: 14}} mb={4}>
+                        <Box boxSize={{base: 10, lg: 12, xl: 12}} mb={4}>
                             <AspectRatio ratio={1 / 1}>
                                 <Img
                                     src={item.src}
