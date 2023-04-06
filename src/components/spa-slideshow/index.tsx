@@ -73,7 +73,12 @@ const SpaSlideshow = (props: SpaSlideshowProps) => {
 
     return (
         <HStack
-            w="full"
+            w={
+                !about && !techstack
+                    ? {base: '95%', lg: 'full', xl: '85%'}
+                    : 'full'
+            }
+            margin='auto'
             h={
                 !about && !techstack
                     ? {base: 'auto', md: '50vh'}
@@ -131,7 +136,7 @@ const SpaSlideshow = (props: SpaSlideshowProps) => {
                             ? 0
                             : techstack
                             ? {base: 6, mini: 8, xs: 10, sm: 10, md: 10, lg: 10, xl: 12, xxl: 12}
-                            : {base: 6, md: 12, lg: 16}
+                            : {base: 6, md: 12, lg: 12}
                     }
                     mt={about ? 0 : {base: 0, md: 0}}
                     zIndex={9}
@@ -166,8 +171,6 @@ const SpaSlideshow = (props: SpaSlideshowProps) => {
                                                 mini: '11px',
                                                 md: '16px',
                                                 lg: '17px',
-                                                xl: '18px',
-                                                xxl: 'md',
                                             }}
                                         >
                                             {role}
@@ -177,8 +180,6 @@ const SpaSlideshow = (props: SpaSlideshowProps) => {
                                                 base: '10px',
                                                 mini: '14px',
                                                 lg: '19px',
-                                                xl: '20px',
-                                                xxl: 'lg',
                                             }}
                                             color="red"
                                             display={

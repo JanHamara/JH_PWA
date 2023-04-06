@@ -84,12 +84,12 @@ const AwardsPage = () => {
 
                 <Box
                     position="absolute"
-                    left={{base: 8, xs: 10, md: 16}}
+                    left={{base: 8, xs: 10, md: 12}}
                     bottom="64px"
                     display={{base: 'none', xl: 'block'}}
                     zIndex={-1}
                 >
-                    <AspectRatio w="42px" h="288px" opacity={1} ratio={1 / 8}>
+                    <AspectRatio w="34px" h="240px" opacity={1} ratio={1 / 8}>
                         <StaticImage
                             src="../images/categories/awards.png"
                             alt="contact-page-label-image"
