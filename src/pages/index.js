@@ -29,8 +29,8 @@ const IndexPage = () => {
         <Layout pageTitle="Home Page">
             <FadeIn duration={4}>
                 <AspectRatio
-                    w={{base: '270px', mini: '360px', md: '450px'}}
-                    h={{base: '240px', mini: '320px', md: '400px'}}
+                    w={{base: '270px', mini: '360px', md: '360px'}}
+                    h={{base: '240px', mini: '320px', md: '320px'}}
                     ratio={9 / 8}
                     position="absolute"
                     top="100vh"

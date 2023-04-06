@@ -16,8 +16,8 @@ const LandingScreen = ({subtitle, ...otherProps}: LandingScreenProps) => {
             <VStack spacing={{base: 2, md: 4}}>
                 <FadeIn delay={750} duration={1.5}>
                     <AspectRatio
-                        w={{base: '240px', mini: '275px', sm: '350px', md: '550px'}}
-                        h={{base: '25px', mini: '28px', sm: '35px', md: '55px'}}
+                        w={{base: '240px', mini: '275px', sm: '350px', md: '450px'}}
+                        h={{base: '25px', mini: '28px', sm: '35px', md: '45px'}}
                         ratio={10 / 1}
                     >
                         <StaticImage
@@ -33,14 +33,14 @@ const LandingScreen = ({subtitle, ...otherProps}: LandingScreenProps) => {
                 <FadeIn delay={750} duration={1.5}>
                     <Text
                         textStyle="heroSubheading"
-                        fontSize={{base: '11px', mini: '0.875rem', sm: 'xs', md: '19px'}}
+                        fontSize={{base: '11px', mini: '0.875rem', sm: 'xs', md: '17px'}}
                     >
                         {subtitle}
                     </Text>
                 </FadeIn>
             </VStack>
 
-            <AboveLG position="absolute" width="full" h="fit-content" bottom={12}>
+            <AboveLG position="absolute" width={{ lg: '1000px', xl: '1160px', xxl: '1160px' }} h="fit-content" bottom={8}>
                 <FadeIn delay={1200} duration={1.5}>
                     <Clients></Clients>
                 </FadeIn>

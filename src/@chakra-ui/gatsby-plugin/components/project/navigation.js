@@ -15,12 +15,12 @@ export default {
             h: {base: '47px', md: '55px'},
         },
         menuIcon: {
-            w: {base: '32px', md: '40px'},
-            h: {base: '24px', md: '30px'},
+            w: {base: '32px', md: '32px'},
+            h: {base: '24px', md: '24px'},
         },
         closeIcon: {
-            w: {base: '32px', md: '40px'},
-            h: {base: '32px', md: '40px'},
+            w: {base: '32px', md: '32px'},
+            h: {base: '32px', md: '32px'},
         },
         menuLabel: {
             opacity: 0,

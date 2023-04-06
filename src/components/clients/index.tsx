@@ -23,7 +23,7 @@ const Clients = ({...otherProps}) => {
             {...otherProps}
         >
             <StylesProvider value={styles}>
-                <HStack spacing={{base: '4vw', xl: 16, xxl: 20}} justifySelf="flex-start">
+                <HStack spacing={{base: '4vw', xl: 16, xxl: 16}} justifySelf="flex-start">
                     <AspectRatio {...styles.ratioSquare} ratio={1 / 1}>
                         <Link to="/portfolio/bat">
                             <Img
@@ -53,7 +53,7 @@ const Clients = ({...otherProps}) => {
                     </AspectRatio>
                 </HStack>
 
-                <HStack spacing={{base: '4vw', xl: 16, xxl: 20}} justifySelf="flex-end">
+                <HStack spacing={{base: '4vw', xl: 16, xxl: 16}} justifySelf="flex-end">
                     <AspectRatio {...styles.ratioBase} ratio={5 / 4}>
                         <Link to="https://www.firmenich.com/" rel="noopener" target="_blank">
                             <Img src={FIRMENICH_SVG} alt="Firmenich" {...styles.client}></Img>

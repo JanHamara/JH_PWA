@@ -38,8 +38,8 @@ const SiteHeader = ({variant = 'default'}: SiteHeaderProps) => {
                     <AspectRatio
                         boxSize={
                             variant == 'subpage'
-                                ? {base: '45px', mini: 16, md: 20}
-                                : {base: 16, mini: 16, md: 28}
+                                ? {base: '45px', mini: 16, md: 16}
+                                : {base: 16, mini: 16, md: 24}
                         }
                         ratio={1 / 1}
                     >
