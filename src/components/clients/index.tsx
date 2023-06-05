@@ -4,7 +4,6 @@ import {Link} from 'gatsby';
 
 import BAT_SVG from '../../images/svg/british-american-tobacco.svg';
 import EASYGYM_SVG from '../../images/svg/easygym.svg';
-import FIRMENICH_SVG from '../../images/svg/firmenich.svg';
 import PIGUETGALLAND_SVG from '../../images/svg/piguetgalland.svg';
 import UTMB_SVG from '../../images/svg/utmb.svg';
 import ROGERDUBUIS_SVG from '../../images/svg/rogerdubuis.svg';
@@ -53,7 +52,7 @@ const Clients = ({...otherProps}) => {
                     </AspectRatio>
                 </HStack>
 
-                <HStack spacing={{base: '4vw', xl: 16, xxl: 16}} justifySelf="flex-end">
+                <HStack spacing={{base: '4vw', xl: 16, xxl: 16}} justifySelf="flex-start">
                     <AspectRatio {...styles.ratioBase} ratio={5 / 4}>
                         <Link to="https://www.rogerdubuis.com/ww-en" rel="noopener" target="_blank">
                             <Img src={ROGERDUBUIS_SVG} alt="Roger Dubuis" {...styles.client}></Img>
