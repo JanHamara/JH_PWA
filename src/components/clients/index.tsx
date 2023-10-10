@@ -7,6 +7,7 @@ import EASYGYM_SVG from '../../images/svg/easygym.svg';
 import PIGUETGALLAND_SVG from '../../images/svg/piguetgalland.svg';
 import UTMB_SVG from '../../images/svg/utmb.svg';
 import ROGERDUBUIS_SVG from '../../images/svg/rogerdubuis.svg';
+import FREENOW_SVG from '../../images/svg/freenow.svg';
 
 const Clients = ({...otherProps}) => {
     const styles = useMultiStyleConfig('Clients', {});
@@ -53,6 +54,12 @@ const Clients = ({...otherProps}) => {
                 </HStack>
 
                 <HStack spacing={{base: '4vw', xl: 16, xxl: 16}} justifySelf="flex-start">
+                    <AspectRatio {...styles.ratioBase} ratio={5 / 4}>
+                        <Link to="https://www.free-now.com/fr/" target='_blank' rel='noopener'>
+                            <Img src={FREENOW_SVG} alt="Freenow" {...styles.client}></Img>
+                        </Link>
+                    </AspectRatio>
+                    
                     <AspectRatio {...styles.ratioBase} ratio={5 / 4}>
                         <Link to="https://www.rogerdubuis.com/ww-en" rel="noopener" target="_blank">
                             <Img src={ROGERDUBUIS_SVG} alt="Roger Dubuis" {...styles.client}></Img>
