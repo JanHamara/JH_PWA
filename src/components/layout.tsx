@@ -2,6 +2,7 @@ import {AspectRatio, Box, Center, Img} from '@chakra-ui/react';
 import * as React from 'react';
 import Navigation from './navigation';
 import SiteHeader from './site-header';
+import {useLocation} from '@reach/router';
 import FadeIn from './fade-in';
 import {Helmet} from 'react-helmet';
 
@@ -35,6 +36,9 @@ interface LayoutProps {
 }
 
 const Layout = ({portfolio = false, pageTitle = 'Personal Portfolio', children}: LayoutProps) => {
+    const location = useLocation();
+    const isLanding = location.pathname == '/';
+
     return (
         <Box h="full">
             <Helmet
