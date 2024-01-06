@@ -1,4 +1,4 @@
-[![Netlify Status](https://api.netlify.com/api/v1/badges/03868e5e-9cb1-4bba-a730-473640436f3d/deploy-status)](https://app.netlify.com/sites/friendly-tulumba-2f2a92/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/03868e5e-9cb1-4bba-a730-473640436f3d/deploy-status)](https://app.netlify.com/sites/janhamara/deploys)
 
 <p align="center">
   <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter">
