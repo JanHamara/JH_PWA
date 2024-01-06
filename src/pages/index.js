@@ -7,23 +7,6 @@ import {StaticImage} from 'gatsby-plugin-image';
 import FadeIn from '../components/fade-in';
 import {Helmet} from 'react-helmet';
 
-// const line = (
-//     <HStack
-//         alignItems="center"
-//         justifyContent="center"
-//         position="absolute"
-//         left={0}
-//         bottom="170px"
-//         spacing={2}
-//         opacity={0.6}
-//     >
-//         <Box h=".5px" w="8vw" background="white"></Box>
-//         <Text textStyle="base" fontSize="2xs">
-//             PROUDLY SERVED CLIENTS
-//         </Text>
-//     </HStack>
-// );
-
 const IndexPage = () => {
     return (
         <Layout pageTitle="Home Page">

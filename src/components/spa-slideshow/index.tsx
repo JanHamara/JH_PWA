@@ -228,8 +228,8 @@ const SpaSlideshow = (props: SpaSlideshowProps) => {
                             xs: '14px',
                             md: '14px',
                             lg: '15px',
-                            xl: '16px',
-                            xxl: '16px',
+                            xl: '15px',
+                            xxl: '15px',
                         }}
                     ></Text>
 

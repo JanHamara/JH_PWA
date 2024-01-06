@@ -31,9 +31,9 @@ const paragraphBase = {
 const heroSubheading = {
     ...secondary,
     textAlign: 'center',
-    fontWeight: 'semibold',
+    fontWeight: 'light',
     textTransform: 'uppercase',
-    letterSpacing: {base: '0.14em', mini: 'wide', sm: 'wider', md: 'widest'},
+    letterSpacing: {base: '0.14em', mini: 'wide', sm: 'wider', md: '0.35em'},
     width: {base: '245px', mini: '275px', sm: '356px', md: '570px'},
     maxW: {base: '245px', mini: '275px', sm: '356px', md: '570px'},
     transform: {
@@ -73,7 +73,7 @@ const paragraph = {
     ...primary,
     ...paragraphBase,
     fontStyle: 'normal',
-    fontWeight: 100,
+    fontWeight: 200,
     color: 'paragraph',
 };
 
