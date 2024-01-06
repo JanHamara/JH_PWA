@@ -26,7 +26,7 @@ export default {
             mt: 2,
             opacity: 1,
             fontFamily: 'heading',
-            fontWeight: 'light',
+            fontWeight: 'semibold',
             color: 'paragraph',
             lineHeight: {base: 5, md: 7},
             letterSpacing: 'wider',

@@ -16,7 +16,7 @@ export default {
         },
         strong: {
             color: 'strong',
-            fontWeight: '300',
+            fontWeight: 'bold',
         },
         '.visible': {
             opacity: 1,

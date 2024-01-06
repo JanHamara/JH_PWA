@@ -39,8 +39,8 @@ export default {
         px: {base: '7px', md: '8px'},
         py: {base: '3px', md: '6px'},
         textTransform: 'uppercase',
-        fontFamily: 'heading',
-        fontWeight: 'regular',
+        fontFamily: 'body',
+        fontWeight: 'semibold',
         letterSpacing: 'wider',
         fontSize: {
             base: '6.5px',

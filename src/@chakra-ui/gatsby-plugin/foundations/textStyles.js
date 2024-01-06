@@ -1,7 +1,7 @@
 const primary = {
     fontFamily: 'heading',
     fontSize: 'base',
-    fontWeight: 'normal',
+    fontWeight: 'semibold',
     color: 'white',
 };
 
@@ -57,7 +57,7 @@ const heading = {
     },
     maxW: {base: '85vw', lg: 'unset'},
     fontStyle: 'normal',
-    fontWeight: 300,
+    fontWeight: 'semibold',
     color: 'paragraph',
 };
 
@@ -65,15 +65,15 @@ const roles = {
     ...primary,
     ...paragraphBase,
     fontStyle: 'normal',
-    fontWeight: 200,
-    color: 'paragraph',
+    fontWeight: 'semibold',
+    color: 'white',
 };
 
 const paragraph = {
     ...primary,
     ...paragraphBase,
     fontStyle: 'normal',
-    fontWeight: 300,
+    fontWeight: 'semibold',
     color: 'paragraph',
 };
 
@@ -83,7 +83,7 @@ const stack = {
     fontSize: {base: '2xs', xl: '2xs'},
     textTransform: 'none',
     letterSpacing: 'wider',
-    color: 'paragraph',
+    color: 'white',
 };
 
 const projectHeading = {
@@ -91,9 +91,9 @@ const projectHeading = {
     ...base,
     opacity: 1,
     color: 'white',
-    fontFamily: 'heading',
+    fontFamily: 'body',
     letterSpacing: 'widest',
-    fontWeight: 'medium',
+    fontWeight: 'bold',
 };
 
 const projectHeaderLabel = {

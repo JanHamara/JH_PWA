@@ -28,7 +28,7 @@ const PortfolioPage = ({pageContext: {pages}}) => {
                         mt={{base: 12, xs: 16, md: 20}}
                         spacing={{base: 16, md: 28, lg: 32}}
                     >
-                        {pages.map((page) => (
+                        {pages.map((page, idx) => (
                             <Flex
                                 w="full"
                                 flexDirection={{base: 'column', lg: 'row'}}
@@ -36,6 +36,7 @@ const PortfolioPage = ({pageContext: {pages}}) => {
                                 alignItems="center"
                                 flexWrap="nowrap"
                                 role="group"
+                                key={idx}
                             >
                                 <Link to={'/portfolio/' + page.slug}>
                                     <AspectRatio
