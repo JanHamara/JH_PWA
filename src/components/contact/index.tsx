@@ -58,6 +58,7 @@ const Contact = (props: ContactProps) => {
                         <Flex
                             textStyle="roles"
                             color="strong"
+                            fontWeight={300}
                             fontSize={{base: '12px', xs: 'xs', md: 'base'}}
                         >
                             <Text mr={2} color="red">

@@ -25,13 +25,13 @@ const AboutPage = () => {
         {
             id: 1,
             content:
-                'I graduated from <strong>MA Digital Media & Information Studies</strong> <br/> degree at <strong>the University of Glasgow</strong>. <br/><br/> During my studies, I have completed multiple internships, most important one at <strong>J.P.Morgan Chase & Co.</strong> at their <strong>Technology Centre of Excellence</strong> in Glasgow. <br/><br/>Participation at many <strong>hackathons</strong> over the world during my studies has allowed me to learn from the very best developers and companies in the tech field, and has led to some notable achievements and <a href="https://www.instagram.com/watch_us_see/" class="inlineLink" target="_blank" style="color: #d1d1d1;"><strong>awards</strong></a>',
+                'I graduated from <strong>MA Digital Media & Information Studies</strong> <br/> degree at <strong>the University of Glasgow</strong>. <br/><br/> During my studies, I have completed multiple internships, most important one at <strong>J.P.Morgan Chase & Co.</strong> at their <strong>Technology Centre of Excellence</strong> in Glasgow. <br/><br/>Participation at many <strong>hackathons</strong> over the world during my studies has allowed me to learn from the very best developers and companies in the tech field, and has led to some notable achievements and <a href="https://www.instagram.com/jan_hamara/" class="inlineLink" target="_blank" style="color: #d1d1d1;"><strong>awards</strong></a>',
             label: 'Interests',
         },
         {
             id: 2,
             content:
-                'I am also an <strong>avid traveler</strong>, <strong>photographer</strong> and <strong>film maker</strong> with an active travel blog on <a href="https://www.instagram.com/watch_us_see/" class="inlineLink" target="_blank" style="color: #d1d1d1">Instagram</a><br/><br/>Years of experience in <strong>hospitality and tourism</strong> have gained me valuable soft skills, like <strong>time management</strong>, <strong>adaptability</strong>, as well as <strong>organisational</strong> and <strong>communicational skills</strong>, so priceless during non-technical communication with clients.<br/><br/>I am also an enthusiast of <strong>VR technology</strong> and an active <strong>cryptocurrency investor</strong>',
+                'I am also an <strong>avid traveler</strong>, <strong>photographer</strong> and <strong>film maker</strong> with an active travel blog on <a href="https://www.instagram.com/jan_hamara/" class="inlineLink" target="_blank" style="color: #d1d1d1">Instagram</a><br/><br/>Years of experience in <strong>hospitality and tourism</strong> have gained me valuable soft skills, like <strong>time management</strong>, <strong>adaptability</strong>, as well as <strong>organisational</strong> and <strong>communicational skills</strong>, so priceless during non-technical communication with clients.<br/><br/>I am also an enthusiast of <strong>VR technology</strong> and an active <strong>cryptocurrency investor</strong>',
             label: 'Technology Stack',
         },
     ];

@@ -16,7 +16,7 @@ export default {
         },
         strong: {
             color: 'strong',
-            fontWeight: 'hairline',
+            fontWeight: '300',
         },
         '.visible': {
             opacity: 1,

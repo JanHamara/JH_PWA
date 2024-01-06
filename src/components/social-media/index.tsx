@@ -33,7 +33,7 @@ const SocialMedia = ({dir = 'row', size = 20}: SocialMediaProps) => {
             </Link>
 
             <Link
-                href="https://www.instagram.com/watch_us_see/"
+                href="https://www.instagram.com/jan_hamara/"
                 target="_blank"
                 opacity={0.6}
                 _hover={{opacity: 1}}

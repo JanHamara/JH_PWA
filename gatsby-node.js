@@ -42,7 +42,7 @@ exports.createPages = ({actions}) => {
             previewImage:
                 'https://res.cloudinary.com/jhamara/image/upload/v1637860061/projects/1_hp45mx.jpg',
             shortDesc:
-                'Website development for a gym franchise owned by one of the most-known consumer brands in Europe - <strong>easyJet</strong>...',
+                'Web development for a gym franchise owned by one of the most-known consumer brands in Europe - <strong>easyJet</strong>...',
             images: [
                 'https://res.cloudinary.com/jhamara/image/upload/v1637860061/projects/1_hp45mx.jpg',
                 'https://res.cloudinary.com/jhamara/image/upload/v1637860060/projects/2_ifgruf.jpg',

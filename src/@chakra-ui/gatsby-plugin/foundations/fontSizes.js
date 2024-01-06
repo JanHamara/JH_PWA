@@ -1,6 +1,6 @@
 export default {
     base: '1rem', // 16px
-    '2xs': '0.8rem',
+    '2xs': '0.725rem',
     xs: '0.9375rem', // 15px
     sm: '1.125rem', // 18px
     md: '1.25rem', // 20px

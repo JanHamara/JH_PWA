@@ -84,7 +84,7 @@ const PortfolioPage = ({pageContext: {pages}}) => {
                                         }}
                                         letterSpacing="wider"
                                         fontFamily="body"
-                                        fontWeight="black"
+                                        fontWeight="bold"
                                     >
                                         <span class="sep">/</span>
                                         &nbsp;{page.title}

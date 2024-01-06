@@ -8,7 +8,7 @@ export default {
             mt: {base: 4, xs: 8, md: 0},
             fontSize: {base: '17px', mini: '20px', xs: '22px', md: '34px', lg: '38px'},
             fontFamily: 'body',
-            fontWeight: 'black',
+            fontWeight: 'bold',
             letterSpacing: 'wider',
             _before: {
                 content: '"/"',
@@ -26,7 +26,7 @@ export default {
             mt: 2,
             opacity: 1,
             fontFamily: 'heading',
-            fontWeight: 'hairline',
+            fontWeight: 'light',
             color: 'paragraph',
             lineHeight: {base: 5, md: 7},
             letterSpacing: 'wider',

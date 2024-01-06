@@ -57,7 +57,7 @@ const heading = {
     },
     maxW: {base: '85vw', lg: 'unset'},
     fontStyle: 'normal',
-    fontWeight: 100,
+    fontWeight: 300,
     color: 'paragraph',
 };
 
@@ -65,7 +65,7 @@ const roles = {
     ...primary,
     ...paragraphBase,
     fontStyle: 'normal',
-    fontWeight: 100,
+    fontWeight: 200,
     color: 'paragraph',
 };
 
@@ -73,7 +73,7 @@ const paragraph = {
     ...primary,
     ...paragraphBase,
     fontStyle: 'normal',
-    fontWeight: 200,
+    fontWeight: 300,
     color: 'paragraph',
 };
 
