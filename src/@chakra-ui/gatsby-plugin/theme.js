@@ -38,7 +38,7 @@ const overrides = {
         normal: '0.025',
         wide: '0.05em',
         wider: '0.18em',
-        paragraph: '0.28em',
+        paragraph: '0.24em',
         widest: '0.33em',
     },
     layerStyles,

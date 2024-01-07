@@ -14,7 +14,7 @@ const SiteHeader = ({variant = 'default'}: SiteHeaderProps) => {
             position={variant == 'menu' ? 'absolute' : 'static'}
             top={0}
             // zIndex={variant == 'menu' ? '1' : '1'}
-            zIndex={1}
+            zIndex={999}
             justifyContent={variant == 'subpage' ? {base: 'flex-start', md: 'center'} : 'center'}
             layerStyle={
                 variant == 'subpage'
@@ -23,13 +23,13 @@ const SiteHeader = ({variant = 'default'}: SiteHeaderProps) => {
             }
             minH={
                 variant == 'subpage'
-                    ? {base: '100px', mini: '100px', xs: '100px', md: '30vh'}
-                    : {base: '180px', mini: '220px', xs: '260px', md: '30vh'}
+                    ? {base: '100px', md: '30vh'}
+                    : {base: '30vh', md: '30vh'}
             }
             h={
                 variant == 'subpage'
-                    ? {base: '100px', mini: '100px', xs: '100px', md: '30vh'}
-                    : {base: '180px', mini: '220px', xs: '260px', md: '30vh'}
+                    ? {base: '100px', md: '30vh'}
+                    : {base: '30vh', md: '30vh'}
             }
             mb={variant == 'subpage' ? 0 : 0}
         >

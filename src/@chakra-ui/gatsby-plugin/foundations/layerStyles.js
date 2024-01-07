@@ -20,7 +20,7 @@ const paragraph = {
     fontSize: {
         base: '9.5px',
         mini: '11px',
-        xs: '2xs',
+        xs: '3xs',
         md: '15px',
         lg: '16px',
     },

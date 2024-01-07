@@ -105,7 +105,7 @@ const TechStack = ({stack = 'frontend', pf = undefined, ...otherProps}: TechStac
                             </AspectRatio>
                         </Box>
 
-                        <Text textStyle="stack" _groupHover={{color: 'strong'}}>
+                        <Text textStyle="stack" _groupHover={{color: 'white'}}>
                             {item.label}
                         </Text>
                     </Flex>
@@ -144,7 +144,7 @@ const TechStack = ({stack = 'frontend', pf = undefined, ...otherProps}: TechStac
                             <Text
                                 textStyle="stack"
                                 fontSize={{base: '8px', mini: '9px', xs: '11px', sm: '10px'}}
-                                _groupHover={{color: 'strong'}}
+                                _groupHover={{color: 'white'}}
                             >
                                 {item.label}
                             </Text>
@@ -195,7 +195,7 @@ const TechStack = ({stack = 'frontend', pf = undefined, ...otherProps}: TechStac
                                             xs: '11px',
                                             sm: '10px',
                                         }}
-                                        _groupHover={{color: 'strong'}}
+                                        _groupHover={{color: 'white'}}
                                     >
                                         {tech.label}
                                     </Text>

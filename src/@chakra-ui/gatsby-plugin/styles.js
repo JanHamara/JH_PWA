@@ -15,8 +15,8 @@ export default {
             zIndex: -2,
         },
         strong: {
-            color: 'strong',
-            fontWeight: 'bold',
+            color: 'white',
+            fontWeight: 'black',
         },
         '.visible': {
             opacity: 1,

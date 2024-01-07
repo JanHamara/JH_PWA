@@ -29,20 +29,21 @@ const paragraphBase = {
 };
 
 const heroSubheading = {
-    ...secondary,
+    ...primary,
+    color: 'white80',
+    fontSize:{base: '11px', mini: '14px', md: '15px'},
     textAlign: 'center',
-    fontWeight: 'light',
     textTransform: 'uppercase',
-    letterSpacing: {base: '0.14em', mini: 'wide', sm: 'wider', md: '0.35em'},
-    width: {base: '245px', mini: '275px', sm: '356px', md: '570px'},
-    maxW: {base: '245px', mini: '275px', sm: '356px', md: '570px'},
+    letterSpacing: {base: 'paragraph', mini: '0.12em', sm: 'paragraph', md: '0.35em'},
+    width: {base: '100%', mini: '100%', sm: '100%', md: '570px'},
+    maxW: {base: '100%', mini: '100%', sm: '100%', md: '570px'},
     transform: {
         base: 'translate(2px, 0)',
         mini: 'translate(0)',
         md: 'translate(8px, 0)',
         lg: 'translate(4px, 0)',
     },
-    opacity: 0.7,
+    // opacity: 0.7,
 };
 
 const heading = {
@@ -58,7 +59,7 @@ const heading = {
     maxW: {base: '85vw', lg: 'unset'},
     fontStyle: 'normal',
     fontWeight: 'semibold',
-    color: 'paragraph',
+    color: 'white80',
 };
 
 const roles = {
@@ -74,13 +75,13 @@ const paragraph = {
     ...paragraphBase,
     fontStyle: 'normal',
     fontWeight: 'semibold',
-    color: 'paragraph',
+    color: 'white80',
 };
 
 const stack = {
     ...primary,
     ...paragraphBase,
-    fontSize: {base: '2xs', xl: '2xs'},
+    fontSize: {base: '3xs'},
     textTransform: 'none',
     letterSpacing: 'wider',
     color: 'white',

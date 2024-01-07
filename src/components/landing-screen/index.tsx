@@ -13,7 +13,7 @@ interface LandingScreenProps {
 const LandingScreen = ({subtitle, ...otherProps}: LandingScreenProps) => {
     return (
         <Center w="full" h="70vh" position="relative" alignItems="flex-start" {...otherProps}>
-            <VStack spacing={{base: 2, md: 6}}>
+            <VStack spacing={{base: 4, md: 6}}>
                 <FadeIn delay={750} duration={1.5}>
                     <AspectRatio
                         w={{base: '240px', mini: '275px', sm: '350px', md: '450px'}}
@@ -33,7 +33,6 @@ const LandingScreen = ({subtitle, ...otherProps}: LandingScreenProps) => {
                 <FadeIn delay={750} duration={1.5}>
                     <Text
                         textStyle="heroSubheading"
-                        fontSize={{base: '11px', mini: '0.875rem', sm: 'xs', md: '15px'}}
                     >
                         {subtitle}
                     </Text>

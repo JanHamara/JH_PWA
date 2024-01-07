@@ -109,7 +109,7 @@ const PortfolioPage = ({pageContext: {pages}}) => {
                                             fontSize={{
                                                 base: '9.5px',
                                                 mini: '11px',
-                                                xs: '2xs',
+                                                xs: '3xs',
                                                 md: '14px',
                                             }}
                                             dangerouslySetInnerHTML={{

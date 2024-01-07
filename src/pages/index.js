@@ -12,13 +12,13 @@ const IndexPage = () => {
         <Layout pageTitle="Home Page">
             <FadeIn duration={4}>
                 <AspectRatio
-                    w={{base: '270px', mini: '360px', md: '360px'}}
-                    h={{base: '240px', mini: '320px', md: '320px'}}
+                    w={{base: '80%', sm: '360px'}}
+                    h='auto'
                     ratio={9 / 8}
                     position="absolute"
-                    top="100vh"
+                    bottom="0"
                     left="50%"
-                    transform="translate(-50%, -100%)"
+                    transform="translate(-50%, 0)"
                     filter="contrast(1.05)"
                 >
                     <StaticImage

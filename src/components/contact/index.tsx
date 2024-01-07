@@ -25,7 +25,7 @@ const Contact = (props: ContactProps) => {
                     textStyle="heading"
                     color="strong"
                     textAlign="center"
-                    fontSize={{base: '2xs', xs: 'xs', md: 'base'}}
+                    fontSize={{base: '3xs', xs: 'xs', md: 'base'}}
                 >
                     {info.heading}
                 </Text>
@@ -33,7 +33,7 @@ const Contact = (props: ContactProps) => {
                     display={{base: 'none', md: 'block'}}
                     textStyle="paragraph"
                     maxW={{base: '70vw', md: 'full'}}
-                    fontSize={{base: '2xs', md: 'base'}}
+                    fontSize={{base: '3xs', md: 'base'}}
                     textAlign="center"
                 >
                     {info.subheading}

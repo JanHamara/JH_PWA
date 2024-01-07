@@ -7,7 +7,7 @@ export default {
         lineHeight: '2',
         fontWeight: 'thin',
         opacity: 0.8,
-        color: 'paragraph',
+        color: 'white80',
         transition: 'opacity 1s',
         _hover: {
             opacity: 1,
@@ -35,7 +35,7 @@ export default {
             },
             _hover: {
                 opacity: 1,
-                color: 'strong',
+                color: 'white',
                 textDecoration: 'none',
                 _before: {
                     content: '"/"',
