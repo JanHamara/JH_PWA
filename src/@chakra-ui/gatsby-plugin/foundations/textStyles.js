@@ -1,7 +1,7 @@
 const primary = {
     fontFamily: 'heading',
     fontSize: 'base',
-    fontWeight: 'semibold',
+    fontWeight: 'normal',
     color: 'white',
 };
 
@@ -31,7 +31,7 @@ const paragraphBase = {
 const heroSubheading = {
     ...primary,
     color: 'white80',
-    fontSize:{base: '11px', mini: '14px', md: '15px'},
+    fontSize:{base: '11px', mini: '2xs', md: 'base'},
     textAlign: 'center',
     textTransform: 'uppercase',
     letterSpacing: {base: 'paragraph', mini: '0.12em', sm: 'paragraph', md: '0.35em'},
@@ -43,7 +43,6 @@ const heroSubheading = {
         md: 'translate(8px, 0)',
         lg: 'translate(4px, 0)',
     },
-    // opacity: 0.7,
 };
 
 const heading = {

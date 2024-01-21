@@ -5,7 +5,6 @@ export default {
                 // outline: '.5px #c46c00 solid',
             },
         'html, body': {
-            fontFamily: 'Ingra',
             backgroundColor: 'bg',
             color: 'white',
             minH: '100vh',
