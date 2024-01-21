@@ -5,7 +5,6 @@ import Layout from '../components/layout';
 import LandingScreen from '../components/landing-screen';
 import {StaticImage} from 'gatsby-plugin-image';
 import FadeIn from '../components/fade-in';
-import {Helmet} from 'react-helmet';
 
 const IndexPage = () => {
     return (

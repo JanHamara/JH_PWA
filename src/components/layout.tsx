@@ -53,6 +53,7 @@ const Layout = ({portfolio = false, pageTitle = 'Personal Portfolio', children}:
                     content="Personal portfolio website of Jan Hamara, a front-end developer and UI/UX designer based in Barcelona, Spain."
                 />
                 <title>Jan Hamara | {pageTitle}</title>
+                <link rel="stylesheet" href="https://use.typekit.net/gza2ntw.css"></link>
                 <link rel="canonical" href="https://jhpwa.gatsbyjs.io/" />
             </Helmet>
 
