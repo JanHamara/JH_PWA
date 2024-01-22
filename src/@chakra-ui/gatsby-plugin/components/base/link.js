@@ -2,12 +2,12 @@ export default {
     baseStyle: {
         textTransform: 'uppercase',
         letterSpacing: 'paragraph',
-        fontSize: 'md',
+        fontSize: 'sm',
         fontFamily: 'body',
         lineHeight: '2',
         fontWeight: 'thin',
         opacity: 0.8,
-        color: 'white80',
+        color: 'white',
         transition: 'opacity 1s',
         _hover: {
             opacity: 1,
@@ -18,7 +18,12 @@ export default {
     },
     variants: {
         secondary: {
-            fontSize: {base: '10px', mini: '12px', xs: '14px', md: 'xs', lg: 'xs', xxl: 'sm'},
+            fontSize: {
+                base: '10px',
+                mini: '12px',
+                xs: '13px',
+                md: 'base',
+            },
             _before: {
                 display: 'inline-block',
                 content: '"/"',

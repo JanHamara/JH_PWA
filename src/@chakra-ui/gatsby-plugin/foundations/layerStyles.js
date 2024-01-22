@@ -13,16 +13,17 @@ const paragraph = {
         sm: '90vw',
         md: '71vw',
         lg: '700px',
-        xl: '800px',
+        xl: '780px',
     },
     textStyle: 'paragraph',
     textAlign: 'center',
     fontSize: {
         base: '9.5px',
         mini: '11px',
-        xs: '3xs',
-        md: '15px',
-        lg: '16px',
+        xs: '14px',
+        md: '14px',
+        lg: 'base',
+        max: '20px'
     },
 };
 
@@ -39,8 +40,7 @@ export default {
         px: {base: '7px', md: '8px'},
         py: {base: '3px', md: '6px'},
         textTransform: 'uppercase',
-        fontFamily: 'body',
-        fontWeight: 'semibold',
+        fontWeight: 'medium',
         letterSpacing: 'wider',
         fontSize: {
             base: '6.5px',

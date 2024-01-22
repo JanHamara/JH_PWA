@@ -9,7 +9,7 @@ const PortfolioPage = ({pageContext: {pages}}) => {
         <Layout pageTitle="Portfolio" portfolio={true}>
             <Flex flexDirection="column" alignItems="center">
                 <FadeIn delay={500}>
-                    <Text textStyle="heading" color="strong" textTransform="uppercase">
+                    <Text textStyle="heading" fontWeight='thin' color="white" textTransform="uppercase">
                         <span class="sep">/</span> Portfolio
                     </Text>
                 </FadeIn>
@@ -40,7 +40,7 @@ const PortfolioPage = ({pageContext: {pages}}) => {
                             >
                                 <Link to={'/portfolio/' + page.slug}>
                                     <AspectRatio
-                                        minW={{base: '80vw', md: '85vw', lg: '380px'}}
+                                        minW={{base: '85vw', md: '85vw', lg: '380px'}}
                                         w="50%"
                                         ratio={11 / 7}
                                         opacity={0.95}
@@ -62,35 +62,15 @@ const PortfolioPage = ({pageContext: {pages}}) => {
                                     mt={{base: 6, mini: 8, sm: 12, lg: 0}}
                                     ml={{base: 0, lg: 12}}
                                 >
+                                    {/* Portfolio Item - Heading */}
                                     <Text
-                                        textStyle="heading"
-                                        color="strong"
-                                        fontSize={{
-                                            base: '15x',
-                                            mini: '19px',
-                                            xs: '20px',
-                                            sm: '18px',
-                                            md: '30px',
-                                            lg: '28px',
-                                            xxl: '28px',
-                                        }}
-                                        lineHeight={{
-                                            base: '15px',
-                                            mini: '19px',
-                                            xs: '20px',
-                                            sm: '18px',
-                                            md: '30px',
-                                            lg: '28px',
-                                            xxl: '28px',
-                                        }}
-                                        letterSpacing="wider"
-                                        fontFamily="body"
-                                        fontWeight="bold"
+                                        textStyle="portfolioHeading"
                                     >
                                         <span class="sep">/</span>
                                         &nbsp;{page.title}
                                     </Text>
 
+                                    {/* Portfolio Item - Roles */}
                                     <HStack mt={{base: 4, md: 8, lg: 6}} spacing={4}>
                                         {page.header.role?.map((roleItem) => (
                                             <Box layerStyle="role" opacity={0.9}>
@@ -99,19 +79,13 @@ const PortfolioPage = ({pageContext: {pages}}) => {
                                         ))}
                                     </HStack>
 
+                                    {/* Portfolio Item - Desc */}
                                     {page.shortDesc && (
                                         <Text
                                             mt={{base: 4, md: 8, lg: 6}}
                                             mb={{base: 3, xs: 4, md: 6, lg: 8}}
                                             maxW={{base: 'full', lg: '90%'}}
-                                            textStyle="paragraph"
-                                            letterSpacing="wider"
-                                            fontSize={{
-                                                base: '9.5px',
-                                                mini: '11px',
-                                                xs: '3xs',
-                                                md: '14px',
-                                            }}
+                                            textStyle="portfolioDescription"
                                             dangerouslySetInnerHTML={{
                                                 __html: page.shortDesc,
                                             }}
@@ -129,13 +103,6 @@ const PortfolioPage = ({pageContext: {pages}}) => {
                                         <ChakraLink
                                             ml={{base: 3, md: 6}}
                                             variant="secondary"
-                                            fontSize={{
-                                                base: '10px',
-                                                mini: '13px',
-                                                xs: '15px',
-                                                md: '17px',
-                                                lg: '17px',
-                                            }}
                                         >
                                             Explore
                                         </ChakraLink>

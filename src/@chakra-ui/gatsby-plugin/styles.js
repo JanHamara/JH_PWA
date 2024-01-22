@@ -15,7 +15,7 @@ export default {
         },
         strong: {
             color: 'white',
-            fontWeight: 'black',
+            fontWeight: 'thin',
         },
         '.visible': {
             opacity: 1,
@@ -24,7 +24,7 @@ export default {
             opacity: 0,
         },
         '.inlineLink': {
-            opacity: 0.8,
+            opacity: 1,
             whiteSpace: 'nowrap',
             _hover: {
                 opacity: 1,

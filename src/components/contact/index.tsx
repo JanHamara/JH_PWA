@@ -22,9 +22,10 @@ const Contact = (props: ContactProps) => {
             <VStack justifyContent="center" alignItems="center" spacing={8}>
                 <Text
                     maxW={{base: '85vw', md: '800px'}}
-                    textStyle="heading"
-                    color="strong"
-                    textAlign="center"
+                    textAlign='center'
+                    textStyle="paragraph"
+                    color='white'
+                    fontWeight='400'
                     fontSize={{base: '3xs', xs: 'xs', md: 'base'}}
                 >
                     {info.heading}
@@ -56,9 +57,7 @@ const Contact = (props: ContactProps) => {
                         alignItems={{base: 'center', md: 'flex-start'}}
                     >
                         <Flex
-                            textStyle="roles"
-                            color="strong"
-                            fontWeight='semibold'
+                            textStyle="mediumBold"
                             fontSize={{base: '12px', xs: 'xs', md: 'base'}}
                         >
                             <Text mr={2} color="red">

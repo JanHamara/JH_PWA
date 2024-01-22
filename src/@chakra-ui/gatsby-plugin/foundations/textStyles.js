@@ -1,40 +1,75 @@
 const primary = {
     fontFamily: 'heading',
     fontSize: 'base',
-    fontWeight: 'normal',
+    fontStyle: 'normal',
     color: 'white',
+    fontWeight: 300,
 };
 
 const secondary = {
-    fontFamily: 'body',
-    fontSize: 'base',
+    ...primary,
     fontWeight: 'normal',
-    color: 'white',
 };
 
-const base = {
-    ...secondary,
-    fontWeight: 'semibold',
-    textTransform: 'uppercase',
-    letterSpacing: 'wide',
-    opacity: 0.8,
-    transition: '1s opacity',
-};
-
-const paragraphBase = {
+const contentBase = {
     textTransform: 'uppercase',
     letterSpacing: 'paragraph',
-    fontSize: 'md',
     lineHeight: '2',
 };
 
-const heroSubheading = {
+const heading = {
+    ...primary,
+    ...contentBase,
+    fontSize: {
+        base: '14px',
+        mini: '17px',
+        xs: '18px',
+        sm: '18px',
+        md: '20px',
+        max: '24px'
+    },
+    maxW: {base: '85vw', lg: 'unset'},
+    color: 'white80',
+};
+
+const paragraph = {
+    ...primary,
+    ...contentBase,
+    fontSize: {
+        base: '9.5px',
+        mini: '11px',
+        xs: '14px',
+        md: '14px',
+        lg: 'base',
+        max: '20px'
+    },
+    fontWeight: 'light',
+    color: 'white80',
+};
+
+const mediumBold = {
+    ...primary,
+    ...contentBase,
+    fontWeight: 'medium',
+};
+
+const stack = {
+    ...primary,
+    ...contentBase,
+    fontSize: {base: '3xs'},
+    fontWeight: 200,
+    textTransform: 'none',
+    letterSpacing: 'wider',
+    color: 'white',
+};
+
+const landingSubheading = {
     ...primary,
     color: 'white80',
-    fontSize:{base: '11px', mini: '2xs', md: 'base'},
     textAlign: 'center',
     textTransform: 'uppercase',
-    letterSpacing: {base: 'paragraph', mini: '0.12em', sm: 'paragraph', md: '0.35em'},
+    fontSize: {base: '12px', mini: '14px', md: 'sm'},
+    letterSpacing: {base: 'paragraph', mini: '0.12em', sm: 'paragraph', md: '0.30em'},
     width: {base: '100%', mini: '100%', sm: '100%', md: '570px'},
     maxW: {base: '100%', mini: '100%', sm: '100%', md: '570px'},
     transform: {
@@ -45,84 +80,62 @@ const heroSubheading = {
     },
 };
 
-const heading = {
-    ...primary,
-    ...paragraphBase,
-    fontSize: {
-        base: '14px',
-        mini: '17px',
-        xs: '18px',
-        sm: '18px',
-        md: '20px',
-    },
+const portfolioHeading = {
+    ...mediumBold,
     maxW: {base: '85vw', lg: 'unset'},
-    fontStyle: 'normal',
-    fontWeight: 'semibold',
-    color: 'white80',
-};
-
-const roles = {
-    ...primary,
-    ...paragraphBase,
-    fontStyle: 'normal',
-    fontWeight: 'semibold',
-    color: 'white',
-};
-
-const paragraph = {
-    ...primary,
-    ...paragraphBase,
-    fontStyle: 'normal',
-    fontWeight: 'semibold',
-    color: 'white80',
-};
-
-const stack = {
-    ...primary,
-    ...paragraphBase,
-    fontSize: {base: '3xs'},
-    textTransform: 'none',
-    letterSpacing: 'wider',
-    color: 'white',
-};
-
-const projectHeading = {
-    ...secondary,
-    ...base,
-    opacity: 1,
-    color: 'white',
-    fontFamily: 'body',
-    letterSpacing: 'widest',
-    fontWeight: 'bold',
-};
-
-const projectHeaderLabel = {
-    ...projectHeading,
-    letterSpacing: 'widest',
-    _before: {
-        content: '"/"',
-        color: 'white',
-        fontFamily: 'heading',
-        mr: 2,
+    fontSize: {
+        base: '15x',
+        mini: '19px',
+        xs: '20px',
+        sm: '18px',
+        md: '30px',
+        lg: '26px',
+        xxl: '26px',
     },
-};
+    letterSpacing: "wider",
+    lineHeight: {
+        base: '15px',
+        mini: '19px',
+        xs: '20px',
+        sm: '18px',
+        md: '30px',
+        lg: '26px',
+        xxl: '26px',
+    }
+}
+
+const portfolioDescription = {
+    ...paragraph,
+    letterSpacing: "wider",
+    fontSize: {
+        base: '9.5px',
+        mini: '11px',
+        xs: '3xs',
+        md: '14px',
+    }
+}
 
 const projectParagraph = {
     ...paragraph,
     letterSpacing: '0.16em',
-    lineHeight: {base: 2, md: 1.8},
-};
+    textTransform: 'uppercase',
+    fontSize: {
+        base: '9.5px',
+        mini: '11px',
+        xs: '3xs',
+        md: '15px',
+    },
+}
 
 export default {
-    base,
     primary,
     secondary,
     heading,
     paragraph,
-    roles,
-    heroSubheading,
+    mediumBold,
     stack,
-    projectHeading,
-    projectHeaderLabel,
-    projectParagraph,
+    landingSubheading,
+    portfolioHeading,
+    portfolioDescription,
+    projectParagraph
 };

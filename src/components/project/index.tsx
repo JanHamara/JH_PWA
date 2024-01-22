@@ -221,12 +221,6 @@ const Project = (props: ProjectProps) => {
                         <ChakraLink
                             href="/portfolio"
                             variant="secondary"
-                            fontSize={{
-                                base: '10px',
-                                mini: '12px',
-                                xs: '13px',
-                                md: '15px',
-                            }}
                         >
                             Back to portfolio
                         </ChakraLink>

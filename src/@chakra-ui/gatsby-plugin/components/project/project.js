@@ -1,10 +1,11 @@
 export default {
     baseStyle: {
         pHeading: {
-            textStyle: 'projectHeading',
             mt: {base: 14, md: 24},
             px: {base: 2, md: 0},
             fontSize: {base: '14px', md: 'md'},
+            textTransform: 'uppercase',
+            letterSpacing: 'wider',
             _before: {
                 content: '"/"',
                 color: 'red',
@@ -25,23 +26,11 @@ export default {
             mt: {base: 10, md: 20},
             px: {base: 2, md: 0},
             textStyle: 'projectParagraph',
-            fontSize: {
-                base: '9.5px',
-                mini: '11px',
-                xs: '3xs',
-                md: '14px',
-            },
         },
         phContent: {
             mt: {base: 6, md: 8},
             px: {base: 2, md: 0},
             textStyle: 'projectParagraph',
-            fontSize: {
-                base: '10px',
-                mini: '11px',
-                xs: '3xs',
-                md: '14px',
-            },
         },
         pVideo: {
             mt: {base: 10, md: 20},

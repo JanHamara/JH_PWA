@@ -35,7 +35,6 @@ const ProjectHeader = (props: ProjectHeaderProps) => {
                             {header.techstack && (
                                 <Box {...styles.headerItem}>
                                     <Text
-                                        textStyle="projectHeaderLabel"
                                         {...styles.headerItemLabel}
                                     >
                                         Tech Stack
@@ -48,7 +47,6 @@ const ProjectHeader = (props: ProjectHeaderProps) => {
                             {header.client && (
                                 <Box {...styles.headerItem}>
                                     <Text
-                                        textStyle="projectHeaderLabel"
                                         {...styles.headerItemLabel}
                                     >
                                         Client
@@ -61,7 +59,6 @@ const ProjectHeader = (props: ProjectHeaderProps) => {
                             {header.role && (
                                 <Box {...styles.headerItem}>
                                     <Text
-                                        textStyle="projectHeaderLabel"
                                         {...styles.headerItemLabel}
                                     >
                                         Role
@@ -76,7 +73,6 @@ const ProjectHeader = (props: ProjectHeaderProps) => {
                             {header.agency && (
                                 <Box {...styles.headerItem} display={{base: 'none', md: 'block'}}>
                                     <Text
-                                        textStyle="projectHeaderLabel"
                                         {...styles.headerItemLabel}
                                     >
                                         Agency

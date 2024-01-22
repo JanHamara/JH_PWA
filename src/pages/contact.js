@@ -4,21 +4,7 @@ import FadeIn from '../components/fade-in';
 import Layout from '../components/layout';
 import Contact from '../components/contact';
 import {StaticImage} from 'gatsby-plugin-image';
-
-const mockContactData = {
-    heading: 'Have a project inquiry, or interested in working together?',
-    subheading: "Send me a message and let's chat about it!",
-    info: [
-        {
-            label: 'Email',
-            value: 'jhamara@protonmail.com',
-        },
-        {
-            label: 'Phone',
-            value: '+34 602 558 175',
-        },
-    ],
-};
+import contact from '../mocks/pages/contact';
 
 const ContactPage = () => {
     return (
@@ -34,7 +20,7 @@ const ContactPage = () => {
                         overflow="hidden"
                         zIndex={3}
                     >
-                        <Contact info={mockContactData} social={true}></Contact>
+                        <Contact info={contact} social={true}></Contact>
                     </Box>
                 </Layout>
             </FadeIn>

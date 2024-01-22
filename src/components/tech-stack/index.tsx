@@ -143,7 +143,6 @@ const TechStack = ({stack = 'frontend', pf = undefined, ...otherProps}: TechStac
 
                             <Text
                                 textStyle="stack"
-                                fontSize={{base: '8px', mini: '9px', xs: '11px', sm: '10px'}}
                                 _groupHover={{color: 'white'}}
                             >
                                 {item.label}

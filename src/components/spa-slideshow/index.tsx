@@ -12,7 +12,6 @@ import {
 } from '@chakra-ui/react';
 import * as React from 'react';
 import {StaticImage} from 'gatsby-plugin-image';
-import {useLocation} from '@reach/router';
 import {Link} from 'gatsby';
 
 import TechStack from '../tech-stack';
@@ -38,9 +37,6 @@ const SpaSlideshow = (props: SpaSlideshowProps) => {
     const {items, about = false, techstack = false} = props;
     const [current, setCurrent] = React.useState(0);
     const [visibility, setVisibility] = React.useState('hidden');
-
-    // Location
-    const loc = useLocation();
 
     React.useEffect(() => {
         setTimeout(() => {
@@ -116,7 +112,7 @@ const SpaSlideshow = (props: SpaSlideshowProps) => {
                 className={visibility}
                 transition="opacity 1s"
                 spacing={
-                    // This is basically just spacing for button
+                    // Basically just spacing for button
                     about
                         ? {base: 10, mini: 12, xs: 16, md: 24}
                         : techstack
@@ -129,8 +125,9 @@ const SpaSlideshow = (props: SpaSlideshowProps) => {
                     w="full"
                     h={{base: 'auto', md: 'full'}}
                     mx="auto"
+                    justifyContent={!techstack ? { base: 'flex-start', max: 'center' } : 'flex-start'}
                     textAlign="center"
-                    // You need to align this spacing with button spacing just above
+                    // Align this spacing with button spacing just above
                     spacing={
                         about
                             ? 0
@@ -145,7 +142,7 @@ const SpaSlideshow = (props: SpaSlideshowProps) => {
                         {/* ------------- */}
                         {/* --- TITLE --- */}
                         {/* ------------- */}
-                        {items[current] && (
+                        {items[current].title && (
                             <Text
                                 dangerouslySetInnerHTML={{
                                     __html: items[current].title,
@@ -165,7 +162,7 @@ const SpaSlideshow = (props: SpaSlideshowProps) => {
                                 {items[current].roles.map((role, idx) => (
                                     <>
                                         <Text
-                                            textStyle="roles"
+                                            textStyle="mediumBold"
                                             fontSize={{
                                                 base: '10px',
                                                 mini: '11px',
@@ -222,15 +219,6 @@ const SpaSlideshow = (props: SpaSlideshowProps) => {
                             __html: items[current].content,
                         }}
                         textStyle="paragraph"
-                        fontSize={{
-                            base: '9.5px',
-                            mini: '11px',
-                            xs: '14px',
-                            md: '14px',
-                            lg: '15px',
-                            xl: '15px',
-                            xxl: '15px',
-                        }}
                     ></Text>
 
                     {/* ------------- */}
@@ -243,7 +231,7 @@ const SpaSlideshow = (props: SpaSlideshowProps) => {
                     <Center
                         w="full"
                         position={{base: 'static', md: 'absolute'}}
-                        bottom="calc(15vh)"
+                        bottom="calc(10vh)"
                     >
                         <ChakraLink href={items[current].href} target="_blank" variant="secondary">
                             Read More
@@ -256,7 +244,7 @@ const SpaSlideshow = (props: SpaSlideshowProps) => {
                         w="full"
                         position={{base: 'static', md: 'absolute'}}
                         pt={{base: 0, md: 0}}
-                        bottom={{base: '15vh', md: '13vh'}}
+                        bottom={{base: '15vh', md: '10vh'}}
                     >
                         {items[items.length - 1].label == items[current].label ? (
                             <Link to={about ? '/techstack' : techstack ? '/portfolio' : '/'}>

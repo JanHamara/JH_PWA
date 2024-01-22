@@ -19,7 +19,7 @@ const ProgressSidebar = (props: ProgressSidebarProps) => {
     return (
         <Flex w="2px" h="45vh" direction="column">
             <Box height={offset} backgroundColor="none" transition="height 2s ease-out"></Box>
-            <Box w="full" h={step + 'vh'} backgroundColor="strong"></Box>
+            <Box w="full" h={step + 'vh'} backgroundColor="white"></Box>
         </Flex>
     );
 };

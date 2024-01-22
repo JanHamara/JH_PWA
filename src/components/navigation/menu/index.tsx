@@ -37,7 +37,6 @@ const Menu = (props: MenuProps) => {
                             alt="menu-link"
                             opacity={{base: 1, md: 0.8}}
                             _groupHover={{opacity: 1, transform: 'scale(1)'}}
-                            transition="1s transform"
                         ></Img>
                     </ChakraLink>
                 </Link>
